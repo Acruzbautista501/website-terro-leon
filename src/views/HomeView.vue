@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import CarouselProducts from '../components/CarouselProducts.vue';
   import HeaderComponent from '../components/HeaderComponent.vue';
-  
+  import FooterComponent from '../components/FooterComponent.vue';
+
 </script>
 
 <template>
@@ -46,7 +47,7 @@
                     <h2 class="title-carousel">Disfruta de los <br> clásicos</h2>
                   </div>
                   <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-2.avif" class="d-block img-fluid mb-3 mx-auto" alt="Producto 2" />
+                    <img src="/img/img-product-carousel-2.avif" class="d-none d-lg-block  img-fluid mb-3 mx-auto" alt="Producto 2" />
                   </div>
                   <div class="pt-3">
                     <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
@@ -68,7 +69,7 @@
                     <h2 class="title-carousel">La elegancia <br>está en los <br>detalles</h2>
                   </div>
                   <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-3.avif" class="d-block mx-auto img-fluid mb-3" alt="Producto 3" />
+                    <img src="/img/img-product-carousel-3.avif" class="d-none d-lg-block  mx-auto img-fluid mb-3" alt="Producto 3" />
                   </div>
                   <div class="pt-3">
                     <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
@@ -90,7 +91,7 @@
                     <h2 class="title-carousel">Tenemos para <br>todos los <br>gustos</h2>
                   </div>
                   <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-4.avif" class="d-block mx-auto img-fluid mb-3" alt="Producto 4" style="width: 50%;" />
+                    <img src="/img/img-product-carousel-4.avif" class="d-none d-lg-block mx-auto img-fluid mb-3" alt="Producto 4" style="width: 50%;" />
                   </div>
                   <div class="pt-3">
                     <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
@@ -136,7 +137,9 @@
       <div class="col-12 col-xl-6 text-center">
         <h1 class="display-6 lh-1 text-body-emphasis mb-3 text-uppercase">¡Ponte en contacto con nostros!</h1>
         <p class="fs-6">¿Tienes un proyecto en mente y quieres saber más sobre nuestros productos? ¡Escríbenos! Nos dará gusto saber de ti.</p>
-        <p class="fs-6 pt-0 mt-0 pt-lg-5 mt-lg-5">Blvd. J. J. Torres Landa Ote. 5642, Jardines de Jerez, 37530 León, Gto., México</p>
+        <p class="fs-6 pt-0 mt-0 pt-lg-5 mt-lg-4">Blvd. J. J. Torres Landa Ote. 5642, Jardines de Jerez, 37530 León, Gto., México</p>
+        <p class="fs-6 pt-0 mt-0 pt-lg-4">cristina.tejasybarro@gmail.com</p>
+        <p class="fs-6 pt-0 mt-0 pt-lg-4">477 628 75 15</p>
       </div>
       <div class="d-none d-xl-block col-lg-1"></div>
       <div class="col-md-10 mx-auto col-lg-5">
@@ -176,6 +179,17 @@
       </div>
     </div>
   </section>
+  <section class="mb-3">
+    <div class="map-wrapper">
+      <div class="ratio ratio-21x9">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.4236418124024!2d-101.63356112413405!3d21.095669985475947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbe47360225c3%3A0x9456856c8dce3114!2sTejas%20y%20Barro%20de%20Le%C3%B3n!5e0!3m2!1ses-419!2smx!4v1744862741592!5m2!1ses-419!2smx"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <FooterComponent />
 </template>
 
 <style scoped>
@@ -266,6 +280,9 @@
   width: 100%;
 }
 
+.map-wrapper {
+  width: 100%;
+}
 
 @media (min-width: 1200px) {
   .bg-jumbotron {
@@ -276,5 +293,10 @@
     max-width: 1700px !important;
     margin: 0 auto !important;
   }
+  .map-wrapper {
+    max-width: 1700px;
+    margin: 0 auto; /* Centra el contenido */
+  }
 }
+
 </style>
