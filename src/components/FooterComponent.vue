@@ -28,9 +28,9 @@
       <!-- Columna de redes sociales -->
       <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
         <div class="d-flex gap-3">
-          <a href="#" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-dark fs-4"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="text-dark fs-4"><i class="bi bi-facebook fs-1 ms-3"></i></a>
+          <a href="#" class="text-dark fs-4"><i class="bi bi-instagram fs-1 mx-3"></i></a>
+          <a href="#" class="text-dark fs-4"><i class="bi bi-whatsapp fs-1 me-3"></i></a>
         </div>
       </div>
     </div>
