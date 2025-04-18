@@ -11,10 +11,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
                     <li class="nav-item pe-0 pe-lg-2">
-                        <a class="nav-link" to="/">Inicio</a>
+                        <router-link class="nav-link" to="/">Inicio</router-link>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2">
-                        <a class="nav-link" href="#">Nosotros</a>
+                        <router-link class="nav-link" to="/nosotros">Nosotros</router-link>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
