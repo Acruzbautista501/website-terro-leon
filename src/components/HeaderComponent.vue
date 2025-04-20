@@ -28,7 +28,7 @@
                     </ul>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <router-link class="nav-link" to="/contacto">Contacto</router-link>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2">
                         <a class="nav-link" href="#">Recursos</a>
