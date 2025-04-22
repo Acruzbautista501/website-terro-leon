@@ -31,7 +31,7 @@
                         <router-link class="nav-link" to="/contacto">Contacto</router-link>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2">
-                        <a class="nav-link" href="#">Recursos</a>
+                        <router-link class="nav-link" to="/recursos">Recursos</router-link>
                     </li>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -46,7 +46,7 @@
 
 <style scoped>
 	.nav-link {
-		color: #422B1C!important;
+		color: #454015!important;
 		font-size: 18px;
 	}
     .bg-header {
