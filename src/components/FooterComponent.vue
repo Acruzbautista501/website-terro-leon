@@ -2,7 +2,7 @@
 </script>
 
 <template>
-<footer class="bg-footer mt-5 py-4">
+<footer class="bg-footer py-4">
   <div class="container">
     <div class="row text-center text-md-start">
       <!-- Columna de contacto -->
