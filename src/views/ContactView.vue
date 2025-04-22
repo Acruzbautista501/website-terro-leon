@@ -7,7 +7,7 @@
 
 <template>
 	<HeaderComponent />
-    <main class="pt-3 pb-3">
+    <main>
         <ContactComponent/>
     </main>
 	<FooterComponent />
