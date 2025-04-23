@@ -7,11 +7,15 @@
 
 <template>
 	<HeaderComponent />
-    <main>
+    <main class="main-contact">
         <ContactComponent/>
     </main>
 	<FooterComponent />
 </template>
 
 <style scoped>
+.main-contact {
+  background-color: #fff8ea !important;
+}
+
 </style>

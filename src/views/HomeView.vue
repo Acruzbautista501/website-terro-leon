@@ -103,37 +103,39 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <button class="btn btn-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span aria-hidden="true"><i class="bi bi-chevron-left bg-icon fs-1 fw-bold"></i></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button class="btn btn-next" type="button" data-bs-target="#mainCarousel " data-bs-slide="next">
+        <span aria-hidden="true"><i class="bi bi-chevron-right bg-icon fs-1 fw-bold"></i></span>
       </button>
     </div>
   </section>
   <CarouselProducts />
-  <section class="container-fluid bg-jumbotron p-5">
-    <div class="p-5 text-center">
-      <h2 class="display-3 text-white text-uppercase">¿Quiénes somos?</h2>
-    </div>
-  </section>
-  <section class="container my-5">
-    <div class="p-5 text-center">
-      <h4 class="text-body-emphasis title-jumbotron mb-4">¿Quiénes somos?</h4>
-      <p class="mx-auto fs-5 text-muted mb-5">
-        En Tejas y barro de León ofrecemos a nuestros clientes los productos de la más alta calidad, los mejores suministros del mercado y un excelente servicio al cliente en todas las etapas del proceso de compra y entrega.
-      </p>
-      <p class="mx-auto fs-5 text-muted mb-4">
-        Estamos comprometidos a ayudarte a realizar tu proyecto de remodelación o jardinería, desde grandes obras hasta pequeñas reparaciones. Echa un vistazo a nuestro inventario y encuentra lo que necesitas.
-      </p>
-      <div class="d-inline-flex gap-2 mb-5">
-      <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-        Contacto
-      </button>
-    </div>
-    </div>
-  </section>
-  <ContactComponent />
+  <main class="main-home">
+    <section class="container-fluid bg-jumbotron p-5">
+      <div class="p-5 text-center">
+        <h2 class="display-3 text-white text-uppercase">¿Quiénes somos?</h2>
+      </div>
+    </section>
+    <section class="container my-5">
+      <div class="p-5 text-center">
+        <h4 class="title-jumbotron mb-4 display-6">¿Quiénes somos?</h4>
+        <p class="mx-auto fs-5 mb-5 text-jumbotron">
+          En Tejas y barro de León ofrecemos a nuestros clientes los productos de la más alta calidad, los mejores suministros del mercado y un excelente servicio al cliente en todas las etapas del proceso de compra y entrega.
+        </p>
+        <p class="mx-auto fs-5 mb-4 text-jumbotron">
+          Estamos comprometidos a ayudarte a realizar tu proyecto de remodelación o jardinería, desde grandes obras hasta pequeñas reparaciones. Echa un vistazo a nuestro inventario y encuentra lo que necesitas.
+        </p>
+        <div class="d-inline-flex gap-2 mb-5">
+          <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+            Contacto
+          </button>
+        </div>
+      </div>
+    </section>
+    <ContactComponent />
+  </main>
   <FooterComponent />
 </template>
 
@@ -181,6 +183,72 @@
   object-fit: cover;
 }
 
+/* Estilos base para pantallas pequeñas */
+.btn-prev,
+.btn-next {
+  position: absolute !important;
+  top: 45%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+/* Estilo para pantallas pequeñas: izquierda y derecha a 20px */
+.btn-prev {
+  left: 0;
+}
+
+.btn-next {
+  right: 0;
+}
+
+/* md: ≥768px */
+@media (min-width: 768px) {
+  .btn-prev {
+    left: 40px;
+  }
+
+  .btn-next {
+    right: 40px;
+  }
+}
+
+/* lg: ≥992px */
+@media (min-width: 992px) {
+  .btn-prev {
+    left: 60px;
+  }
+
+  .btn-next {
+    right: 60px;
+  }
+}
+
+/* xl: ≥1200px */
+@media (min-width: 1200px) {
+  .btn-prev {
+    left: 80px;
+  }
+
+  .btn-next {
+    right: 80px;
+  }
+}
+
+/* xxl: ≥1400px */
+@media (min-width: 1400px) {
+  .btn-prev {
+    left: 100px;
+  }
+
+  .btn-next {
+    right: 100px;
+  }
+}
+
+.bg-icon {
+  color:#ffffff !important
+}
+
 /* Breakpoint sm: ≥576px */
 @media (min-width: 576px) {
   .carousel-img {
@@ -209,8 +277,19 @@
   }
 }
 
-.title-jumbotron {
-  color: #422B1C !important;
+.title-jumbotron,
+.text-jumbotron {
+  color: #454015 !important;
+}
+
+.btn-outline-secondary {
+  border-color: #454015 !important;
+  color: #454015 !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #454015 !important;
+  color: #ffffff !important;
 }
 
 .bg-jumbotron {
@@ -218,6 +297,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+}
+
+.main-home {
+  background-color: #fff8ea !important;
 }
 
 @media (min-width: 1200px) {

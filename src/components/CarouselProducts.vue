@@ -31,16 +31,16 @@
               v-for="(producto, i) in grupo"
               :key="i"
             >
-              <div class="card h-100">
+              <div class="card h-100 rounded-0 border-0">
                 <img
                   :src="producto.imagen || '/images/default.jpg'"
-                  class="card-img-top"
+                  class="card-img-top rounded-0 mx-auto"
                   alt="Imagen del producto"
                 />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">{{ producto.nombre }}</h5>
                   <p class="card-text mb-3">
-                    <strong>Precio:</strong> ${{ producto.precio }}
+                    ${{ producto.precio }}
                     <span
                       v-if="producto.precioOriginal"
                       class="text-muted text-decoration-line-through ms-2"
@@ -48,7 +48,6 @@
                       ${{ producto.precioOriginal }}
                     </span>
                   </p>
-                  <button class="btn btn-primary mt-auto">Ver producto</button>
                 </div>
               </div>
             </div>
@@ -57,32 +56,51 @@
       </div>
 
       <!-- Controles -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselProductos"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
+      <button class="btn btn-prod-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+        <span aria-hidden="true"><i class="bi bi-chevron-left bg-prod-icon fs-5 fw-bold"></i></span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselProductos"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
+      <button class="btn btn-prod-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+        <span aria-hidden="true"><i class="bi bi-chevron-right bg-prod-icon fs-5 fw-bold"></i></span>
       </button>
     </div>
   </section>
 </template>
 
 <style scoped>
+.bg-section-carousel {
+  background-color: #fff8ea;
+}
 .carousel-item {
   transition: transform 0.6s ease;
 }
+
+/* Estilos base para pantallas pequeñas */
+.btn-prod-prev,
+.btn-prod-next {
+  position: absolute !important;
+  top: 45%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+/* Estilo para pantallas pequeñas: izquierda y derecha a 20px */
+.btn-prod-prev {
+  left: -45px;
+}
+
+.btn-prod-next {
+  right: -45px;
+}
+
+.bg-prod-icon {
+  color: #454015
+}
+
+.card-body  {
+  color: #454015;
+  background-color: #fff8ea;
+}
+
 
 
 </style>

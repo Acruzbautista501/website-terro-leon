@@ -60,15 +60,15 @@
 		</div>
   	</section>
 	<section class="container-fluid px-0 bg-vission">
-		<div class="row g-0">
-			<div class="col-12 col-xl-3">
-				<img src="/img/img-col-1.avif" alt="" class="w-100 img-fit-top">
+		<div class="row g-0 d-flex image-row flex-nowrap">
+			<div class="col-12 col-xl-3 img-column">
+				<img src="/img/img-col-1.avif" alt="" class="w-100">
 			</div>
-			<div class="col-12 col-xl-7">
-				<img src="/img/img-col-2.avif" alt="" class="w-100 img-fit-top">
+			<div class="col-12 col-xl-7 img-column">
+				<img src="/img/img-col-2.avif" alt="" class="w-100">
 			</div>
-			<div class="col-12 col-xl-2">
-				<img src="/img/img-col-3.avif" alt="" class="w-100 img-fit-top">
+			<div class="col-12 col-xl-2 img-column">
+				<img src="/img/img-col-3.avif" alt="" class="w-100">
 			</div>
 		</div>
 		<div class="p-5 text-start container">
@@ -87,7 +87,7 @@
 		</div>
 	</section>
 	<section class="container-fluid bg-values">
-		<div class="container p-5">
+		<div class=" p-5">
 			<div class="row g-5 align-items-center">
 				<div class="col-12 col-xl-7">
 					<h2 class="title-values mb-4 display-4 fw-bold text-uppercase">Nuestros Valores</h2>
@@ -96,30 +96,34 @@
 							<tbody>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Calidad</th>
-									<td class="desc-value fs-5 p-3 bg-col">Materiales duraderos y de primera.</td>
+									<td class="desc-value fs-5 p-3 bg-col">Materiales duraderos y <br> de primera.</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Cercanía</th>
-									<td class="desc-value fs-5 p-3 bg-col">Relación genuina con clientes y profesionales</td>
+									<td class="desc-value fs-5 p-3 bg-col">Relación genuina con <br> clientes y profesionales</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Innovación</th>
-									<td class="desc-value fs-5 p-3 bg-col">Adaptarse a nuevas tendencias y necesidades.</td>
+									<td class="desc-value fs-5 p-3 bg-col">Adaptarse a nuevas <br> tendencias y necesidades.</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Compromiso</th>
-									<td class="desc-value fs-5 p-3 bg-col">Ayudar a los clientes a hacer realidad sus proyectos.</td>
+									<td class="desc-value fs-5 p-3 bg-col">Ayudar a los clientes a <br> hacer realidad sus proyectos.</td>
 								</tr>
 								<tr class="border-value">
-									<th class="label-value text-uppercase display-6 p-3 bg-col">Responsabilidad</th>
-									<td class="desc-value fs-5 p-3 bg-col">Cumplir con altos estándares y prácticas sostenible</td>
+									<th class="label-value text-uppercase display-5 p-3 bg-col">Responsabilidad</th>
+									<td class="desc-value fs-5 p-3 bg-col">Cumplir con altos estándares <br> y prácticas sostenible</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 				</div>
 				<div class="col-12 col-xl-5">
-					<img src="/img/img-value.png" alt="img-value" class="img-wrapper">
+					<div class="row g-0 d-flex image-value-row flex-nowrap">
+						<div class="img-value-column">
+							<img src="/img/img-value.png" alt="img-value" class="w-100">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -180,29 +184,37 @@
 	.title-values{
 		font-family: 'Playfair Display', serif;
 	}
-	.img-fit-top {
-      object-fit: cover;
-      object-position: top;
-      height: 700px; /* Puedes ajustar esta altura */
+	.border-end {
+    border-right: 2px solid #454015 !important;
+  }
+	.img-column {
+		overflow: hidden;
+		padding: 0;
+  	}
+
+	.img-column img {
+		width: 100%;
+		height: 120%;
+		object-fit: cover;
+		object-position: top;
+		display: block;
+	}
+
+	.image-row {
+		height: 60vh;
+	}
+
+  /* En pantallas pequeñas: que la fila tenga altura automática y columnas apiladas */
+  @media (max-width: 1200px) {
+    .image-row {
+      height: auto;
+      flex-direction: column !important;
     }
 
-	@media (min-width: 768px) and (max-width: 1024px) {
-		.img-fit-top {
-			height: 450px;
-		}
-		.item-value-left {
-      margin-bottom: 2.58rem !important;
+    .img-column {
+      height: 45vh; /* altura por imagen apilada en móvil */
     }
-    .item-value {
-      margin-bottom: 1.5rem !important;
-    }
-    }
-
-    @media (max-width: 767.98px) {
-      .img-fit-top {
-        height: 200px;
-      }
-    }
+  }
 	.bg-vission{
 		background-color: #9d9167;
 		color: #fff8ea;
@@ -223,20 +235,36 @@
 	.bg-col{
 		background-color: transparent !important;
 	}
-	.img-wrapper {
-  width: 100%;
-  max-width: 530px;
-  height: auto;
-  aspect-ratio: 2 / 3; /* Mantiene la proporción aproximada */
-  object-fit: cover;
-  object-position: top;
-}
+	.img-value-column {
+		overflow: hidden;
+		padding: 0;
+  	}
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .img-wrapper {
-    max-width: 100%;
-    aspect-ratio: 3 / 4; /* Ajusta la proporción en pantallas más pequeñas */
-  }
-}
+	.img-value-column img {
+		width: 120% !important;
+		height: 120%;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	.image-value-row {
+		height: 60vh;
+	}
+
+	@media (max-width: 1200px) {
+		.image-value-row {
+		height: auto;
+		flex-direction: column !important;
+		}
+
+		.img-value-column {
+		height: 75vh; /* altura por imagen apilada en móvil */
+		}
+  	}
+	
+	  @media (max-width: 576px) {
+		.img-value-column {
+      		height: 45vh; /* altura por imagen apilada en móvil */
+    	}
+	}
 </style>
