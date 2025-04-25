@@ -8,7 +8,7 @@
                 <h1 class="display-6 lh-1 mb-3 text-uppercase">¡Ponte en contacto con nostros!</h1>
                 <p class="fs-6">¿Tienes un proyecto en mente y quieres saber más sobre nuestros productos? ¡Escríbenos! Nos dará gusto saber de ti.</p>
                 <p class="fs-6 pt-0 mt-0 pt-lg-5 mt-lg-4">Blvd. J. J. Torres Landa Ote. 5642, Jardines de Jerez, 37530 León, Gto., México</p>
-                <p class="fs-6 pt-0 mt-0 pt-lg-4">cristina.tejasybarro@gmail.com</p>
+                <p class="fs-6 pt-0 mt-0 pt-lg-4"><a href="mailto:contacto@terroacabados.com" class="text-decoration-none text-white">contacto@terroacabados.com</a></p>
                 <p class="fs-6 pt-0 mt-0 pt-lg-4">477 628 75 15</p>
             </div>
             <div class="d-none d-xl-block col-lg-1"></div>
