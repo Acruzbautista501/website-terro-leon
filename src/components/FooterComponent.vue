@@ -1,4 +1,20 @@
-<script setup>
+<script lang="ts" setup>
+  import { ref } from 'vue';
+  import PrivacyNoticeComponent from './PrivacyNoticeComponent.vue'
+  import DeliveryPoliciesComponent from './DeliveryPoliciesComponent.vue';
+
+  const modalPrivacy =  ref<InstanceType<typeof PrivacyNoticeComponent> | null>(null)
+  
+  function openModal() {
+    modalPrivacy.value?.open()
+  }
+
+  const modalDelivery =  ref<InstanceType<typeof DeliveryPoliciesComponent> | null>(null)
+  
+  function openModalDelivery() {
+    modalDelivery.value?.open()
+  }
+
 </script>
 
 <template>
@@ -7,10 +23,9 @@
     <div class="row text-center text-md-start">
       <!-- Columna de contacto -->
       <div class="col-md-4 mb-4 mb-md-0 border-end">
-        <ul class="list-unstyled fs-5 mt-3">
+        <ul class="list-unstyled fs-5 mt-5">
           <li><a href="#" class="text-decoration-none color-footer">477 628 7515</a></li>
-          <li><a href="#" class="text-decoration-none color-footer">477 821 0020</a></li>
-          <li class="mt-3 mb-3"><a href="#" class="text-decoration-none color-footer">contacto@terroacabados.com</a></li>
+          <li class="mt-3 mb-3"><a href="mailto:contacto@terroacabados.com" class="text-decoration-none color-footer">contacto@terroacabados.com</a></li>
           <li>
             <a href="#" class="text-decoration-none color-footer">
               Blvd. J. J. Torres Landa Ote. 5642,
@@ -25,10 +40,12 @@
       <div class="col-md-4 mb-4 mb-md-0 border-end">
         <ul class="list-unstyled ms-lg-3 fs-5 mt-3">
           <li class="mb-3"><a href="#" class="text-decoration-none color-footer">FAQ´s</a></li>
-          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer">Aviso de Privacidad</a></li>
-          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer">Políticas de Entrega y Devoluciones</a></li>
+          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModal">Polítca de Privacidad</a></li>
+          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModalDelivery">Políticas de Entrega y Devoluciones</a></li>
           <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer">Términos y condiciones</a></li>
         </ul>
+        <PrivacyNoticeComponent ref="modalPrivacy" />
+        <DeliveryPoliciesComponent ref="modalDelivery"/>
       </div>
 
       <!-- Columna de redes sociales -->
