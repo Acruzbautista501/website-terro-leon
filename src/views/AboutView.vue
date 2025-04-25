@@ -7,16 +7,24 @@
 	<HeaderComponent />
 	<section class="container-fluid p-0">
 		<div class="row g-0">
-			<div class="col-12 col-xl-4 bg-history p-4 d-flex flex-column justify-content-center">
-				<div class="ps-md-5 pe-md-4">
-					<div class="border-top border-2 w-75 mb-3"></div>
-					<h1 class="title-history mb-3 fw-bold display-4 text-uppercase">Nuestra<br>Historia</h1>
-					<p class="text-history mb-3 fs-4">
+			<div class="col-12 col-xl-4 bg-history d-flex flex-column justify-content-center">
+				<div class="ps-3 pe-4 ps-xxl-5 pe-xxl-5">
+					<div class=" border-top border-2 w-75 mb-3 d-none d-xl-block"></div>
+					<h1 class="title-history mt-3 mt-xl-0 mb-3 display-4 text-uppercase">Nuestra<br>Historia</h1>
+					<p class="text-history mb-3 d-block d-xl-none d-xxl-block">
 						Todo empezó en León, Guanajuato, con un sueño familiar: transformar la construcción en algo más que obra gris.
 						Queríamos ofrecer materiales que no solo fueran funcionales, sino también bellos, naturales y llenos de significado. 
 						Así nació Tejas y Barro de León, y con el tiempo, crecimos, aprendimos, nos llenamos de ideas nuevas. 
 					</p>
-					<p class="text-history mb-3 fs-4">
+					<p class="text-history mb-3 d-block d-xl-none d-xxl-block">
+						Hoy somos TERRO, y seguimos aquí, acompañando cada proyecto con calidad, diseño y calidez.
+					</p>
+					<p class="text-history mb-3 d-none d-xl-block d-xxl-none">
+						Todo empezó en León, Guanajuato, con un sueño familiar: transformar la construcción en algo más que obra gris.
+						Queríamos ofrecer materiales que no solo fueran funcionales, sino también bellos, naturales y llenos de significado. 
+						Así nació Tejas y Barro de León, y con el tiempo, crecimos, aprendimos, nos llenamos de ideas nuevas. 
+					</p>
+					<p class="text-history mb-3 d-none d-xl-block d-xxl-none">
 						Hoy somos TERRO, y seguimos aquí, acompañando cada proyecto con calidad, diseño y calidez.
 					</p>
 				</div>
@@ -33,7 +41,7 @@
 	</section>
 	<section class="container-fluid bg-mission">
 		<div class="p-5 text-center container">
-			<h2 class="title-mission mb-4 display-4 fw-bold text-uppercase">Nuestra Misión</h2>
+			<h2 class="title-mission mb-4 display-4 text-uppercase">Nuestra Misión</h2>
 			<p class="mx-auto fs-4 mb-5">
 				En Terro, transformamos materiales en sueños. Proveemos acabados arquitectónicos de alta calidad que
 				dan vida a espacios únicos, fusionando tradición y diseño. Más que productos, ofrecemos la posibilidad de
@@ -72,7 +80,7 @@
 			</div>
 		</div>
 		<div class="p-5 text-start container">
-			<h2 class="title-vission mb-4 display-4 fw-bold text-uppercase">Nuestra Visión</h2>
+			<h2 class="title-vission mb-4 display-4 text-uppercase">Nuestra Visión</h2>
 			<p class="mx-auto fs-4 mb-5">
 				Ser la referencia en acabados arquitectónicos que combinan tradición y diseño, ofreciendo productos que
 				inspiran y transforman espacios en México y más allá. Nos consolidamos como la solución integral para
@@ -90,7 +98,7 @@
 		<div class=" p-5">
 			<div class="row g-5 align-items-center">
 				<div class="col-12 col-xl-7">
-					<h2 class="title-values mb-4 display-4 fw-bold text-uppercase">Nuestros Valores</h2>
+					<h2 class="title-values mb-4 display-4 text-uppercase">Nuestros Valores</h2>
 					<div class="table-responsive">
 						<table class="table align-middle">
 							<tbody>
@@ -154,14 +162,30 @@
 		display: block;
 		margin: 0 auto;
 	}
-	@media (min-width: 1200px) {
+
+	@media (min-width: 1601px) {
 		.image-section img {
-			height: 700px;
+			height: 650px;
+		}
+		.text-history{
+			font-size: 24px;
+		}
+	}
+
+	@media (min-width: 1200px) and (max-width: 1600px) {
+		.image-section img {
+			height: 500px;
+		}
+		.text-history{
+			font-size: 20px;
 		}
 	}
 	@media (max-width: 1199px) {
 		.image-section img {
-			height: auto;
+			height: 650px;
+		}
+		.text-history{
+			font-size: 22px;
 		}
 	}
     .quote {
