@@ -4,12 +4,14 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import DidacticView from '../views/DidacticView.vue'
+import TermsConditionsView from '../views/TermsConditionsView.vue'
+import FAQsView from '../views/FAQsView.vue'
 
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Inicio',
     component: HomeView
   },
   {
@@ -26,6 +28,16 @@ const routes: RouteRecordRaw[] = [
     path: '/recursos',
     name: 'Recursos',
     component: DidacticView,
+  },
+  {
+    path: '/terminos-y-condiciones',
+    name: 'Términos y Condiciones',
+    component: TermsConditionsView,
+  },
+  {
+    path: '/faqs',
+    name: 'FAQ´s',
+    component: FAQsView,
   },
 ]
 
