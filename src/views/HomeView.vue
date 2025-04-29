@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import CarouselProducts from '../components/CarouselProducts.vue';
   import HeaderComponent from '../components/HeaderComponent.vue';
   import FooterComponent from '../components/FooterComponent.vue';
   import ContactComponent from '../components/ContactComponent.vue';
@@ -111,7 +110,6 @@
       </button>
     </div>
   </section>
-  <CarouselProducts />
   <main class="main-home">
     <section class="container-fluid bg-jumbotron p-5">
       <div class="p-5 text-center">
