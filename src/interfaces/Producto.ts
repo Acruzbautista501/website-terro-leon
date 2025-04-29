@@ -1,7 +1,6 @@
 export interface Producto {
-    imagen: string
-    nombre: string
-    precio: string
-    precioOriginal?: string
-  }
+    titulo: string
+    img: string,
+    url: string,
+}
   
