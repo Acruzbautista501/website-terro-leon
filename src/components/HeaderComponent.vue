@@ -17,9 +17,9 @@
                         <router-link class="nav-link" to="/nosotros">Nosotros</router-link>
                     </li>
                     <li class="nav-item pe-0 pe-lg-2 dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <router-link class="nav-link dropdown-toggle" to="/productos">
                             Productos
-                        </a>
+                        </router-link> 
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
