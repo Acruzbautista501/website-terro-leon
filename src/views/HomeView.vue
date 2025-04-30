@@ -7,107 +7,24 @@
 
 <template>
   <HeaderComponent />
-  <section>
-    <div id="mainCarousel" class="carousel slide carousel-fade">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+  <section class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="overlay-box rounded shadow">
+      <h2 class="mb-2 text-white text-uppercase title-hero-home display-6">Tejas y Barro se transforma</h2>
+      <p class="mb-0 text-white">Bienvenido a esta nueva era</p>
+      <div class="logo">
+        <img src="/img/logo-terro-brown.png" alt="" class="img-fluid" style="width: 300px;;">
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container-fluid bg-item-1">
-            <div class="container px-lg-5">
-              <div class="row flex-lg-row-reverse align-items-start px-lg-5">
-                <div class="col-10 mx-auto col-sm-8 col-lg-6">
-                  <img src="/img/img-carousel-1.avif" class="d-block mx-lg-auto img-fluid carousel-img" alt="Imagen 1" loading="lazy">
-                </div>
-                <div class="col-lg-6">
-                  <div class="lc-block mb-3 text-center">
-                    <img src="/img/logo-terro.avif" class="d-block mx-auto img-fluid mb-3" alt="Logo" loading="lazy">
-                  </div>
-                  <div class="lc-block mb-3 text-center">
-                    <p class="lead fs-5">Si es de barro, nosotros lo tenemos.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container-fluid bg-item-2">
-            <div class="container px-lg-5">
-              <div class="row flex-lg-row-reverse align-items-start px-lg-5 text-center">
-                <div class="col-10 mx-auto col-sm-8 col-lg-6">
-                  <img src="/img/img-carousel-2.avif" class="d-block mx-lg-auto img-fluid carousel-img" alt="Imagen 2" />
-                </div>
-                <div class="col-lg-6">
-                  <div class="lc-block mb-3 pt-lg-5 mt-lg-5">
-                    <h2 class="title-carousel">Disfruta de los <br> clásicos</h2>
-                  </div>
-                  <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-2.avif" class="d-none d-lg-block  img-fluid mb-3 mx-auto" alt="Producto 2" />
-                  </div>
-                  <div class="pt-3">
-                    <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container-fluid bg-item-3">
-            <div class="container px-lg-5">
-              <div class="row d-flex align-items-start px-lg-5 text-center">
-                <div class="col-10 mx-auto col-sm-8 col-lg-6">
-                  <img src="/img/img-carousel-3.avif" class="d-block mx-lg-auto img-fluid carousel-img" alt="Imagen 3" />
-                </div>
-                <div class="col-lg-6">
-                  <div class="lc-block mb-3 pt-lg-5 mt-lg-5">
-                    <h2 class="title-carousel">La elegancia <br>está en los <br>detalles</h2>
-                  </div>
-                  <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-3.avif" class="d-none d-lg-block  mx-auto img-fluid mb-3" alt="Producto 3" />
-                  </div>
-                  <div class="pt-3">
-                    <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container-fluid bg-item-4">
-            <div class="container px-lg-5">
-              <div class="row flex-lg-row-reverse align-items-start px-lg-5 text-center">
-                <div class="col-10 mx-auto col-sm-8 col-lg-6">
-                  <img src="/img/img-carousel-4.avif" class="d-block mx-lg-auto img-fluid carousel-img" alt="Imagen 4" />
-                </div>
-                <div class="col-lg-6">
-                  <div class="lc-block mb-3 pt-lg-5 mt-lg-5">
-                    <h2 class="title-carousel">Tenemos para <br>todos los <br>gustos</h2>
-                  </div>
-                  <div class="lc-block mb-3">
-                    <img src="/img/img-product-carousel-4.avif" class="d-none d-lg-block mx-auto img-fluid mb-3" alt="Producto 4" style="width: 50%;" />
-                  </div>
-                  <div class="pt-3">
-                    <p class="fs-6 text-uppercase text-decoration-underline letter-spacing">Teja Renacimiento</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="btn btn-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-        <span aria-hidden="true"><i class="bi bi-chevron-left bg-icon fs-1 fw-bold"></i></span>
-      </button>
-      <button class="btn btn-next" type="button" data-bs-target="#mainCarousel " data-bs-slide="next">
-        <span aria-hidden="true"><i class="bi bi-chevron-right bg-icon fs-1 fw-bold"></i></span>
-      </button>
+    </div>
+  </section>
+
+  <section class="text-center py-5 bg-section">
+    <div class="container">
+      <p class="fs-5">
+        En TERRO creemos que cada proyecto es una historia que merece ser bien contada. Por eso, te acompañamos con
+        materiales naturales, diseño con alma y un toque muy nuestro, para que transformar tu espacio sea tan emocionante como imaginarlo.
+      </p>
+      <div class="divider"></div>
+      <h3 class="slogan">SI ES DE BARRO, NOSOTROS LO TENEMOS</h3>
     </div>
   </section>
   <main class="main-home">
@@ -138,34 +55,46 @@
 </template>
 
 <style scoped>
-.bg-item-1 {
-  background-color: #e8d1a7ff;
-  color: #2A7C6F !important;
+  .hero {
+    background-image: url('/img/img-hero-home.avif'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+    color: #FFFFFF;
+  }
+
+  .overlay-box {
+    background-color: rgba(175, 175, 175, 0.3); /* color crema más transparente */
+    backdrop-filter: blur(5px);               /* difuminado tipo frosted glass */
+    -webkit-backdrop-filter: blur(5px);       /* soporte para Safari */
+    padding: 3rem;
+    text-align: center;
+    color: #3e2e20;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-.bg-item-2 {
-  background-image: url(/img/bg-item-2.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #752800 !important;
-  font-family: "Playfair Display", sans-serif !important;
-}
+  .divider {
+    width: 1px;
+    height: 60px;
+    background-color: #454015 !important;
+    margin: 2rem auto;
+  }
 
-.bg-item-3 {
-  background-image: url(/img/bg-item-3.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #0E3109 !important;
-  font-family: "Playfair Display", sans-serif !important;
-}
+  .bg-section {
+    background-color: #fff8ea;
+    color: #454015;
+  }
 
-.bg-item-4 {
-  background-image: url(/img/bg-item-4.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #0A2E5A !important;
-  font-family: "Playfair Display", sans-serif !important;
-}
+  .slogan {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .title-hero-home {
+		font-family: 'Playfair Display', serif;
+	}
 
 .title-carousel {
   font-size: 40px !important;
