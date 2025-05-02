@@ -18,27 +18,32 @@
 </script>
 
 <template>
-<footer class="bg-footer py-4">
+<footer class="bg-footer py-4 pb-5 w-100">
   <div class="container">
     <div class="row text-center text-md-start">
       <!-- Columna de contacto -->
       <div class="col-md-4 mb-4 mb-md-0 border-end">
-        <ul class="list-unstyled fs-5 mt-5">
-          <li><a href="#" class="text-decoration-none color-footer">477 628 7515</a></li>
-          <li class="mt-3 mb-3"><a href="mailto:contacto@terroacabados.com" class="text-decoration-none color-footer">contacto@terroacabados.com</a></li>
+        <ul class="list-unstyled fs-4 mt-5">
+          <li><a href="" class="text-decoration-none color-footer">477 628 7515</a></li>
+          <li class="mt-3 mb-3"><a href="" class="text-decoration-none color-footer">contacto@terroacabados.com</a></li>
           <li>
-            <a href="#" class="text-decoration-none color-footer">
+            <p href="#" class="text-decoration-none color-footer">
               Blvd. J. J. Torres Landa Ote. 5642,
               Cerrito de Jerez, 37530 León de los
               Aldama, Gto.
-            </a>
+            </p>
+          </li>
+          <li class="mt-3 mb-3">
+            <p class="text-uppercase">Horarios</p>
+            <p>Lunes a Viernes <span class="ms-5">9:00 -14:00 y 16:00- 18:00</span></p>
+            <p>Sábados <span class="ms-5">9:00 -13:00</span></p>
           </li>
         </ul>
       </div>
 
       <!-- Columna de políticas -->
       <div class="col-md-4 mb-4 mb-md-0 border-end">
-        <ul class="list-unstyled ms-lg-3 fs-5 mt-3">
+        <ul class="list-unstyled ms-lg-3 fs-4 mt-5 pt-5">
           <li class="mb-3"><router-link to="/faqs" class="text-decoration-none color-footer">FAQ´s</router-link></li>
           <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModal">Polítca de Privacidad</a></li>
           <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModalDelivery">Políticas de Entrega y Devoluciones</a></li>
@@ -51,17 +56,17 @@
       <!-- Columna de redes sociales -->
       <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
         <div class="d-flex gap-3">
-          <a href="#" class="text-dark fs-4"><i class="icon-footer bi bi-facebook fs-1 ms-3"></i></a>
-          <a href="#" class="text-dark fs-4"><i class="icon-footer bi bi-instagram fs-1 mx-3"></i></a>
-          <a href="#" class="text-dark fs-4"><i class="icon-footer bi bi-pinterest fs-1 me-3"></i></a>
-          <a href="#" class="text-dark fs-4"><i class="icon-footer bi bi-youtube fs-1 me-3"></i></a>
+          <a href="https://www.facebook.com/TejasyBarrodeLeon" target="_blank" class="text-dark fs-4"><i class="icon-footer bi bi-facebook display-1 ms-5"></i></a>
+          <a href="https://www.instagram.com/tejasybarro/" target="_blank" class="text-dark fs-4"><i class="icon-footer bi bi-instagram display-1 mx-5"></i></a>
+          <a href="https://wa.link/j9vdxm" target="_blank" class="text-dark fs-4"><i class="icon-footer bi bi-whatsapp display-1 me-5"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Pie de página -->
-    <div class="text-center mt-4 fs-6 color-footer">
-      ©2025 por Tejas y barro de León.
+    <div class="text-center mt-4 fs-5 color-footer">
+      ©2025 por Tejas y barro de León. Todos los derechos reservados. Desarollado por:
+      <a href="https://impulsodigitalmkt.com/" target="_blank" class="text-decoration-none link-footer">ImpulsoDigitalMKT</a>
     </div>
   </div>
 </footer>
@@ -75,7 +80,11 @@
     border-right: 1px solid #454015 !important;
   }
   .color-footer,
-  .icon-footer{
+  .icon-footer,
+  .link-footer{
     color: #454015 !important;
+  }
+  .link-footer:hover {
+    text-decoration: underline !important;
   }
   </style>

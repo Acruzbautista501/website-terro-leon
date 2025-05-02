@@ -1,28 +1,23 @@
-<script lang="ts" setup>
-	import { onMounted, ref } from 'vue'
-	import { Modal } from 'bootstrap'
-
-	const modal = ref<HTMLElement | null>(null)
-	let bsModal: Modal | null = null
-
-	onMounted(() => {
-		if (modal.value) {
-			bsModal = new Modal(modal.value)
-		}
-	})
-
-	function open() {
-		bsModal?.show()
-	}
-
+<script lang="ts" setup> 
+	import { onMounted, ref } from 'vue' 
+	import { Modal } from 'bootstrap' 
+	const modal = ref<HTMLElement | null>(null) 
+	let bsModal: Modal | null = null 
+	
+	onMounted(() => { 
+		if (modal.value) { 
+			bsModal = new Modal(modal.value) 
+		} 
+	}) 
+	function open() { 
+		bsModal?.show() 
+	} 
 	function close() {
-		(document.activeElement as HTMLElement)?.blur()
-		bsModal?.hide()
-		modal.value?.setAttribute('aria-hidden', 'true')
+		(document.activeElement as HTMLElement)?.blur();
+		bsModal?.hide();
+		modal.value?.setAttribute('aria-hidden', 'true');
 	}
-
-
-	defineExpose({ open, close })
+	defineExpose({ open, close }) 
 </script>
 
 <template>
@@ -33,7 +28,7 @@
           <h1 class="modal-title fs-2" id="exampleModalLabel">Política de Privacidad</h1>
           <button type="button" class="btn-close" @click="close" aria-label="Close"></button>
         </div>
-        <div class="modal-body fs-5">
+        <div class="modal-body fs-3">
 					<p>
 						<span class="fw-privacy">TERRO, S.A. de C.V.</span>, con domicilio en <span class="fw-privacy">Blvd. J. J. Torres Landa Ote. 5642, Cerrito de
 						Jerez, CP 37530, León, Guanajuato, México</span>, como responsable de la operación de la

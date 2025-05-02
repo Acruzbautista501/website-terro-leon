@@ -9,22 +9,22 @@
 		<div class="row g-0">
 			<div class="col-12 col-xl-4 bg-history d-flex flex-column justify-content-center">
 				<div class="ps-3 pe-4 ps-xxl-5 pe-xxl-5">
-					<div class=" border-top border-2 w-75 mb-3 d-none d-xl-block"></div>
+					<div class="border-top border-2 w-75 mb-3 d-none d-xl-block"></div>
 					<h1 class="title-history mt-3 mt-xl-0 mb-3 display-4 text-uppercase">Nuestra<br>Historia</h1>
-					<p class="text-history mb-3 d-block d-xl-none d-xxl-block">
+					<p class="text-history fs-3 mb-3 d-block d-xl-none d-xxl-block">
 						Todo empezó en León, Guanajuato, con un sueño familiar: transformar la construcción en algo más que obra gris.
 						Queríamos ofrecer materiales que no solo fueran funcionales, sino también bellos, naturales y llenos de significado. 
 						Así nació Tejas y Barro de León, y con el tiempo, crecimos, aprendimos, nos llenamos de ideas nuevas. 
 					</p>
-					<p class="text-history mb-3 d-block d-xl-none d-xxl-block">
+					<p class="text-history fs-3 mb-3 d-block d-xl-none d-xxl-block">
 						Hoy somos TERRO, y seguimos aquí, acompañando cada proyecto con calidad, diseño y calidez.
 					</p>
-					<p class="text-history mb-3 d-none d-xl-block d-xxl-none">
+					<p class="text-history fs-3 mb-3 d-none d-xl-block d-xxl-none">
 						Todo empezó en León, Guanajuato, con un sueño familiar: transformar la construcción en algo más que obra gris.
 						Queríamos ofrecer materiales que no solo fueran funcionales, sino también bellos, naturales y llenos de significado. 
 						Así nació Tejas y Barro de León, y con el tiempo, crecimos, aprendimos, nos llenamos de ideas nuevas. 
 					</p>
-					<p class="text-history mb-3 d-none d-xl-block d-xxl-none">
+					<p class="text-history fs-3 mb-3 d-none d-xl-block d-xxl-none">
 						Hoy somos TERRO, y seguimos aquí, acompañando cada proyecto con calidad, diseño y calidez.
 					</p>
 				</div>
@@ -40,9 +40,9 @@
 		</div>
 	</section>
 	<section class="container-fluid bg-mission">
-		<div class="p-5 text-center container">
+		<div class="p-5 text-center container w-75">
 			<h2 class="title-mission mb-4 display-4 text-uppercase">Nuestra Misión</h2>
-			<p class="mx-auto fs-4 mb-5">
+			<p class="mx-auto fs-3 mb-5">
 				En Terro, transformamos materiales en sueños. Proveemos acabados arquitectónicos de alta calidad que
 				dan vida a espacios únicos, fusionando tradición y diseño. Más que productos, ofrecemos la posibilidad de
 				crear hogares y proyectos con identidad, belleza y durabilidad.
@@ -79,15 +79,15 @@
 				<img src="/img/img-col-3.avif" alt="" class="w-100">
 			</div>
 		</div>
-		<div class="p-5 text-start container">
+		<div class="p-5 text-start container w-75">
 			<h2 class="title-vission mb-4 display-4 text-uppercase">Nuestra Visión</h2>
-			<p class="mx-auto fs-4 mb-5">
+			<p class="mx-auto fs-3 mb-5">
 				Ser la referencia en acabados arquitectónicos que combinan tradición y diseño, ofreciendo productos que
 				inspiran y transforman espacios en México y más allá. Nos consolidamos como la solución integral para
 				proyectos arquitectónicos, brindando no solo materiales de alta calidad, sino también asesoría personalizada y
 				una red de alianzas comerciales que faciliten cada etapa del proceso.
 			</p>
-			<p class="mx-auto fs-4">
+			<p class="mx-auto fs-3">
 				En TERRO, queremos ser el lugar donde arquitectos, diseñadores y clientes encuentren todo lo necesario para
 				dar vida a sus espacios con acabados aplicados en el diseño de interiores y exteriores.
 			</p>
@@ -95,7 +95,7 @@
 		</div>
 	</section>
 	<section class="container-fluid bg-values">
-		<div class=" p-5">
+		<div class="container p-5">
 			<div class="row g-5 align-items-center">
 				<div class="col-12 col-xl-7">
 					<h2 class="title-values mb-4 display-4 text-uppercase">Nuestros Valores</h2>
@@ -104,23 +104,23 @@
 							<tbody>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Calidad</th>
-									<td class="desc-value fs-5 p-3 bg-col">Materiales duraderos y <br> de primera.</td>
+									<td class="desc-value fs-3 p-3 bg-col">Materiales duraderos y <br> de primera.</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Cercanía</th>
-									<td class="desc-value fs-5 p-3 bg-col">Relación genuina con <br> clientes y profesionales</td>
+									<td class="desc-value fs-3 p-3 bg-col">Relación genuina con <br> clientes y profesionales</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Innovación</th>
-									<td class="desc-value fs-5 p-3 bg-col">Adaptarse a nuevas <br> tendencias y necesidades.</td>
+									<td class="desc-value fs-3 p-3 bg-col">Adaptarse a nuevas <br> tendencias y necesidades.</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Compromiso</th>
-									<td class="desc-value fs-5 p-3 bg-col">Ayudar a los clientes a <br> hacer realidad sus proyectos.</td>
+									<td class="desc-value fs-3 p-3 bg-col">Ayudar a los clientes a <br> hacer realidad sus proyectos.</td>
 								</tr>
 								<tr class="border-value">
 									<th class="label-value text-uppercase display-5 p-3 bg-col">Responsabilidad</th>
-									<td class="desc-value fs-5 p-3 bg-col">Cumplir con altos estándares <br> y prácticas sostenible</td>
+									<td class="desc-value fs-3 p-3 bg-col">Cumplir con altos estándares <br> y prácticas sostenible</td>
 								</tr>
 							</tbody>
 						</table>
@@ -176,16 +176,10 @@
 		.image-section img {
 			height: 500px;
 		}
-		.text-history{
-			font-size: 20px;
-		}
 	}
 	@media (max-width: 1199px) {
 		.image-section img {
 			height: 650px;
-		}
-		.text-history{
-			font-size: 22px;
 		}
 	}
     .quote {

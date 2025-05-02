@@ -1,4 +1,4 @@
-import type { Producto } from '../interfaces/Producto';
+import type { Producto, Imperdible, Inspirate } from '../interfaces/Producto';
 
 export const productos: Producto[] = [
     {
@@ -25,5 +25,43 @@ export const productos: Producto[] = [
         titulo: 'Adoquines',
         img: '/img/adoquin.jpg',
         url: '/producto/adoquines'
+    },
+]
+
+export const imperdibles: Imperdible[] = [
+    {
+        titulo: 'Tejas',
+        img: '/img/teja.jpg'
+    },
+    {
+        titulo: 'Adoquines',
+        img: '/img/adoquin.jpg'
+    },
+    {
+        titulo: 'Fachaletas',
+        img: '/img/fachaleta.jpg'
+    },
+]
+
+export const puntos: Inspirate[] = [
+    {
+        descripcion: 'Paso a paso para que todo quede perfecto',
+        url: '/recursos',
+        img: '/img/img-imperdible-1.avif'
+    },
+    {
+        descripcion: 'Aprende visualmente y sin complicaciones',
+        url: '/recursos',
+        img: '/img/img-imperdible-2.avif'
+    },
+    {
+        descripcion: 'Ideas, estilos y tendencias para tu espacio',
+        url: '/recursos',
+        img: '/img/img-imperdible-3.avif'
+    },
+    {
+        descripcion: 'Explora toda nuestra biblioteca de contenido',
+        url: '/recursos',
+        img: '/img/img-imperdible-4.avif'
     },
 ]

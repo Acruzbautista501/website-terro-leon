@@ -8,7 +8,7 @@
   onMounted(() => {
     if (navbarCollapseRef.value) {
       collapseInstance = new Collapse(navbarCollapseRef.value, {
-        toggle: false // important to prevent auto-toggle
+        toggle: false 
       })
     }
   })
@@ -21,7 +21,7 @@
 <template>
   <header class="bg-header">
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
+        <div class="container w-75">
             <router-link to="/">
                 <img src="/img/logo-terro-brown.png" alt="" class="img-fluid" style="width: 95px;">
             </router-link>
@@ -30,11 +30,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" ref="navbarCollapseRef">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
-                    <li class="nav-item pe-0 pe-lg-2">
-                        <router-link class="nav-link" to="/">Inicio</router-link>
+                    <li class="nav-item pe-0 pe-lg-3">
+                        <router-link class="nav-link fs-4" to="/">Inicio</router-link>
                     </li>
-                    <li class="nav-item pe-0 pe-lg-2">
-                        <router-link class="nav-link" to="/nosotros">Nosotros</router-link>
+                    <li class="nav-item pe-0 pe-lg-3">
+                        <router-link class="nav-link fs-4" to="/nosotros">Nosotros</router-link>
                     </li>
                     <!--<li class="nav-item pe-0 pe-lg-2 dropdown">
                         <router-link class="nav-link dropdown-toggle" to="/productos">
@@ -47,11 +47,11 @@
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                     </li>-->
-                    <li class="nav-item pe-0 pe-lg-2">
-                        <router-link class="nav-link" to="/contacto">Contacto</router-link>
+                    <li class="nav-item pe-0 pe-lg-3">
+                        <router-link class="nav-link fs-4" to="/contacto">Contacto</router-link>
                     </li>
-                    <li class="nav-item pe-0 pe-lg-2">
-                        <router-link class="nav-link" to="/recursos">Recursos</router-link>
+                    <li class="nav-item pe-0 pe-lg-3">
+                        <router-link class="nav-link fs-4" to="/recursos">Recursos</router-link>
                     </li>
                     <!--<form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">

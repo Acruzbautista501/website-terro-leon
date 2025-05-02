@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import HeaderComponent from '../components/HeaderComponent.vue';
   import FooterComponent from '../components/FooterComponent.vue';
-  import ContactComponent from '../components/ContactComponent.vue';
+  import ContactComponentMain from '../components/ContactComponentMain.vue';
+  import { imperdibles, puntos } from '../data/productos';
 
 </script>
 
@@ -9,8 +10,8 @@
   <HeaderComponent />
   <section class="hero d-flex align-items-center justify-content-center text-center">
     <div class="overlay-box rounded shadow">
-      <h2 class="mb-2 text-white text-uppercase title-hero-home display-6">Tejas y Barro se transforma</h2>
-      <p class="mb-0 text-white">Bienvenido a esta nueva era</p>
+      <h1 class="mb-2 text-white text-uppercase title-hero-home display-4">Tejas y Barro se transforma</h1>
+      <p class="mb-0 text-white fs-4">Bienvenido a esta nueva era</p>
       <div class="logo">
         <img src="/img/logo-terro-brown.png" alt="" class="img-fluid" style="width: 300px;;">
       </div>
@@ -19,37 +20,68 @@
 
   <section class="text-center py-5 bg-section">
     <div class="container">
-      <p class="fs-5">
+      <p class="fs-3 container w-75">
         En TERRO creemos que cada proyecto es una historia que merece ser bien contada. Por eso, te acompañamos con
         materiales naturales, diseño con alma y un toque muy nuestro, para que transformar tu espacio sea tan emocionante como imaginarlo.
       </p>
       <div class="divider"></div>
-      <h3 class="slogan">SI ES DE BARRO, NOSOTROS LO TENEMOS</h3>
+      <h3 class="slogan text-uppercase display-3">Si es de barro, Nosotros lo tenemos</h3>
     </div>
   </section>
   <main class="main-home">
     <section class="container-fluid bg-jumbotron p-5">
-      <div class="p-5 text-center">
-        <h2 class="display-3 text-white text-uppercase">¿Quiénes somos?</h2>
-      </div>
-    </section>
-    <section class="container my-5">
-      <div class="p-5 text-center">
-        <h4 class="title-jumbotron mb-4 display-6">¿Quiénes somos?</h4>
-        <p class="mx-auto fs-5 mb-5 text-jumbotron">
-          En Tejas y barro de León ofrecemos a nuestros clientes los productos de la más alta calidad, los mejores suministros del mercado y un excelente servicio al cliente en todas las etapas del proceso de compra y entrega.
-        </p>
-        <p class="mx-auto fs-5 mb-4 text-jumbotron">
-          Estamos comprometidos a ayudarte a realizar tu proyecto de remodelación o jardinería, desde grandes obras hasta pequeñas reparaciones. Echa un vistazo a nuestro inventario y encuentra lo que necesitas.
-        </p>
-        <div class="d-inline-flex gap-2 mb-5">
-          <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-            Contacto
-          </button>
+      <div class="container w-75">
+        <div class="row g-5">
+          <div class="col-12 col-md-6 col-xl-3 my-5 py-5">
+            <h2 class="title-jumbotron display-4 text-uppercase">Nuestros imperdibles</h2>
+            <p class="text-jumbotron fs-4">
+              Explora lo mejor de TERRO y encuentra justo lo que tu proyecto necesita.
+            </p>
+            <div class="border-bottom border-2 w-75 pt-3 mb-3"></div>
+            <div class="d-inline-flex pt-3 mx-5">
+              <router-link class="btn btn-outline-secondary btn-lg px-4 rounded-pill text-uppercase" type="button" to="/productos">
+                Ver todos
+              </router-link>
+            </div>
+          </div>
+          <div v-for="(imperdible, index) in imperdibles" :key="index" class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100 bg-transparent border-0">
+              <img class="card-img-top img-jumbotron" :src="imperdible.img" :alt="imperdible.titulo">
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <p class="text-uppercase fs-3 text-white">{{ imperdible.titulo }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <ContactComponent />
+    <section class="container-fluid p-5 color-text">
+      <div class="container w-75">
+        <div class="pt-3 pb-2">
+          <h2 class="title-jumbotron display-4 text-uppercase">Inspírate y aprende con Nosotros</h2>
+          <p class="text-jumbotron fs-4">
+            Visita nuestra sección de recursos y descubre guías, videos e ideas para hacer de tu proyecto una obra maestra.
+          </p>
+        </div>
+        <div class="row g-5">
+          <div v-for="(punto, index) in puntos" :key="index" class="col-12 col-md-6 col-xl-3">
+            <div class="card h-100 bg-transparent border-0">
+              <router-link :to="punto.url">
+                <img class="card-img-top" :src="punto.img" alt="img-punto">
+              </router-link>
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <p class="fs-4 fst-italic">{{ punto.descripcion }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ContactComponentMain />
   </main>
   <FooterComponent />
 </template>
@@ -88,153 +120,50 @@
   }
 
   .slogan {
-    font-size: 2rem;
     font-family: 'Playfair Display', serif;
   }
 
-  .title-hero-home {
+  .title-hero-home,
+  .title-jumbotron {
 		font-family: 'Playfair Display', serif;
 	}
 
-.title-carousel {
-  font-size: 40px !important;
-}
-
-.letter-spacing {
-  letter-spacing: 3px;
-}
-
-.carousel-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* Estilos base para pantallas pequeñas */
-.btn-prev,
-.btn-next {
-  position: absolute !important;
-  top: 45%;
-  background-color: transparent;
-  z-index: 1;
-}
-
-/* Estilo para pantallas pequeñas: izquierda y derecha a 20px */
-.btn-prev {
-  left: 0;
-}
-
-.btn-next {
-  right: 0;
-}
-
-/* md: ≥768px */
-@media (min-width: 768px) {
-  .btn-prev {
-    left: 40px;
+  .text-jumbotron {
+    text-align: justify;
   }
 
-  .btn-next {
-    right: 40px;
-  }
-}
-
-/* lg: ≥992px */
-@media (min-width: 992px) {
-  .btn-prev {
-    left: 60px;
+  .btn-outline-secondary {
+    background-color: #454015 !important;
+    color: #ffffff !important;
+    width: 150px;
+    padding: 12px;
   }
 
-  .btn-next {
-    right: 60px;
-  }
-}
-
-/* xl: ≥1200px */
-@media (min-width: 1200px) {
-  .btn-prev {
-    left: 80px;
+  .btn-outline-secondary:hover {
+    background-color: #fff8ea !important;
+    color: #454015 !important;
+    border: 1px solid #454015 !important;
   }
 
-  .btn-next {
-    right: 80px;
-  }
-}
-
-/* xxl: ≥1400px */
-@media (min-width: 1400px) {
-  .btn-prev {
-    left: 100px;
-  }
-
-  .btn-next {
-    right: 100px;
-  }
-}
-
-.bg-icon {
-  color:#ffffff !important
-}
-
-/* Breakpoint sm: ≥576px */
-@media (min-width: 576px) {
-  .carousel-img {
-    height: 500px;
-  }
-}
-
-/* Breakpoint md: ≥768px */
-@media (min-width: 768px) {
-  .carousel-img {
-    height: 600px;
-  }
-}
-
-/* Breakpoint lg: ≥992px */
-@media (min-width: 992px) {
-  .carousel-img {
-    height: 700px;
-  }
-}
-
-/* Breakpoint xl: ≥1200px */
-@media (min-width: 1200px) {
-  .carousel-img {
-    height: 800px;
-  }
-}
-
-.title-jumbotron,
-.text-jumbotron {
-  color: #454015 !important;
-}
-
-.btn-outline-secondary {
-  border-color: #454015 !important;
-  color: #454015 !important;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #454015 !important;
-  color: #ffffff !important;
-}
-
-.bg-jumbotron {
-  background-image: url(/img/img-jumbotron.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-}
-
-.main-home {
-  background-color: #fff8ea !important;
-}
-
-@media (min-width: 1200px) {
   .bg-jumbotron {
-    max-width: 1700px !important;
-    margin: 0 auto !important;
+    background-color: #9d9167;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: #fff8ea !important;
   }
-}
+
+  .img-jumbotron {
+      height: 300px;
+      object-fit: cover;
+  }
+
+  .color-text {
+    color: #454015 !important;
+  }
+
+  .main-home {
+    background-color: #fff8ea !important;
+  }
 
 </style>
