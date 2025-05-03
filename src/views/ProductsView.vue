@@ -8,34 +8,25 @@ import FooterComponent from '../components/FooterComponent.vue';
 
 <template>
   <HeaderComponent />
-  <section class="bg-img-product py-5 position-relative">
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-    <div class="container px-4 px-lg-5 my-5 position-relative">
-    <div class="text-center">
-      <h1 class="display-3 title-hero-product">Elegancia natural para tu construcción</h1>
-      <p class="lead mb-0">
-        Especialistas en barro, cantera y acabados únicos.
-      </p>
-    </div>
-    </div>
-  </section>
-  <section class="py-5">
-      <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center">
+  <main class="main-products">
+    <section class="container-fluid">
+      <div class="p-5 text-center container">
+          <div class="text-center py-4">
+              <h1 class="title-hero-product mb-4 display-1 text-uppercase">Nuestros productos</h1>
+          </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5 w-75">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
           <div v-for="(producto, index) in productos" :key="index" class="col mb-5">
-            <div class="card h-100">
+            <div class="card h-100 bg-transparent border-0">
               <!-- Product image -->
               <img class="card-img-top" :src="producto.img || 'https://via.placeholder.com/450x300'" alt="Product image" />
               <!-- Product details -->
               <div class="card-body p-4">
                 <div class="text-center">
-                  <h5 class="fw-bolder">{{ producto.titulo }}</h5>
-                </div>
-              </div>
-              <!-- Product actions -->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a :href="producto.url" class="btn btn-outline-dark mt-auto text-uppercase">Ver más</a>
+                  <a :href="producto.url" class="fs-3 text-uppercase text-decoration-none text-color">{{ producto.titulo }}</a>
                 </div>
               </div>
             </div>
@@ -43,20 +34,41 @@ import FooterComponent from '../components/FooterComponent.vue';
         </div>
       </div>
     </section>
-    <FooterComponent />-->
+    <section class="container-fluid">
+        <div class="px-4 pb-3">
+          <div class="col-lg-8 mx-auto text-infor">
+            <p class="lead mb-5 fs-3">
+              *Al ser productos de origen natural, los tonos y colores aquí mostrados pueden tener sutiles variaciones inherentes a los productos de barro. El color mostrado de los productos varía de acuerdo al brillo de cada pantalla.
+              Los productos flameados tienen amplias variaciones de color, resultado de la posición de el producto en el horno, patrones de rociado y cobertura resultante.
+              <br>
+              Se recomienda su compra en base a muestras físicas que puede encontrar en nuestra tienda.
+            </p>
+          </div>
+        </div>
+      </section>
+  </main>
+  <FooterComponent />
   </template>
 
   <style scoped>
-  .bg-img-product {
-    background-image: url('/img/bg-img-product.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    color: #fff8ea !important;
+  .main-products {
+      background-color: #fff8ea !important;
+      color: #454015 !important;
+  }
+  .text-color {
+    color: #454015 !important;
   }
   .title-hero-product {
 		font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #3b2415 !important;
 	}
+  .title-hero-product,
+  .text-infor {
+		font-family: 'Playfair Display', serif;
+  }
   .card-img-top {
     height: 300px;
     object-fit: cover;

@@ -36,17 +36,17 @@
                     <li class="nav-item pe-0 pe-lg-3">
                         <router-link class="nav-link fs-4" to="/nosotros">Nosotros</router-link>
                     </li>
-                    <!--<li class="nav-item pe-0 pe-lg-2 dropdown">
-                        <router-link class="nav-link dropdown-toggle" to="/productos">
+                    <li class="nav-item pe-0 pe-lg-2 dropdown">
+                        <router-link class="nav-link fs-4" to="/productos">
                             Productos
                         </router-link> 
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>-->
+                        <!--<ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>-->
+                    </li>
                     <li class="nav-item pe-0 pe-lg-3">
                         <router-link class="nav-link fs-4" to="/contacto">Contacto</router-link>
                     </li>
