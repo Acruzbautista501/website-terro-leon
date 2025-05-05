@@ -14,22 +14,17 @@
 
 <template>
   <HeaderComponent />
-  <section class="bg-img-product py-5 position-relative">
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-    <div class="container px-4 px-lg-5 my-5 position-relative">
-      <div class="text-center">
-        <h1 class="display-3 title-hero-product">Tejas que Protegen y Embellecen tu Idea</h1>
-        <p class="lead mb-0">
-          Variedad de tejas resistentes, duraderas y con estilo.
-        </p>
-      </div>
+  <section class="container-fluid bg-color">
+    <div class="p-5 text-center container">
+        <div class="text-center py-4">
+            <h1 class="title-hero-product mb-4 display-1 text-uppercase">Tejas</h1>
+        </div>
     </div>
   </section>
 
   <main class="carousel-grid">
     <!-- Delcon -->
     <section class="carousel-section">
-      <h3 class="display-4 title-brand">Tejas Delcon</h3>
       <ProductCarousel
         v-for="(teja) in delcon"
         :key="teja.id"
@@ -41,7 +36,6 @@
 
     <!-- Aguila -->
     <section class="carousel-section">
-      <h3 class="display-4 title-brand">Tejas Águila</h3>
       <ProductCarousel
         v-for="(teja) in aguila"
         :key="teja.id"
@@ -53,7 +47,6 @@
 
     <!-- IKO -->
     <section class="carousel-section">
-      <h3 class="display-4 title-brand">Tejas IKO</h3>
       <ProductCarousel
         v-for="(teja) in iko"
         :key="teja.id"
@@ -65,7 +58,6 @@
 
     <!-- Mextile -->
     <section class="carousel-section">
-      <h3 class="display-4 title-brand">Tejas Mextile</h3>
       <ProductCarousel
         v-for="(teja) in mextile"
         :key="teja.id"
@@ -75,11 +67,20 @@
       />
     </section>
   </main>
-
+  <section class="container-fluid bg-color">
+    <div class="px-4 pb-3 pt-3">
+      <div class="col-lg-8 mx-auto text-infor">
+        <p class="lead mb-5 fs-3">
+          *Al ser productos de origen natural, los tonos y colores aquí mostrados pueden tener sutiles variaciones inherentes a los productos de barro. El color mostrado de los productos varía de acuerdo al brillo de cada pantalla.
+          Los productos flameados tienen amplias variaciones de color, resultado de la posición de el producto en el horno, patrones de rociado y cobertura resultante.
+          <br>
+          Se recomienda su compra en base a muestras físicas que puede encontrar en nuestra tienda.
+        </p>
+      </div>
+    </div>
+  </section>
   <FooterComponent />
 </template>
-
-
 
 <style scoped>
  *, *::after, *::before {
@@ -88,52 +89,52 @@
     margin: 0;
   }
   
-main.carousel-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-
-@media (max-width: 1700px) {
-  main.carousel-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .bg-color {
+    background-color: #fff8ea !important;
+    color: #454015 !important;
   }
-}
 
-@media (max-width: 1200px) {
-  main.carousel-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  main.carousel-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.bg-img-product {
-    background-image: url('/img/backgound-tejas.avif'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    color: #fff8ea !important;
-  }
   .title-hero-product {
-		font-family: 'Playfair Display', serif;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #3b2415 !important;
 	}
-  .carousel-section {
-  display: contents; /* Para no romper el grid */
-}
+  
+  main.carousel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #fff8ea !important;
+    color: #454015 !important;
+  }
 
-.title-brand {
-  grid-column: 1 / -1; /* Hace que el h3 ocupe todo el ancho en el grid */
-  margin: 40px 0 20px;
-  color: #454015 !important;
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-}
+  @media (max-width: 1700px) {
+    main.carousel-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    main.carousel-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    main.carousel-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .title-hero-product,
+  .text-infor {
+    font-family: 'Playfair Display', serif;
+  }
+    .carousel-section {
+    display: contents; /* Para no romper el grid */
+  }
 
 </style>

@@ -35,17 +35,17 @@ import FooterComponent from '../components/FooterComponent.vue';
       </div>
     </section>
     <section class="container-fluid">
-        <div class="px-4 pb-3">
-          <div class="col-lg-8 mx-auto text-infor">
-            <p class="lead mb-5 fs-3">
-              *Al ser productos de origen natural, los tonos y colores aquí mostrados pueden tener sutiles variaciones inherentes a los productos de barro. El color mostrado de los productos varía de acuerdo al brillo de cada pantalla.
-              Los productos flameados tienen amplias variaciones de color, resultado de la posición de el producto en el horno, patrones de rociado y cobertura resultante.
-              <br>
-              Se recomienda su compra en base a muestras físicas que puede encontrar en nuestra tienda.
-            </p>
-          </div>
+      <div class="px-4 pb-3">
+        <div class="col-lg-8 mx-auto text-infor">
+          <p class="lead mb-5 fs-3">
+            *Al ser productos de origen natural, los tonos y colores aquí mostrados pueden tener sutiles variaciones inherentes a los productos de barro. El color mostrado de los productos varía de acuerdo al brillo de cada pantalla.
+            Los productos flameados tienen amplias variaciones de color, resultado de la posición de el producto en el horno, patrones de rociado y cobertura resultante.
+            <br>
+            Se recomienda su compra en base a muestras físicas que puede encontrar en nuestra tienda.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
   </main>
   <FooterComponent />
   </template>
@@ -59,7 +59,6 @@ import FooterComponent from '../components/FooterComponent.vue';
     color: #454015 !important;
   }
   .title-hero-product {
-		font-family: 'Playfair Display', serif;
     position: relative;
     display: inline-block;
     padding-bottom: 0.5rem;

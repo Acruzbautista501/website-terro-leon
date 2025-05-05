@@ -48,7 +48,7 @@ function goToSlide(index: number) {
       </section>
     </div>
     <!-- Título del producto -->
-    <h3 class="product-title">{{ props.title }}</h3>
+    <span class="product-title fs-3 text-uppercase text-center">{{ props.title }}</span>
         <!-- Miniaturas -->
     <div class="thumbnail-carousel-wrapper"> 
       <div :id="`thumbnailCarousel-${props.carouselId}`" class="carousel slide" data-bs-ride="false">
@@ -93,10 +93,7 @@ function goToSlide(index: number) {
 /* mismos estilos de antes */
 .product-title {
   margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  color: #333;
+  color: #454015 !important;
 }
 
 .carousel-wrapper {
@@ -283,5 +280,4 @@ button img {
     right: 40px;
   }
 }
-
 </style>
