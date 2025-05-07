@@ -145,7 +145,7 @@
       color: #fff8ea;
     }
     .title-history {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Cormorant', serif;
       line-height: 1.1;
     }
 	.text-history{
@@ -200,7 +200,7 @@
 	}
 	.title-mission,
 	.title-values{
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
 	.border-end {
     border-right: 2px solid #454015 !important;
@@ -238,11 +238,11 @@
 		color: #fff8ea;
 	}
 	.title-vission{
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
     .label-value {
       color: #454015;
-	  font-family: 'Playfair Display', serif;
+	  font-family: 'Cormorant', serif;
     }
     .desc-value {
       color: #454015;

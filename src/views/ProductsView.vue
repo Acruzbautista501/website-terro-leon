@@ -66,11 +66,45 @@ import FooterComponent from '../components/FooterComponent.vue';
 	}
   .title-hero-product,
   .text-infor {
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
   }
   .card-img-top {
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Altura base para pantallas pequeñas */
+.card-img-top {
+  height: 200px;
+}
+
+/* A partir de sm (576px) */
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 250px;
   }
+}
+
+/* A partir de md (768px) */
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 300px;
+  }
+}
+
+/* A partir de lg (992px) */
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 350px;
+  }
+}
+
+/* A partir de xl (1200px) */
+@media (min-width: 1400px) {
+  .card-img-top {
+    height: 400px;
+  }
+}
+
   </style>
   

@@ -35,20 +35,18 @@ function goToSlide(index: number) {
 <template>
   <div class="carousel-wrapper">
     <!-- Imagen principal -->
-    <div :id="`mainCarousel-${props.carouselId}`" class="carousel slide carousel-fade">
+    <div :id="`mainCarousel-${props.carouselId}`" class="carousel slide carousel-fade mb-5">
       <section class="carousel-inner">
         <div
           v-for="(image, index) in props.images"
           :key="index"
-          :class="['carousel-box', 'carousel-item', 'bg-primary', 'shadow-sm', 'rounded', { active: currentIndex === index }]"
+          :class="['carousel-box', 'carousel-item', 'shadow-sm', 'rounded', { active: currentIndex === index }]"
         >
           <img :src="image" class="d-block w-100" alt="Imagen grande" />
           <div class="pt-5 text-center"></div>
         </div>
       </section>
     </div>
-    <!-- Título del producto -->
-    <span class="product-title fs-3 text-uppercase text-center">{{ props.title }}</span>
         <!-- Miniaturas -->
     <div class="thumbnail-carousel-wrapper"> 
       <div :id="`thumbnailCarousel-${props.carouselId}`" class="carousel slide" data-bs-ride="false">
@@ -142,10 +140,9 @@ button img {
 }
 
 .carousel-box {
-  width: 400px;
-  height: 205px;
-  margin: 5px;
-  position: relative;
+  width: 545px;
+  height: 450px;
+  object-fit: cover;
 }
 
 .carousel-fade .carousel-item {
@@ -172,29 +169,29 @@ button img {
 /* Responsividad usando los puntos de ruptura de Bootstrap */
 @media (max-width: 575.98px) { /* xs - teléfonos pequeños */
   .carousel-box {
-    width: 250px;
-    height: 130px;
+    width: 290px;
+    height: 200px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { /* sm - teléfonos medianos */
   .carousel-box {
-    width: 240px;
-    height: 130px;
+    width: 350px;
+    height: 260px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) { /* md - tablets */
   .carousel-box {
-    width: 320px;
-    height: 170px;
+    width: 420px;
+    height: 330px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1440px) { /* lg - laptops */
   .carousel-box {
-    width: 350px;
-    height: 190px;
+    width: 490px;
+    height: 400px;
   }
 }
 

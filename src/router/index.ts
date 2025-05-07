@@ -8,6 +8,7 @@ import DidacticView from '../views/DidacticView.vue'
 import TermsConditionsView from '../views/TermsConditionsView.vue'
 import FAQsView from '../views/FAQsView.vue'
 import TejasView from '../views/products/TejasView.vue'
+import TejasDetailsView from '../views/products/details/TejasDetailsView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -34,6 +35,11 @@ const routes: RouteRecordRaw[] = [
     path: '/productos/tejas',
     name: 'Tejas',
     component: TejasView,
+  },
+  {
+    path: '/tejas/:tipo/:slug',
+    name: 'TejaDetalle',
+    component: TejasDetailsView,
   },
   {
     path: '/recursos',

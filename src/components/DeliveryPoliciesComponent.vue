@@ -90,7 +90,7 @@
 		color: #fff8ea;
 	}
 	.modal-title {
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
 	.fw-privacy{
 		color: #454015; 

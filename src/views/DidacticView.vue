@@ -107,7 +107,7 @@
     
     .title-mission,
     .title-vission {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Cormorant', serif;
     }
     .title-mission {
         position: relative;
@@ -144,7 +144,7 @@
 
     .video-description {
         margin-top: 1rem;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Cormorant', serif;
     }
 
     @media (min-width: 1500px) {

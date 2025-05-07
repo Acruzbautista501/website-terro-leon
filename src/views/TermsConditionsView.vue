@@ -6,9 +6,9 @@
 
 	const modalPrivacy =  ref<InstanceType<typeof PrivacyNoticeComponent> | null>(null)
   
-  function openModal() {
-    modalPrivacy.value?.open()
-  }
+	function openModal() {
+		modalPrivacy.value?.open()
+	}
 
 
 </script>
@@ -155,7 +155,7 @@
 	.conditions-title,
 	.conditions-subtitle {
 		color: #454015 !important;
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
 	.list-style {
     	list-style-type:decimal

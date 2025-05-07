@@ -178,7 +178,7 @@
 	.conditions-subtitle,
     .accordion-button {
 		color: #454015 !important;
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
 	.list-style {
         list-style-type:decimal

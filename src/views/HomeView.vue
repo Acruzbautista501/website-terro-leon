@@ -120,12 +120,12 @@
   }
 
   .slogan {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant', serif;
   }
 
   .title-hero-home,
   .title-jumbotron {
-		font-family: 'Playfair Display', serif;
+		font-family: 'Cormorant', serif;
 	}
 
   .text-jumbotron {
@@ -156,6 +156,12 @@
   .img-jumbotron {
       height: 300px;
       object-fit: cover;
+  }
+ 
+  @media(min-width: 1200px) and (max-width: 1450px) {
+    .img-jumbotron {
+      height: 245px;
+  }
   }
 
   .color-text {

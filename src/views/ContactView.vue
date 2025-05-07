@@ -45,7 +45,7 @@
     color: #454015 !important;
   }
   .text-jumbotron-contact {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant', serif;
   }
   .map-container iframe {
     height: 350px; /* Ajusta el tamaño como lo necesites */

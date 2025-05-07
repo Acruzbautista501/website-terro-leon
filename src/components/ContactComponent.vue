@@ -1,4 +1,63 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+
+const nombre = ref('');
+const telefono = ref('');
+const correo = ref('');
+const mensaje = ref('');
+const producto = ref('Formulario de contacto');
+
+const handleSubmit = async (e: Event) => {
+  e.preventDefault();
+
+  if (!nombre.value || !telefono.value || !correo.value || !mensaje.value) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Campos incompletos',
+      text: 'Por favor llena todos los campos antes de enviar.',
+    });
+    return;
+  }
+
+  try {
+    const response = await axios.post('http://pruebas-poyectos.great-site.net/contact.php', {
+      nombre: nombre.value,
+      telefono: telefono.value,
+      correo: correo.value,
+      mensaje: mensaje.value,
+      producto: producto.value,
+    });
+
+    if (response.data.success) {
+      Swal.fire({
+        icon: 'success',
+        title: '¡Enviado!',
+        text: 'Tu mensaje fue enviado con éxito.',
+      });
+      // Limpia campos
+      nombre.value = '';
+      telefono.value = '';
+      correo.value = '';
+      mensaje.value = '';
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: response.data.message || 'No se pudo enviar el formulario.',
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error del servidor',
+      text: 'Ocurrió un problema al enviar tu mensaje.',
+    });
+  }
+};
+
 </script>
 
 <template>
@@ -31,29 +90,29 @@
 					</div>
 				</div>
 				<div class="col-12 col-xl-6">
-				<form class="p-4 p-md-5 needs-validation" novalidate>
-					<div class="row g-4 mb-3">
-						<div class="col-12 col-md-6">
-							<label for="nombre" class="form-label fs-4">Nombre</label>
-							<input type="text" class="form-control rounded-0" id="nombre" required>
+					<form class="p-4 p-md-5 needs-validation" novalidate @submit="handleSubmit">
+						<div class="row g-4 mb-3">
+							<div class="col-12 col-md-6">
+								<label for="nombre" class="form-label fs-4">Nombre</label>
+								<input type="text" class="form-control rounded-0" id="nombre" v-model="nombre" required />
+							</div>
+							<div class="col-12 col-md-6">
+								<label for="telefono" class="form-label fs-4">Teléfono</label>
+								<input type="tel" class="form-control rounded-0" id="telefono" v-model="telefono" required />
+							</div>
+							<div class="col-12">
+								<label for="correo" class="form-label fs-4">Email</label>
+								<input type="email" class="form-control fs-4" id="correo" v-model="correo" required />
+							</div>
+							<div class="col-12">
+								<label for="validationCustom07" class="form-label fs-4">Mensaje</label>
+								<textarea class="form-control fst-italic fs-6 text-area-color" rows="5" id="validationCustom07" v-model="mensaje" required></textarea>
+							</div>
 						</div>
-						<div class="col-12 col-md-6">
-							<label for="telefono" class="form-label fs-4">Teléfono</label>
-							<input type="tel" class="form-control rounded-0" id="telefono" required>
+						<div class="text-end pt-4">
+							<button class="btn btn-lg btn-form rounded-0 fs-5" type="submit">Enviar</button>
 						</div>
-						<div class="col-12">
-							<label for="correo" class="form-label fs-4">Email</label>
-							<input type="email" class="form-control fs-4" id="correo" required>
-						</div>
-						<div class="col-12">
-							<label for="validationCustom07" class="form-label fs-4">Mensaje</label>
-							<textarea class="form-control fst-italic fs-6 text-area-color" rows="5" id="validationCustom07" required></textarea>
-						</div>
-					</div>
-					<div class="text-end pt-4">
-						<button class="btn btn-lg btn-form rounded-0 fs-5" type="submit">Enviar</button>
-					</div>
-				</form>
+					</form>
 				</div>
 			</div>
 		</div>

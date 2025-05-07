@@ -72,7 +72,7 @@
 }
 
 .title-contact {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant', serif;
 }
 
 input {
