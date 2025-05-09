@@ -4,6 +4,10 @@ import FooterComponent from '../../components/FooterComponent.vue';
 import { tejas } from '../../data/products/tejas';
 import { useRouter } from 'vue-router';
 
+const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
 const delcon = tejas.delcon;
 const aguila = tejas.aguila;
 const iko = tejas.iko;
@@ -35,6 +39,8 @@ function irADetalle(teja: { titulo: string; tipo: string }) {
   router.push({ name: 'TejaDetalle', params: { tipo: teja.tipo, slug } });
 }
 
+
+
 </script>
 
 <template>
@@ -56,7 +62,7 @@ function irADetalle(teja: { titulo: string; tipo: string }) {
         :key="`${teja.tipo}-${teja.id}`"
         class="col"
       >
-        <div class="card border-0 shadow-sm h-100 text-center teja-card" @click="irADetalle(teja)">
+        <div class="card border-0 shadow-sm h-100 text-center teja-card" @click="() => { irADetalle(teja); handleScrollToTop(); }">
           <img
             :src="teja.img[0] || '/img/placeholder.jpg'"
             class="card-img-top teja-img"

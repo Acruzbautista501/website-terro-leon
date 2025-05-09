@@ -22,7 +22,7 @@ const handleSubmit = async (e: Event) => {
   }
 
   try {
-    const response = await axios.post('http://pruebas-poyectos.great-site.net/contact.php', {
+    const response = await axios.post('https://terroacabados.com/correo/formulario-contacto.php', {
       nombre: nombre.value,
       telefono: telefono.value,
       correo: correo.value,

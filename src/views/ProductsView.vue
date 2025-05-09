@@ -3,6 +3,9 @@ import { productos } from '../data/productos';
 
 import HeaderComponent from '../components/HeaderComponent.vue';
 import FooterComponent from '../components/FooterComponent.vue';
+const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 
 </script>
 
@@ -26,7 +29,7 @@ import FooterComponent from '../components/FooterComponent.vue';
               <!-- Product details -->
               <div class="card-body p-4">
                 <div class="text-center">
-                  <a :href="producto.url" class="fs-3 text-uppercase text-decoration-none text-color">{{ producto.titulo }}</a>
+                  <router-link :to="producto.url" class="fs-3 text-uppercase text-decoration-none text-color" @click="handleScrollToTop">{{ producto.titulo }}</router-link>
                 </div>
               </div>
             </div>

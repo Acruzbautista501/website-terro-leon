@@ -4,6 +4,10 @@
   import ContactComponentMain from '../components/ContactComponentMain.vue';
   import { imperdibles, puntos } from '../data/productos';
 
+  const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
 </script>
 
 <template>
@@ -39,7 +43,7 @@
             </p>
             <div class="border-bottom border-2 w-75 pt-3 mb-3"></div>
             <div class="d-inline-flex pt-3 mx-5">
-              <router-link class="btn btn-outline-secondary btn-lg px-4 rounded-pill text-uppercase" type="button" to="/productos">
+              <router-link class="btn btn-outline-secondary btn-lg px-4 rounded-pill text-uppercase" type="button" to="/productos" @click="handleScrollToTop">
                 Ver todos
               </router-link>
             </div>

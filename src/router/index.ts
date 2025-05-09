@@ -14,52 +14,82 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Inicio',
-    component: HomeView
+    component: HomeView,
+    meta: { title: 'Terro | Inicio' },
   },
   {
     path: '/nosotros',
     name: 'Nosotros',
-    component: AboutView
+    component: AboutView,
+    meta: { title: 'Nosotros | Terro' },
   },
   {
     path: '/contacto',
     name: 'Contacto',
     component: ContactView,
+    meta: { title: 'Contacto | Terro' },
   },
   {
     path: '/productos',
     name: 'Productos',
     component: ProductsView,
+    meta: { title: 'Productos | Terro' },
   },
   {
     path: '/productos/tejas',
     name: 'Tejas',
     component: TejasView,
+    meta: { title: 'Tejas | Terro' },
   },
   {
     path: '/tejas/:tipo/:slug',
     name: 'TejaDetalle',
     component: TejasDetailsView,
+    meta: { title: 'Detalle de Teja | Terro' }, // Base genérica
   },
   {
     path: '/recursos',
     name: 'Recursos',
     component: DidacticView,
+    meta: { title: 'Recursos | Terro' },
   },
   {
     path: '/terminos-y-condiciones',
     name: 'Términos y Condiciones',
     component: TermsConditionsView,
+    meta: { title: 'Términos y Condiciones | Terro' },
   },
   {
     path: '/faqs',
     name: 'FAQ´s',
     component: FAQsView,
+    meta: { title: 'Preguntas Frecuentes | Terro' },
   },
-];
+]
+
 const router = createRouter({
   history: createWebHistory(),
   routes
+})
+
+// Cambiar título dinámicamente
+router.beforeEach((to, from, next) => {
+  const defaultTitle = 'Terro'
+
+  if (to.name === 'TejaDetalle') {
+    const tipo = to.params.tipo as string
+    const slug = to.params.slug as string
+
+    // Generar un título más legible basado en 'tipo' y 'slug'
+    const tipoFormatted = tipo.charAt(0).toUpperCase() + tipo.slice(1).toLowerCase(); // Capitalizar el tipo
+    const slugFormatted = slug.replace(/-/g, ' ').toUpperCase(); // Reemplazar guiones por espacios y poner en mayúsculas
+    
+    document.title = `${tipoFormatted} - ${slugFormatted} | ${defaultTitle}`
+  } else {
+    document.title = (to.meta.title as string) || defaultTitle
+  }
+
+  next()
 })
 
 export default router
