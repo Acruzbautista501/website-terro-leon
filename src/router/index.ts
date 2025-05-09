@@ -73,7 +73,7 @@ const router = createRouter({
 })
 
 // Cambiar título dinámicamente
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const defaultTitle = 'Terro'
 
   if (to.name === 'TejaDetalle') {
