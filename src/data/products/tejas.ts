@@ -109,7 +109,7 @@ export const tejas: Teja = {
                 "/img/aguila/teja renacimiento flameado negro.jpg",
                 "/img/aguila/teja renacimiento flameado veneto.jpg",
                 "/img/aguila/teja renacimiento iron stone.jpg",
-                "/img/aguila/teja renacimiento madera.jpg,",
+                "/img/aguila/teja renacimiento madera.jpg",
                 "/img/aguila/teja renacimiento rojo oxido.jpg",
                 "/img/aguila/teja renacimiento san cristobal.jpg",
                 "/img/aguila/teja renacimiento san francisco.jpg",

@@ -23,7 +23,7 @@ const handleScrollToTop = () => {
       <div class="container px-4 px-lg-5 mt-5 w-75">
         <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center">
           <div v-for="(producto, index) in productos" :key="index" class="col mb-5">
-            <div class="card h-100 bg-transparent border-0">
+            <router-link class="card h-100 bg-transparent border-0 text-decoration-none" :to="producto.url" @click="handleScrollToTop">
               <!-- Product image -->
                <div class="ratio ratio-1x1">
                  <img class="card-img-top" :src="producto.img || 'https://via.placeholder.com/450x300'" alt="Product image" />
@@ -34,7 +34,7 @@ const handleScrollToTop = () => {
                   <router-link :to="producto.url" class="fs-3 text-uppercase text-decoration-none text-color" @click="handleScrollToTop">{{ producto.titulo }}</router-link>
                 </div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>

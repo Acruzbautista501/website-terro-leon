@@ -14,17 +14,17 @@ export const productos: Producto[] = [
     {
         titulo: 'Ladrillo y block',
         img: '/img/ladrillo.jpg',
-        url: '/producto/ladrillo-y-block'
+        url: ''
     },
     {
         titulo: 'Fachaletas',
         img: '/img/fachaleta.jpg',
-        url: '/producto/fachaletas'
+        url: ''
     },
     {
         titulo: 'Adoquines',
         img: '/img/adoquin.jpg',
-        url: '/producto/adoquines'
+        url: ''
     },
 ]
 
