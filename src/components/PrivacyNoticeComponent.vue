@@ -25,7 +25,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content bg-modal-privacy">
         <div class="modal-header">
-          <h1 class="modal-title fs-2" id="exampleModalLabel">Política de Privacidad</h1>
+          <h1 class="modal-title display-4" id="exampleModalLabel">Política de Privacidad</h1>
           <button type="button" class="btn-close" @click="close" aria-label="Close"></button>
         </div>
         <div class="modal-body fs-3">
@@ -57,7 +57,7 @@
 					</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" @click="close">Cerrar</button>
+          <button type="button" class="btn btn-lg btn-secondary fs-3 p-3" @click="close">Cerrar</button>
         </div>
       </div>
     </div>
