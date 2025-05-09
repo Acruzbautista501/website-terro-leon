@@ -45,13 +45,20 @@ function irADetalle(teja: { titulo: string; tipo: string }) {
 
 <template>
   <HeaderComponent />
-
   <main class="bg-color">
     <section class="container-fluid ">
     <div class="p-5 text-center container">
       <div class="text-center py-4">
         <h1 class="title-hero-product mb-4 display-1 text-uppercase">Tejas</h1>
       </div>
+    </div>
+    <div class="mb-4 container">
+      <router-link
+        to="/productos"
+        class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-uppercase text-infor"
+      >
+      <i class="bi bi-arrow-left-circle"></i> Volver
+      </router-link>
     </div>
   </section>
 
@@ -63,11 +70,13 @@ function irADetalle(teja: { titulo: string; tipo: string }) {
         class="col"
       >
         <div class="card border-0 shadow-sm h-100 text-center teja-card" @click="() => { irADetalle(teja); handleScrollToTop(); }">
-          <img
-            :src="teja.img[0] || '/img/placeholder.jpg'"
-            class="card-img-top teja-img"
-            :alt="'Imagen de ' + teja.titulo"
-          />
+          <div class="ratio ratio-1x1">
+            <img
+                :src="teja.img[0] || '/img/placeholder.jpg'"
+                class="card-img-top"
+                :alt="'Imagen de ' + teja.titulo"
+            />
+           </div> 
           <div class="card-body">
             <h5 class="card-title text-uppercase fs-3">{{ teja.titulo }}</h5>
           </div>
@@ -126,5 +135,8 @@ function irADetalle(teja: { titulo: string; tipo: string }) {
 }
 .teja-card:hover {
   transform: scale(1.02);
+}
+.text-back {
+  color: #454015 !important;
 }
 </style>

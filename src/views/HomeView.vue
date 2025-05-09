@@ -50,7 +50,10 @@
           </div>
           <div v-for="(imperdible, index) in imperdibles" :key="index" class="col-12 col-md-6 col-xl-3">
             <div class="card h-100 bg-transparent border-0">
-              <img class="card-img-top img-jumbotron" :src="imperdible.img" :alt="imperdible.titulo">
+              <!-- Contenedor para mantener la proporción cuadrada de la imagen -->
+              <div class="ratio ratio-1x1">
+                <img class="card-img-top" :src="imperdible.img" :alt="imperdible.titulo">
+              </div>
               <div class="card-body p-4">
                 <div class="text-center">
                   <p class="text-uppercase fs-3 text-white">{{ imperdible.titulo }}</p>

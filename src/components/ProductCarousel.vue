@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 // Props
 const props = defineProps<{
@@ -11,25 +11,6 @@ const props = defineProps<{
 // Estado
 const currentIndex = ref(0);
 
-// Número de miniaturas por slide
-const buttonsPerSlide = 4;
-
-// Cálculo de grupo actual de botones
-const currentButtonGroupIndex = computed(() => Math.floor(currentIndex.value / buttonsPerSlide));
-
-// Agrupar miniaturas en slides
-const buttonGroups = computed(() => {
-  const groups = [];
-  for (let i = 0; i < props.images.length; i += buttonsPerSlide) {
-    groups.push(props.images.slice(i, i + buttonsPerSlide));
-  }
-  return groups;
-});
-
-// Función para cambiar de slide
-function goToSlide(index: number) {
-  currentIndex.value = index;
-}
 </script>
 
 <template>
@@ -46,43 +27,6 @@ function goToSlide(index: number) {
           <div class="pt-5 text-center"></div>
         </div>
       </section>
-    </div>
-        <!-- Miniaturas -->
-    <div class="thumbnail-carousel-wrapper"> 
-      <div :id="`thumbnailCarousel-${props.carouselId}`" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner d-flex flex-row">
-          <div
-            v-for="(group, groupIndex) in buttonGroups"
-            :key="groupIndex"
-            :class="['carousel-item', { active: groupIndex === currentButtonGroupIndex }]"
-          >
-            <div class="d-flex justify-content-center">
-              <div
-                v-for="(image, index) in group"
-                :key="index"
-                class="carousel-btn shadow-sm rounded"
-              >
-                <button
-                  type="button"
-                  :aria-label="`Slide ${(groupIndex * buttonsPerSlide) + index + 1}`"
-                  :class="{ active: currentIndex === (groupIndex * buttonsPerSlide) + index }"
-                  @click="goToSlide((groupIndex * buttonsPerSlide) + index)"
-                >
-                  <img :src="image" class="d-block w-100" alt="Miniatura" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <!-- Controles mini-carrusel -->
-        <button class="btn btn-prev" type="button" :data-bs-target="`#thumbnailCarousel-${props.carouselId}`" data-bs-slide="prev">
-          <span aria-hidden="true"><i class="bi bi-chevron-left bg-icon fs-5 fw-bold"></i></span>
-        </button>
-        <button class="btn btn-next" type="button" :data-bs-target="`#thumbnailCarousel-${props.carouselId}`" data-bs-slide="next">
-          <span aria-hidden="true"><i class="bi bi-chevron-right bg-icon fs-5 fw-bold"></i></span>
-        </button>
-      </div>
     </div>
   </div>
 </template>

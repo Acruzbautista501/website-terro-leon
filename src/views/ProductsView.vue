@@ -21,11 +21,13 @@ const handleScrollToTop = () => {
     </section>
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5 w-75">
-        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-center">
           <div v-for="(producto, index) in productos" :key="index" class="col mb-5">
             <div class="card h-100 bg-transparent border-0">
               <!-- Product image -->
-              <img class="card-img-top" :src="producto.img || 'https://via.placeholder.com/450x300'" alt="Product image" />
+               <div class="ratio ratio-1x1">
+                 <img class="card-img-top" :src="producto.img || 'https://via.placeholder.com/450x300'" alt="Product image" />
+                </div>
               <!-- Product details -->
               <div class="card-body p-4">
                 <div class="text-center">
@@ -71,43 +73,6 @@ const handleScrollToTop = () => {
   .text-infor {
 		font-family: 'Cormorant', serif;
   }
-  .card-img-top {
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Altura base para pantallas pequeñas */
-.card-img-top {
-  height: 200px;
-}
-
-/* A partir de sm (576px) */
-@media (min-width: 576px) {
-  .card-img-top {
-    height: 250px;
-  }
-}
-
-/* A partir de md (768px) */
-@media (min-width: 768px) {
-  .card-img-top {
-    height: 300px;
-  }
-}
-
-/* A partir de lg (992px) */
-@media (min-width: 992px) {
-  .card-img-top {
-    height: 350px;
-  }
-}
-
-/* A partir de xl (1200px) */
-@media (min-width: 1400px) {
-  .card-img-top {
-    height: 400px;
-  }
-}
 
   </style>
   
