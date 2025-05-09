@@ -1,4 +1,62 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
+import axios from 'axios'
+import Swal from 'sweetalert2'
+
+// Campos del formulario
+const nombre = ref('')
+const telefono = ref('')
+const correo = ref('')
+const mensaje = ref('')
+const producto = ref('Formulario de contacto') // Valor estático, puede cambiar
+
+const enviarFormulario = async () => {
+  if (!nombre.value || !telefono.value || !correo.value || !mensaje.value) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'Campos incompletos',
+      text: 'Por favor llena todos los campos antes de enviar.'
+    })
+    return
+  }
+
+  try {
+    const response = await axios.post('https://terroacabados.com/correo/formulario-contacto.php', {
+      nombre: nombre.value,
+      telefono: telefono.value,
+      correo: correo.value,
+      mensaje: mensaje.value,
+      producto: producto.value,
+    })
+
+    if (response.data.success) {
+      Swal.fire({
+        icon: 'success',
+        title: '¡Mensaje enviado!',
+        text: response.data.message,
+      })
+
+      // Limpiar campos
+      nombre.value = ''
+      telefono.value = ''
+      correo.value = ''
+      mensaje.value = ''
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: response.data.message,
+      })
+    }
+  } catch (error) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error de conexión',
+      text: 'No se pudo enviar el formulario. Inténtalo más tarde.',
+    })
+  }
+}
+
 </script>
 
 <template>
@@ -34,23 +92,23 @@
               Escríbenos y con gusto te ayudamos. En TERRO estamos para acompañarte en cada paso
             </p>
           </div>
-          <form class="p-4 p-md-5  needs-validation" novalidate>
+          <form class="p-4 p-md-5 needs-validation" @submit.prevent="enviarFormulario">
             <div class="row g-4 mb-3">
               <div class="col-12 col-md-6">
                 <label for="nombre" class="form-label fs-4">Nombre</label>
-                <input type="text" class="form-control rounded-0" id="nombre" required>
+                <input type="text" v-model="nombre" class="form-control rounded-0" id="nombre" required>
               </div>
               <div class="col-12 col-md-6">
                 <label for="telefono" class="form-label fs-4">Teléfono</label>
-                <input type="tel" class="form-control rounded-0" id="telefono" required>
+                <input type="tel" v-model="telefono" class="form-control rounded-0" id="telefono" required>
               </div>
               <div class="col-12">
                 <label for="correo" class="form-label fs-4">Email</label>
-                <input type="email" class="form-control fs-4" id="correo" required>
+                <input type="email" v-model="correo" class="form-control fs-4" id="correo" required>
               </div>
               <div class="col-12">
-                <label for="validationCustom07" class="form-label fs-4">Mensaje</label>
-                <textarea class="form-control fst-italic fs-6" rows="5" id="validationCustom07" placeholder="¿Requieres una cotización o no enconstraste lo que buscabas?. Dinos como podemos ayudarte" required></textarea>
+                <label for="mensaje" class="form-label fs-4">Mensaje</label>
+                <textarea v-model="mensaje" class="form-control fst-italic fs-6" rows="5" id="mensaje" placeholder="¿Requieres una cotización o no encontraste lo que buscabas?. Dinos cómo podemos ayudarte" required></textarea>
               </div>
             </div>
             <div class="text-end pt-4">
