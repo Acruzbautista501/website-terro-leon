@@ -7,3 +7,11 @@
   box-sizing: border-box; /* Hack para Box Model */
   scroll-snap-type: y mandatory;
 }
+
+.swal2-title-lg {
+  font-size: 1.8rem !important;
+}
+
+.swal2-popup-lg {
+  font-size: 1.5rem !important; /* Esto afecta el contenido general */
+}

@@ -17,6 +17,10 @@ const handleSubmit = async (e: Event) => {
       icon: 'warning',
       title: 'Campos incompletos',
       text: 'Por favor llena todos los campos antes de enviar.',
+      customClass: {
+        title: 'swal2-title-lg',
+        popup: 'swal2-popup-lg'
+      }
     });
     return;
   }
@@ -35,6 +39,10 @@ const handleSubmit = async (e: Event) => {
         icon: 'success',
         title: '¡Enviado!',
         text: 'Tu mensaje fue enviado con éxito.',
+        customClass: {
+          title: 'swal2-title-lg',
+          popup: 'swal2-popup-lg'
+        }
       });
       // Limpia campos
       nombre.value = '';
@@ -46,6 +54,10 @@ const handleSubmit = async (e: Event) => {
         icon: 'error',
         title: 'Error',
         text: response.data.message || 'No se pudo enviar el formulario.',
+        customClass: {
+          title: 'swal2-title-lg',
+          popup: 'swal2-popup-lg'
+        }
       });
     }
   } catch (error) {
@@ -54,6 +66,10 @@ const handleSubmit = async (e: Event) => {
       icon: 'error',
       title: 'Error del servidor',
       text: 'Ocurrió un problema al enviar tu mensaje.',
+      customClass: {
+        title: 'swal2-title-lg',
+        popup: 'swal2-popup-lg'
+      }
     });
   }
 };

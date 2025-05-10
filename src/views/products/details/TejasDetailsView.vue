@@ -5,6 +5,10 @@ import HeaderComponent from '../../../components/HeaderComponent.vue';
 import ProductCarousel from '../../../components/ProductCarousel.vue';
 import FooterComponent from '../../../components/FooterComponent.vue';
 import { tejas } from '../../../data/products/tejas';
+import { useQuoteStore } from '../../../stores/quoteStore';
+import Swal from 'sweetalert2'
+
+const quoteStore = useQuoteStore();
 
 const route = useRoute();
 const tipo = route.params.tipo as keyof typeof tejas;
@@ -40,6 +44,31 @@ function getColorNameFromPath(path: string): string {
   const fileName = path.split('/').pop() ?? '';
   return fileName.replace(/\.(webp|jpg|jpeg|png)$/, '').replace(/[-_]/g, ' ');
 }
+
+function cotizarProducto() {
+  if (teja.value && selectedImage.value) {
+    quoteStore.addToQuote({
+      id: teja.value.id,
+      name: teja.value.titulo,
+      color: getColorNameFromPath(selectedImage.value)
+    });
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Agregado a la cotización',
+      html: `<strong>${teja.value.titulo}</strong><br>Color: ${getColorNameFromPath(selectedImage.value)}`,
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      customClass: {
+        title: 'swal2-title-lg',
+        popup: 'swal2-popup-lg'
+      }
+    });
+  }
+}
+
 </script>
 
 <template>
@@ -65,7 +94,7 @@ function getColorNameFromPath(path: string): string {
         </div>
         <div class="col-12 col-xl-6">
           <div class="mt-4 mb-5">
-            <h1 class="text-center">{{ teja.titulo }}</h1>
+            <h1 class="text-center text-uppercase display-4">{{ teja.titulo }}</h1>
           </div>
 
           <!-- Selector de color con miniatura circular -->
@@ -107,6 +136,14 @@ function getColorNameFromPath(path: string): string {
             <p class="fs-3" v-if="teja.espesor"><span class="fw-bold">Espesor:</span> {{ teja.espesor }}</p>
             <p class="fs-3" v-if="teja.translapeMin"><span class="fw-bold">Translape mínimo:</span> {{ teja.translapeMin }}</p>
             <p class="fs-3" v-if="teja.piezasxTarima"><span class="fw-bold">Piezas por tarima:</span> {{ teja.piezasxTarima }}</p>
+          </div>
+          <div class="text-center mt-5 pt-3">
+            <button
+              class="btn btn-outline-secondary btn-lg px-4 py-2 fs-3 w-25"
+              @click="cotizarProducto"
+            >
+              <i class="bi bi-file-earmark-text me-2"></i> Cotizar
+            </button>
           </div>
         </div>
       </div>
@@ -151,6 +188,7 @@ function getColorNameFromPath(path: string): string {
   color: #fff8ea !important;
   border: 1px solid #9d9167 !important;
 }
+
 </style>
 
 
