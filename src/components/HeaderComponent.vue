@@ -16,31 +16,36 @@
 async function sendQuoteEmail() {
   // Cierra el offcanvas antes de abrir el Swal
   const offcanvasEl = document.getElementById('quoteOffcanvas')
-  const bsOffcanvas = Offcanvas.getInstance(offcanvasEl)
-  bsOffcanvas?.hide()
 
-  // Espera a que termine la animación del offcanvas
-  setTimeout(async () => {
-    const { value: email } = await Swal.fire({
-      title: 'Enviar cotización',
-      input: 'email',
-      inputLabel: 'Ingresa tu correo electrónico',
-      inputPlaceholder: 'correo@ejemplo.com',
-      confirmButtonText: 'Enviar',
-      showCancelButton: true,
-      inputValidator: (value) => {
-        if (!value) return 'Debes ingresar un correo'
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        if (!emailRegex.test(value)) return 'Correo no válido'
-      },
-      backdrop: true,
-    })
+  if (offcanvasEl) {
+    const bsOffcanvas = Offcanvas.getInstance(offcanvasEl)
+    bsOffcanvas?.hide()
 
-    if (email) {
-      quoteStore.sendQuoteByEmail(email)
-      Swal.fire('Enviado', 'Tu cotización fue enviada por correo.', 'success')
-    }
-  }, 300) // Espera a que se cierre el offcanvas antes de mostrar SweetAlert
+    // Espera a que termine la animación del offcanvas
+    setTimeout(async () => {
+      const { value: email } = await Swal.fire({
+        title: 'Enviar cotización',
+        input: 'email',
+        inputLabel: 'Ingresa tu correo electrónico',
+        inputPlaceholder: 'correo@ejemplo.com',
+        confirmButtonText: 'Enviar',
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) return 'Debes ingresar un correo'
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+          if (!emailRegex.test(value)) return 'Correo no válido'
+        },
+        backdrop: true,
+      })
+
+      if (email) {
+        quoteStore.sendQuoteByEmail(email)
+        Swal.fire('Enviado', 'Tu cotización fue enviada por correo.', 'success')
+      }
+    }, 300) // Espera a que se cierre el offcanvas antes de mostrar SweetAlert
+  } else {
+    console.error('Elemento no encontrado: quoteOffcanvas')
+  }
 }
 
 
