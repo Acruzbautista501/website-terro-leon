@@ -13,38 +13,43 @@
     offcanvas.show()
   }
 
-async function sendQuoteEmail() {
-  // Cierra el offcanvas antes de abrir el Swal
-  const offcanvasEl = document.getElementById('quoteOffcanvas')
+  async function sendQuoteEmail() {
+  const offcanvasEl = document.getElementById('quoteOffcanvas');
 
   if (offcanvasEl) {
-    const bsOffcanvas = Offcanvas.getInstance(offcanvasEl)
-    bsOffcanvas?.hide()
+    const bsOffcanvas = Offcanvas.getInstance(offcanvasEl);
+    bsOffcanvas?.hide();
 
-    // Espera a que termine la animación del offcanvas
     setTimeout(async () => {
-      const { value: email } = await Swal.fire({
+      const { value: formValues } = await Swal.fire({
         title: 'Enviar cotización',
-        input: 'email',
-        inputLabel: 'Ingresa tu correo electrónico',
-        inputPlaceholder: 'correo@ejemplo.com',
-        confirmButtonText: 'Enviar',
+        html:
+          '<input id="swal-input-email" class="swal2-input" placeholder="correo@ejemplo.com">' +
+          '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono (opcional)">',
+        focusConfirm: false,
         showCancelButton: true,
-        inputValidator: (value) => {
-          if (!value) return 'Debes ingresar un correo'
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-          if (!emailRegex.test(value)) return 'Correo no válido'
-        },
-        backdrop: true,
-      })
+        confirmButtonText: 'Enviar',
+        preConfirm: () => {
+          const email = (document.getElementById('swal-input-email') as HTMLInputElement).value;
+          const phone = (document.getElementById('swal-input-phone') as HTMLInputElement).value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (email) {
-        quoteStore.sendQuoteByEmail(email)
-        Swal.fire('Enviado', 'Tu cotización fue enviada por correo.', 'success')
+          if (!email) {
+            Swal.showValidationMessage('Debes ingresar un correo');
+          } else if (!emailRegex.test(email)) {
+            Swal.showValidationMessage('Correo no válido');
+          } else {
+            return { email, phone };
+          }
+        },
+      });
+
+      if (formValues) {
+        await quoteStore.sendQuoteByEmail(formValues.email, formValues.phone);
       }
-    }, 300) // Espera a que se cierre el offcanvas antes de mostrar SweetAlert
+    }, 300);
   } else {
-    console.error('Elemento no encontrado: quoteOffcanvas')
+    console.error('Elemento no encontrado: quoteOffcanvas');
   }
 }
 

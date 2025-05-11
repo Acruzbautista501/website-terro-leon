@@ -55,13 +55,14 @@ export const useQuoteStore = defineStore('quote', () => {
     if (item && item.quantity > 1) item.quantity -= 1
   }
 
-  const sendQuoteByEmail = async (email: string) => {
+  const sendQuoteByEmail = async (email: string, phone: string) => {
     try {
       const response = await axios.post('https://terroacabados.com/correo/formulario-cotizacion.php', {
         email,
+        phone,
         quote: quote.value,
       });
-
+  
       if (response.data.success) {
         Swal.fire({
           icon: 'success',
@@ -87,6 +88,7 @@ export const useQuoteStore = defineStore('quote', () => {
       return false;
     }
   };
+  
 
   return {
     quote,
