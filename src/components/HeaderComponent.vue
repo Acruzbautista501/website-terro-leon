@@ -28,6 +28,7 @@
           '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono (opcional)">',
         focusConfirm: false,
         showCancelButton: true,
+        cancelButtonText: 'Cancelar',
         confirmButtonText: 'Enviar',
         preConfirm: () => {
           const email = (document.getElementById('swal-input-email') as HTMLInputElement).value;
@@ -41,6 +42,10 @@
           } else {
             return { email, phone };
           }
+        },
+        customClass: {
+          title: 'swal2-title-lg',
+          popup: 'swal2-popup-lg'
         },
       });
 
