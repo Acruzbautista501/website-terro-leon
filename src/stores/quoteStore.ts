@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import axios from 'axios'
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
+import router from '../router'
 
 export interface QuoteItem {
   id: string
@@ -23,20 +24,24 @@ export const useQuoteStore = defineStore('quote', () => {
   loadFromStorage()
 
   // Guardar en localStorage cada vez que cambie
-  watch(quote, () => {
-    localStorage.setItem('quote', JSON.stringify(quote.value))
-  }, { deep: true })
+  watch(
+    quote,
+    () => {
+      localStorage.setItem('quote', JSON.stringify(quote.value))
+    },
+    { deep: true }
+  )
 
   const totalItems = computed(() => {
     return quote.value.reduce((total, item) => total + item.quantity, 0)
   })
 
   const addToQuote = (item: Omit<QuoteItem, 'quantity'>) => {
-    const existing = quote.value.find(i => i.id === item.id && i.color === item.color);
+    const existing = quote.value.find(i => i.id === item.id && i.color === item.color)
     if (existing) {
-      existing.quantity += 1;
+      existing.quantity += 1
     } else {
-      quote.value.push({ ...item, quantity: 1 });
+      quote.value.push({ ...item, quantity: 1 })
     }
   }
 
@@ -61,34 +66,51 @@ export const useQuoteStore = defineStore('quote', () => {
         email,
         phone,
         quote: quote.value,
-      });
-  
+      })
+
       if (response.data.success) {
         Swal.fire({
           icon: 'success',
           title: '¡Cotización enviada!',
           text: 'Hemos enviado tu solicitud de cotización. Revisa tu correo para la copia.',
-        });
-        return true;
+          customClass: {
+            title: 'swal2-title-lg',
+            popup: 'swal2-popup-lg'
+          },
+        }).then(() => {
+          // Vaciar cotizador y redirigir al home
+          quote.value = []
+          localStorage.removeItem('quote')
+          router.push('/')
+        })
+
+        return true
       } else {
         Swal.fire({
           icon: 'error',
           title: 'Error del servidor',
           text: response.data.error || 'No se pudo enviar la cotización.',
-        });
-        return false;
+          customClass: {
+            title: 'swal2-title-lg',
+            popup: 'swal2-popup-lg'
+          },
+        })
+        return false
       }
     } catch (error) {
       Swal.fire({
         icon: 'error',
         title: 'Error al enviar',
         text: 'Hubo un problema al intentar enviar la cotización. Intenta de nuevo.',
-      });
-      console.error(error);
-      return false;
+        customClass: {
+          title: 'swal2-title-lg',
+          popup: 'swal2-popup-lg'
+        },
+      })
+      console.error(error)
+      return false
     }
-  };
-  
+  }
 
   return {
     quote,

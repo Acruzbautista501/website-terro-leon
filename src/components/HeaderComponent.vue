@@ -24,8 +24,8 @@
       const { value: formValues } = await Swal.fire({
         title: 'Enviar cotización',
         html:
-          '<input id="swal-input-email" class="swal2-input" placeholder="correo@ejemplo.com">' +
-          '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono (opcional)">',
+          '<input id="swal-input-email" class="swal2-input" placeholder="Correo Electrónico">' +
+          '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono">',
         focusConfirm: false,
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
