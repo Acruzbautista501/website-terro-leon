@@ -9,6 +9,8 @@ import TermsConditionsView from '../views/TermsConditionsView.vue'
 import FAQsView from '../views/FAQsView.vue'
 import TejasView from '../views/products/TejasView.vue'
 import TejasDetailsView from '../views/products/details/TejasDetailsView.vue'
+import PrivacyNoticeView from '../views/PrivacyNoticeView.vue'
+import DeliveryPoliciesView from '../views/DeliveryPoliciesView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -54,16 +56,28 @@ const routes: RouteRecordRaw[] = [
     meta: { title: 'Recursos | Terro' },
   },
   {
-    path: '/terminos-y-condiciones',
-    name: 'Términos y Condiciones',
-    component: TermsConditionsView,
-    meta: { title: 'Términos y Condiciones | Terro' },
-  },
-  {
     path: '/faqs',
     name: 'FAQ´s',
     component: FAQsView,
     meta: { title: 'Preguntas Frecuentes | Terro' },
+  },
+  {
+    path: '/politica-de-privacidad',
+    name: 'Política de Privacidad',
+    component: PrivacyNoticeView,
+    meta: { title: 'Política de Privacidad | Terro' },
+  },
+    {
+    path: '/politicas-de-entrega-y-devoluciones',
+    name: 'Políticas de Entrega y Devoluciones',
+    component: DeliveryPoliciesView,
+    meta: { title: 'Políticas de Entrega y Devoluciones | Terro' },
+  },
+  {
+    path: '/terminos-y-condiciones',
+    name: 'Términos y Condiciones',
+    component: TermsConditionsView,
+    meta: { title: 'Términos y Condiciones | Terro' },
   },
 ]
 

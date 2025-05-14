@@ -49,7 +49,7 @@
             </div>
           </div>
           <div v-for="(imperdible, index) in imperdibles" :key="index" class="col-12 col-md-6 col-xl-3">
-            <div class="card h-100 bg-transparent border-0">
+            <router-link :to="imperdible.url" class="card h-100 bg-transparent border-0 text-decoration-none" @click="handleScrollToTop">
               <!-- Contenedor para mantener la proporción cuadrada de la imagen -->
               <div class="ratio ratio-1x1">
                 <img class="card-img-top" :src="imperdible.img" :alt="imperdible.titulo">
@@ -59,7 +59,7 @@
                   <p class="text-uppercase fs-3 text-white">{{ imperdible.titulo }}</p>
                 </div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>

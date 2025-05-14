@@ -41,7 +41,7 @@ export const tejas: Teja = {
         {
             id: 5,
             titulo: "Windsor Negro Carbón",
-            img: ["/img/delcon/WINDSOR-Negro-carbon.webp"],
+            img: ["/img/delcon/WINDSOR-Negro-carbon.jpg"],
             medidas: "44cm x 33cm",
             piezasxM2: "9.5",
             peso: "5.6 KG/U",

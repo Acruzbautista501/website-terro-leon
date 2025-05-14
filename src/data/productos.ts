@@ -31,15 +31,18 @@ export const productos: Producto[] = [
 export const imperdibles: Imperdible[] = [
     {
         titulo: 'Tejas',
-        img: '/img/teja.jpg'
+        img: '/img/teja.jpg',
+        url: '/productos/tejas'
     },
     {
         titulo: 'Adoquines',
-        img: '/img/adoquin.jpg'
+        img: '/img/adoquin.jpg',
+        url: ''
     },
     {
         titulo: 'Fachaletas',
-        img: '/img/fachaleta.jpg'
+        img: '/img/fachaleta.jpg',
+        url: ''
     },
 ]
 

@@ -7,6 +7,7 @@ export interface Producto {
 export interface Imperdible {
     titulo: string,
     img: string,
+    url: string;
 }
 
 export interface Inspirate {

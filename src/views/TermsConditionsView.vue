@@ -1,16 +1,10 @@
 <script lang="ts" setup>
- 	import { ref } from 'vue';
 	import FooterComponent from '../components/FooterComponent.vue';
 	import HeaderComponent from '../components/HeaderComponent.vue';
-	import PrivacyNoticeComponent from '../components/PrivacyNoticeComponent.vue';
 
-	const modalPrivacy =  ref<InstanceType<typeof PrivacyNoticeComponent> | null>(null)
-  
-	function openModal() {
-		modalPrivacy.value?.open()
-	}
-
-
+	const handleScrollToTop = () => {
+  		window.scrollTo(0, 0);
+	};
 </script>
 
 <template>
@@ -39,7 +33,7 @@
 							en los presentes términos y condiciones, incluyendo tiempos de entrega, políticas de
 							cambio o devolución de productos, método de pago, entre otros, se regirá plenamente por
 							los términos y condiciones generales publicados en nuestra página web:
-							<router-link to="/terminos-y-condiciones" class="text-decoration-none">https://terro.com.mx/terminos-y-condiciones.</router-link>
+							<router-link to="/terminos-y-condiciones" class="text-decoration-underline fw-privacy" @click.prevent="handleScrollToTop">https://terroacabados.com/terminos-y-condiciones.</router-link>
 						</p>
 						<div class="accordion accordion-flush" id="accordionFlushExample">
 							<div class="accordion-item">
@@ -109,8 +103,8 @@
 											a terceros, excepto cuando sea requerido por la ley o con el consentimiento expreso del cliente.
 										</p>
 										<p class='fs-4 text-conditions'>
-											Para más detalle, consulte nuestro
-											<a href="#" class="text-decoration-none" @click.prevent="openModal">Aviso de Privacidad</a>.
+											TERRO cuenta con una polítca de privacidad que puede consultar en el siguiente enlace: <br>
+											<router-link to="/politica-de-privacidad" class="text-decoration-underline fw-privacy" @click.prevent="handleScrollToTop">https://terroacabados.com//politica-de-privacidad.</router-link>
 										</p>
 									</div>
 								</div>
@@ -159,5 +153,8 @@
 	}
 	.list-style {
     	list-style-type:decimal
+	}
+	.fw-privacy{
+		color: #454015; 
 	}
 </style>

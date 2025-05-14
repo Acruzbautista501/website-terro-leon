@@ -1,24 +1,7 @@
 <script lang="ts" setup>
-  import { ref } from 'vue';
-  import PrivacyNoticeComponent from './PrivacyNoticeComponent.vue'
-  import DeliveryPoliciesComponent from './DeliveryPoliciesComponent.vue';
-
-  const modalPrivacy =  ref<InstanceType<typeof PrivacyNoticeComponent> | null>(null)
-  
-  function openModal() {
-    modalPrivacy.value?.open()
-  }
-
-  const modalDelivery =  ref<InstanceType<typeof DeliveryPoliciesComponent> | null>(null)
-  
-  function openModalDelivery() {
-    modalDelivery.value?.open()
-  }
-
   const handleScrollToTop = () => {
   window.scrollTo(0, 0);
 };
-
 </script>
 
 <template>
@@ -49,8 +32,8 @@
       <div class="col-md-4 mb-4 mb-md-0 border-end">
         <ul class="list-unstyled ms-lg-3 fs-4 mt-5 pt-5">
           <li class="mb-3"><router-link to="/faqs" class="text-decoration-none color-footer" @click="handleScrollToTop">FAQ´s</router-link ></li>
-          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModal">Polítca de Privacidad</a></li>
-          <li class="mb-3"><a href="#" class="text-decoration-none text-uppercase color-footer" @click.prevent="openModalDelivery">Políticas de Entrega y Devoluciones</a></li>
+          <li class="mb-3"><router-link to="/politica-de-privacidad" class="text-decoration-none text-uppercase color-footer" @click.prevent="handleScrollToTop">Polítca de Privacidad</router-link></li>
+          <li class="mb-3"><router-link to="/politicas-de-entrega-y-devoluciones" class="text-decoration-none text-uppercase color-footer" @click.prevent="handleScrollToTop">Políticas de Entrega y Devoluciones</router-link></li>
           <li class="mb-3"><router-link to="/terminos-y-condiciones" class="text-decoration-none text-uppercase color-footer" @click="handleScrollToTop">Términos y condiciones</router-link></li>
         </ul>
         <PrivacyNoticeComponent ref="modalPrivacy" />
