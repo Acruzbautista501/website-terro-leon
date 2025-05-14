@@ -13,6 +13,21 @@
     offcanvas.show()
   }
 
+  function onQuantityInput(id: string, event: Event) {
+  const target = event.target as HTMLInputElement
+  let value = parseInt(target.value)
+
+  if (isNaN(value) || value < 1) {
+    value = 1
+  }
+
+  const item = quoteStore.quote.find(i => i.id === id)
+  if (item) {
+    item.quantity = value
+  }
+}
+
+
   async function sendQuoteEmail() {
   const offcanvasEl = document.getElementById('quoteOffcanvas');
 
@@ -123,10 +138,13 @@
   </header>
     <div class="offcanvas offcanvas-end bg-header" tabindex="-1" id="quoteOffcanvas" aria-labelledby="quoteOffcanvasLabel">
     <div class="offcanvas-header">
-      <h5 class="fs-1" id="quoteOffcanvasLabel">Cotización</h5>
+      <img src="/img/logo-terro-brown.png" alt="" class="img-fluid" style="width: 95px;">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="text-center mx-auto">
+        <h5 class="fs-1" id="quoteOffcanvasLabel">Cotización</h5>
+    </div>
+    <div class="offcanvas-body ms-4">
       <div v-if="quoteStore.quote.length > 0">
         <div v-for="item in quoteStore.quote" :key="item.id" class="d-flex justify-content-between align-items-center mb-3">
           <div>
@@ -134,10 +152,18 @@
             <small class="fs-5 text-capitalize fst-italic">Color: {{ item.color }}</small>
           </div>
           <div>
-            <button class="btn btn-outline-secondary" @click="quoteStore.decreaseQuantity(item.id)">-</button>
-            <span class="mx-2">{{ item.quantity }}</span>
-            <button class="btn btn-outline-secondary" @click="quoteStore.increaseQuantity(item.id)">+</button>
-            <button class="btn btn-outline-danger btn-lg mx-4" @click="quoteStore.removeFromQuote(item.id)"><i class="bi bi-trash"></i></button>
+            <input
+              type="number"
+              class="form-control d-inline-block text-center"
+              style="width: 40%;"
+              min="1"
+              :value="item.quantity"
+              @input="onQuantityInput(item.id, $event)"
+            >
+            <span class="ms-2">m²</span>
+            <button class="btn btn-outline-danger btn-lg ms-5" @click="quoteStore.removeFromQuote(item.id)">
+              <i class="bi bi-trash"></i>
+            </button>
           </div>
         </div>
         <div class="mt-5 text-center">
