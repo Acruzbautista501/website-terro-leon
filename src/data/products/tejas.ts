@@ -4,9 +4,10 @@ export const tejas: Teja = {
     delcon: [
         {
             id: 1,
-            titulo: "Catalana: Rojo Bugambilia",
+            titulo: "Catalana",
             img: [
-                "/img/delcon/catalana_rojo_bugambilia.webp"
+                "/img/delcon/catalana rojo bugambilia.webp",
+                "/img/delcon/catalana mision terracota.webp"
             ],
             medidas: "44cm x 33cm",
             piezasxM2: "9.0",
@@ -14,9 +15,10 @@ export const tejas: Teja = {
         },
         {
             id: 2,
-            titulo: "Terracota Misión",
+            titulo: "Iberia",
             img: [
-                "/img/delcon/catalana_mision_terracota.webp"
+               "/img/delcon/iberia terracota mision.webp",
+               "/img/delcon/iberia color tabaco.webp"
             ],
             medidas: "44cm x 33cm",
             piezasxM2: "9.0",
@@ -24,56 +26,31 @@ export const tejas: Teja = {
         },
         {
             id: 3,
-            titulo: "Iberia Terracota Misión",
-            img: ["/img/delcon/iberia_terracota_mision.webp"],
+            titulo: "Windsor",
+            img: ["/img/delcon/windsor negro carbon.jpg",
+            ],
             medidas: "44cm x 33cm",
             piezasxM2: "9.5",
-            peso: "5.2 KG/U",
+            peso: "5.6 KG/U",
         },
         {
             id: 4,
-            titulo: "Color Tabaco",
-            img: ["/img/delcon/iberia-COLOR-TABACO.webp"],
-            medidas: "44cm x 33cm",
-            piezasxM2: "9.5",
-            peso: "5.2 KG/U",
-        },
-        {
-            id: 5,
-            titulo: "Windsor Negro Carbón",
-            img: ["/img/delcon/WINDSOR-Negro-carbon.jpg"],
-            medidas: "44cm x 33cm",
-            piezasxM2: "9.5",
-            peso: "5.6 KG/U",
-        },
-        {
-            id: 6,
-            titulo: "Mediterránea Café Tostado",
-            img: ["/img/delcon/mediterranea_cafe_tostado.webp"],
+            titulo: "Mediterránea",
+            img: [
+                "/img/delcon/mediterranea_cafe_tostado.webp",
+                "/img/delcon/mediterranea_nueva_españa.webp",
+                "/img/delcon/mediterranea_rojo_bugambilia.webp"
+
+                
+            ],
             medidas: "44cm x 33cm",
             piezasxM2: "10",
             peso: "5.6 KG/U",
-        },
-        {
-            id: 7,
-            titulo: "Nueva España",
-            img: ["/img/delcon/mediterranea_nueva_espana.webp"],
-            medidas: "44cm x 33cm",
-            piezasxM2: "10",
-            peso: "5.0 KG/U",
-        },
-        {
-            id: 8,
-            titulo: "Rojo Bugambilia",
-            img: ["/img/delcon/mediterranea_rojo_bugambilia.webp"],
-            medidas: "44cm x 33cm",
-            piezasxM2: "10",
-            peso: "5.0 KG/U",
         },
     ],    
     aguila: [
         {
-            id: 9,
+            id: 5,
             titulo: "Teja Casa Grande",
             img: [
                 "/img/aguila/teja casa grande bilbao.jpg",
@@ -99,7 +76,7 @@ export const tejas: Teja = {
             resistencia: "500 kgf",
         },
         {
-            id: 10,
+            id: 6,
             titulo: "Teja Renacimiento",
             img: [
                 "/img/aguila/teja renacimiento engobe paja.jpg",
@@ -129,7 +106,7 @@ export const tejas: Teja = {
             resistencia: "450-500 kgf",
         },
         {
-            id: 11,
+            id: 7,
             titulo: "Teja Córcega",
             img: [
                 "/img/aguila/teja corcega acabado natural.jpg",
@@ -146,7 +123,7 @@ export const tejas: Teja = {
             reqInstalacion: ""
         },
         {
-            id: 12,
+            id: 8,
             titulo: "Teja Florentina",
             img: [
                 "/img/aguila/teja florentina engobe paja.jpg",
@@ -176,7 +153,7 @@ export const tejas: Teja = {
             reqInstalacion: ""
         },
         {
-            id: 13,
+            id: 9,
             titulo: "Teja Plana",
             img: [
                 "/img/aguila/Plana_Madera_Flameado-negro.jpg",
@@ -219,7 +196,7 @@ export const tejas: Teja = {
             reqInstalacion: ""
         },
         {
-            id: 14,
+            id: 10,
             titulo: "Teja Rivera",
             img: [
                 "/img/aguila/teja riviera terracota.jpg",
@@ -243,8 +220,8 @@ export const tejas: Teja = {
     ],    
     iko: [
         {
-            id: 15,
-            titulo: "Tejas Armourshake",
+            id: 11,
+            titulo: "Tejas Armour Shake",
             img: [
                 "/img/iko/greystone.webp",
                 "/img/iko/madera chalet.webp",
@@ -254,7 +231,7 @@ export const tejas: Teja = {
             medidas: `37 3/8" x 18 11/16" (950 mm x 475 mm)`,
         },
         {
-            id: 16,
+            id: 12,
             titulo: "Tejas Arquitectónicas Cambridge",
             img: [
                 "/img/iko/beachwood.webp",
@@ -271,7 +248,7 @@ export const tejas: Teja = {
             medidas: `37 3/8" x 18 11/16" (950 mm x 475 mm)`,
         },
         {
-            id: 17,
+            id: 13,
             titulo: "Tejas Dynasty Cool Colors Plus Performance",
             img: [
                 "/img/iko/bayshore.webp",
@@ -284,7 +261,7 @@ export const tejas: Teja = {
             medidas: `40 7/8" x 13 3/4" (1038 mm x 349 mm)`,
         },
         {
-            id: 18,
+            id: 14,
             titulo: "Tejas Marathon Plus AR Tradicionales de 3 Lengüetas",
             img: [
                 "/img/iko/Dual Black 1.webp",
@@ -293,7 +270,7 @@ export const tejas: Teja = {
             medidas: `39 3/8" x 13 1/4" (1000 mm x 336 mm)`,
         },
         {
-            id: 19,
+            id: 15,
             titulo: "Tejas Arquitectónicas Cambridge Cool Colors Plus",
             img: [
                 "/img/iko/amber burst.webp",
@@ -308,7 +285,7 @@ export const tejas: Teja = {
             medidas: `40 7/8" x 13 3/4"(1 038 mm x 349 mm)`,
         },
         {
-            id: 20,
+            id: 16,
             titulo: "Tejas Crowne Slate Designer",
             img: [
                 "/img/iko/Regal Stone.webp",
@@ -317,7 +294,7 @@ export const tejas: Teja = {
             medidas: `39 ½ pulgadas x 13 ¼ pulgadas (1,003 mm x 336 mm)`,
         },
         {
-            id: 21,
+            id: 17,
             titulo: "Tejas Royal State",
             img: [
                 "/img/iko/Harvest Slate 2.webp",
@@ -328,7 +305,7 @@ export const tejas: Teja = {
             medidas: `40 pulgadas x 13 1/4 pulgadas (1016 mm x 336 mm)`,
         },
         {
-            id: 22,
+            id: 18,
             titulo: "Tejas Nordic Performance",
             img: [
                 "/img/iko/brownstone.webp",
@@ -343,7 +320,7 @@ export const tejas: Teja = {
             medidas: `40 7/8" x 13 3/4" (1038 mm x 349 mm)`,
         },
         {
-            id: 23,
+            id: 19,
             titulo: "Tejas Dynasty Performance",
             img: [
                 "/img/iko/atlantic blue.webp",
@@ -366,7 +343,7 @@ export const tejas: Teja = {
     ],    
     lapusa: [
         {
-            id: 24,
+            id: 20,
             titulo: "Teja Ala 28",
             img: [],
             ancho: "16.5cm",
@@ -376,7 +353,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 25,
+            id: 21,
             titulo: "Teja Ala 30",
             img: [],
             ancho: "16.5cm",
@@ -386,7 +363,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 26,
+            id: 22,
             titulo: "Teja Ala 36",
             img: [],
             ancho: "19cm",
@@ -396,7 +373,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 27,
+            id: 23,
             titulo: "Teja Ala 45",
             img: [],
             ancho: "28cm",
@@ -406,7 +383,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 28,
+            id: 24,
             titulo: "Teja Arabe",
             img: [],
             ancho: "13.5cm y 16.5cm",
@@ -416,7 +393,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 29,
+            id: 25,
             titulo: "Teja Guadalajara",
             img: [],
             ancho: "16.5cm",
@@ -426,7 +403,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 30,
+            id: 26,
             titulo: "Teja Media Caña",
             img: [],
             ancho: "16.5cm",
@@ -436,7 +413,7 @@ export const tejas: Teja = {
             espesor: "1.2cm",
         },
         {
-            id: 31,
+            id: 27,
             titulo: "Teja Recta",
             img: [],
             ancho: "16.5cm",
@@ -448,7 +425,7 @@ export const tejas: Teja = {
     ],    
     mextile: [
         {
-            id: 32,
+            id: 28,
             titulo: "Teja Catalana",
             img: [
                 "/img/mexline/catalana_arena_del_desierto.jpg",
@@ -467,7 +444,7 @@ export const tejas: Teja = {
             piezasxTarima: "236",
         },
         {
-            id: 33,
+            id: 29,
             titulo: "Teja Iberia",
             img: [
                 "/img/mexline/iberia_arena_del_desierto.jpg",
@@ -495,7 +472,7 @@ export const tejas: Teja = {
             piezasxTarima: "176",
         },
         {
-            id: 34,
+            id: 30,
             titulo: "Teja Mediterránea",
             img: [
                 "/img/mexline/iberia_maderas_selectas.jpg",
@@ -523,7 +500,7 @@ export const tejas: Teja = {
             piezasxTarima: "192",
         },
         {
-            id: 35,
+            id: 31,
             titulo: "Windsor Pizarra",
             img: [
                "/img/mexline/windsor_pizarra_cafe_tostado.jpg",
@@ -545,7 +522,7 @@ export const tejas: Teja = {
             piezasxTarima: "212",
         },
         {
-            id: 36,
+            id: 32,
             titulo: "Windsor Rustica",
             img: [
                 "/img/mexline/teja_windsor_rustica_maderas_selectas.jpg",

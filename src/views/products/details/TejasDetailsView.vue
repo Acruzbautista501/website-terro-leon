@@ -98,7 +98,7 @@ function cotizarProducto() {
           </div>
 
           <!-- Selector de color con miniatura circular -->
-          <div v-if="teja?.img?.length > 1" class="mb-4">
+          <div v-if="teja?.img?.length >= 1" class="mb-4">
             <label class="form-label fs-3 fw-bold">Selecciona un color:</label>
             <div class="row g-2">
               <div
