@@ -8,7 +8,9 @@ import DidacticView from '../views/DidacticView.vue'
 import TermsConditionsView from '../views/TermsConditionsView.vue'
 import FAQsView from '../views/FAQsView.vue'
 import TejasView from '../views/products/TejasView.vue'
+import FachaletasView from '../views/products/FachaletasView.vue'
 import TejasDetailsView from '../views/products/details/TejasDetailsView.vue'
+import FachaletasDetailsView from '../views/products/details/FachaletasDetailsView.vue'
 import PrivacyNoticeView from '../views/PrivacyNoticeView.vue'
 import DeliveryPoliciesView from '../views/DeliveryPoliciesView.vue'
 
@@ -43,11 +45,23 @@ const routes: RouteRecordRaw[] = [
     component: TejasView,
     meta: { title: 'Tejas | Terro' },
   },
+    {
+    path: '/productos/fachaletas-y-piedras',
+    name: 'Fachaletas y Piedras',
+    component: FachaletasView,
+    meta: { title: 'Tejas | Terro' },
+  },
   {
     path: '/tejas/:tipo/:slug',
     name: 'TejaDetalle',
     component: TejasDetailsView,
     meta: { title: 'Detalle de Teja | Terro' }, // Base genérica
+  },
+    {
+    path: '/fachaletas-y-piedras/:tipo/:slug',
+    name: 'FachaletaDetalle',
+    component: FachaletasDetailsView,
+    meta: { title: 'Detalle de Fachaletas | Terro' }, // Base genérica
   },
   {
     path: '/recursos',

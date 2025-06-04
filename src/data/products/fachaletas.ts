@@ -1,39 +1,43 @@
 import type { Fachaleta } from "../../interfaces/products/Fachaletas";
 
 export const fachaletas: Fachaleta = {
-    lapusa: [
-        {
-            titulo: "Fachaleta Natural",
-            img: [],
-            ancho: "7.5 cm",
-            largo: "25 cm",
-            espesor: "1.2 cm",
-            piezasxM2: "53",
-            peso: "0.350 Kg",
-        },
-        {
-            titulo: "Fachaleta Grafito",
-            img: [],
-            ancho: "7.5 cm",
-            largo: "25 cm",
-            espesor: "1.2 cm",
-            piezasxM2: "53",
-            peso: "0.350 Kg",
-        },
-        {
-            titulo: "Fachaleta Tulum",
-            img: [],
-            ancho: "7.5 cm",
-            largo: "25 cm",
-            espesor: "1.2 cm",
-            piezasxM2: "53",
-            peso: "0.350 Kg",
-        },
-    ],
+    // lapusa: [
+    //     {
+    //         titulo: "Fachaleta Natural",
+    //         img: [],
+    //         ancho: "7.5 cm",
+    //         largo: "25 cm",
+    //         espesor: "1.2 cm",
+    //         piezasxM2: "53",
+    //         peso: "0.350 Kg",
+    //     },
+    //     {
+    //         titulo: "Fachaleta Grafito",
+    //         img: [],
+    //         ancho: "7.5 cm",
+    //         largo: "25 cm",
+    //         espesor: "1.2 cm",
+    //         piezasxM2: "53",
+    //         peso: "0.350 Kg",
+    //     },
+    //     {
+    //         titulo: "Fachaleta Tulum",
+    //         img: [],
+    //         ancho: "7.5 cm",
+    //         largo: "25 cm",
+    //         espesor: "1.2 cm",
+    //         piezasxM2: "53",
+    //         peso: "0.350 Kg",
+    //     },
+    // ],
     rockStone: [
         {
             titulo: "Piedra Almodonada",
-            img: [],
+            img: [
+                "/img/rockstone/almodonada-arizona.jpg",
+                "/img/rockstone/almodonada-caribe.jpg",
+                "/img/rockstone/almodonada-paja.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -46,7 +50,13 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedra Alto Relieve",
-            img: [],
+            img: [
+                "/img/rockstone/piedra-alto-relieve-ocre.jpg",
+                "/img/rockstone/PIEDRA-ALTO-RELIEVE-BEIGE.jpg",
+                "/img/rockstone/PIEDRA-ALTO-RELIEVE-CARIBE.jpg",
+                "/img/rockstone/PIEDRA-ALTO-RELIEVE-LAVA.jpg",
+                "/img/rockstone/PIEDRA-ALTO-RELIEVE-MIXTECA.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -59,7 +69,9 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedra Cañada",
-            img: [],
+            img: [
+                "/img/rockstone/PIEDRA-CAÑADA-UXMAL-MURO.png",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -70,7 +82,7 @@ export const fachaletas: Fachaleta = {
             pesoxCaja: "36 Kg",
             margenVariacion: "+/- 3%"
         },
-        {
+        /*{
             titulo: "Piedra Colosal",
             img: [],
             medidas: "",
@@ -95,10 +107,13 @@ export const fachaletas: Fachaleta = {
             juntaRecom: "Junta recomendada de 1.50 cm",
             pesoxCaja: "34.20 Kg",
             margenVariacion: "+/- 3%"
-        },
+        },*/
         {
             titulo: "Piedra de Rio",
-            img: [],
+            img: [
+                "/img/rockstone/PIEDRA-DE-RÍO-OLMECA.jpg",
+                "/img/rockstone/PIEDRA-DE-RÍO-SAN-FELIPE-MURO.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -111,7 +126,9 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedra Huasteca",
-            img: [],
+            img: [
+                "/img/rockstone/PIEDRA-DE-RÍO-SAN-FELIPE-MURO.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -124,7 +141,10 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedra Petril",
-            img: [],
+            img: [
+                "/img/rockstone/PIEDRA-PRETIL-OLMECA.jpg",
+                "/img/rockstone/PIEDRA-PRETIL-tajin.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -137,7 +157,12 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedra Veneciana",
-            img: [],
+            img: [
+                "/img/rockstone/VENECIANA-AMBAR.jpg",
+                "/img/rockstone/veneciana-aqua.jpg",
+                "/img/rockstone/VENECIANA-COBRIZA.jpg",
+                "/img/rockstone/VENECIANA-DORADA.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -150,7 +175,13 @@ export const fachaletas: Fachaleta = {
         },
         {
             titulo: "Piedrín",
-            img: [],
+            img: [
+                "/img/rockstone/piedrin-caribe.jpg",
+                "/img/rockstone/PIEDRIN-CONFETI.jpg",
+                "/img/rockstone/Piedrín-Durazno.jpg",
+                "/img/rockstone/Piedrín-Olmeca.jpg",
+                "/img/rockstone/piedrin-oro-viejo.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -165,7 +196,13 @@ export const fachaletas: Fachaleta = {
     mextile: [
         {
             titulo: "Rack",
-            img: [],
+            img: [
+                "/img/mexline/fachaleta_rack_trigo.jpg",
+                "/img/mexline/fachaleta_rack_gris_plomo.jpg",
+                "/img/mexline/fachaleta_rack_rojo_rubi.jpg",
+                "/img/mexline/fachaleta_rack_tabaco.jpg",
+                "/img/mexline/fachaleta_rack_terracota.jpg",
+            ],
             medidas: "40cm x19.5cm",
             espesor: "4.5cm",
             pesoxPzas: "8 Kg",
@@ -177,148 +214,67 @@ export const fachaletas: Fachaleta = {
     ],
     perdura: [
         {
-            titulo: "Antik Antico",
+            titulo: "Antik",
             largo: "Máx 20.3cm, Min 20.3cm",
             ancho: "Máx 6.4cm, Min 6.4cm",
             grosor: "1.4cm a 1.7cm",
             pzasxCaja: "60 piezas",
-            img: []
+            img: [
+                "/img/perdura/Antik-Ático.jpg",
+                "/img/perdura/Antik-Cava.jpg",
+                "/img/perdura/Antik-Torre.jpg",
+            ]
         },
         {
-            titulo: "Antik Cava",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 6.4cm, Min 6.4cm",
-            grosor: "1.4cm a 1.7cm",
-            pzasxCaja: "60 piezas",
-            img: []
-        },
-        {
-            titulo: "Antik Torreo",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 6.4cm, Min 6.4cm",
-            grosor: "1.4cm a 1.7cm",
-            pzasxCaja: "60 piezas",
-            img: []
-        },
-        {
-            titulo: "Arabe Chicago",
+            titulo: "Arabe",
             largo: "Máx 20.3cm, Min 20.3cm",
             ancho: "Máx 5.5cm, Min 5.5cm",
             grosor: "1.2cm a 1.3cm",
             pzasxCaja: "109 piezas",
-            img: []
+            img: [
+                "/img/perdura/Arabe-Chicago.jpg",
+                "/img/perdura/Arabe-Grafito.jpg",
+                "/img/perdura/Arabe-Hacienda.jpg",
+                "/img/perdura/Arabe-Mision.jpg",
+                "/img/perdura/Arabe-New-Jersey.jpg",
+                "/img/perdura/Arabe-Rojo-Cardenal.jpg",
+            ]
         },
         {
-            titulo: "Arabe Grafito",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 5.5cm, Min 5.5cm",
-            grosor: "1.2cm a 1.3cm",
-            pzasxCaja: "109 piezas",
-            img: []
-        },
-        {
-            titulo: "Arabe Hacienda",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 5.5cm, Min 5.5cm",
-            grosor: "1.2cm a 1.3cm",
-            pzasxCaja: "109 piezas",
-            img: []
-        },
-        {
-            titulo: "Arabe Misión",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 5.5cm, Min 5.5cm",
-            grosor: "1.2cm a 1.3cm",
-            pzasxCaja: "109 piezas",
-            img: []
-        },
-        {
-            titulo: "Arabe New York",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 5.5cm, Min 5.5cm",
-            grosor: "1.2cm a 1.3cm",
-            pzasxCaja: "109 piezas",
-            img: []
-        },
-        {
-            titulo: "Arabe Rojo Cardenal",
-            largo: "Máx 20.3cm, Min 20.3cm",
-            ancho: "Máx 5.5cm, Min 5.5cm",
-            grosor: "1.2cm a 1.3cm",
-            pzasxCaja: "109 piezas",
-            img: []
-        },
-        {
-            titulo: "Corcho Hacienda",
+            titulo: "Corcho",
             largo: "Máx 25cm, Min 25cm",
             ancho: "Máx 7.5cm, Min 7.5cm",
             grosor: "1.4cm a 1.7cm",
             pzasxCaja: "45 piezas",
-            img: []
+            img: [
+                "/img/perdura/Corcho-Hacienda.jpg",
+                "/img/perdura/Corcho-New-Jersey.jpg",
+            ]
         },
         {
-            titulo: "Corcho New Jersey",
-            largo: "Máx 25cm, Min 25cm",
-            ancho: "Máx 7.5cm, Min 7.5cm",
-            grosor: "1.4cm a 1.7cm",
-            pzasxCaja: "45 piezas",
-            img: []
-        },
-        {
-            titulo: "Old Brick Boston",
+            titulo: "Old Brick",
             largo: "Máx 21cm, Min 20cm",
             ancho: "Máx 6.4cm, Min 6.5cm",
             grosor: "1.5cm a 1.7cm",
             pzasxCaja: "60 piezas",
-            img: []
+            img: [
+                "/img/perdura/Old-Brick-Boston.jpg",
+                "/img/perdura/Old-Brick-Nevada.jpg",
+                "/img/perdura/Old-Brick-Queens.jpg",
+                "/img/perdura/Old-Brick-Soho.jpg",
+            ]
         },
         {
-            titulo: "Old Brick Nevada",
-            largo: "Máx 21cm, Min 20cm",
-            ancho: "Máx 6.4cm, Min 6.5cm",
-            grosor: "1.5cm a 1.7cm",
-            pzasxCaja: "60 piezas",
-            img: []
-        },
-        {
-            titulo: "Old Brick Queens",
-            largo: "Máx 21cm, Min 20cm",
-            ancho: "Máx 6.4cm, Min 6.5cm",
-            grosor: "1.5cm a 1.7cm",
-            pzasxCaja: "60 piezas",
-            img: []
-        },
-        {
-            titulo: "Old Brick Soho",
-            largo: "Máx 21cm, Min 20cm",
-            ancho: "Máx 6.4cm, Min 6.5cm",
-            grosor: "1.5cm a 1.7cm",
-            pzasxCaja: "60 piezas",
-            img: []
-        },
-        {
-            titulo: "Rustica Glaciar",
+            titulo: "Rustica",
             largo: "25cm",
             ancho: "7.5cm",
             grosor: "1.4cm a 1.4cm",
             pzasxCaja: "45 piezas",
-            img: []
-        },
-        {
-            titulo: "Rustica Pueblo Viejo",
-            largo: "25cm",
-            ancho: "7.5cm",
-            grosor: "1.4cm a 1.4cm",
-            pzasxCaja: "45 piezas",
-            img: []
-        },
-        {
-            titulo: "Rustica Rojo Cardenal",
-            largo: "25cm",
-            ancho: "7.5cm",
-            grosor: "1.4cm a 1.4cm",
-            pzasxCaja: "45 piezas",
-            img: []
+            img: [
+                "/img/perdura/Rustica-Glaciar.jpg",
+                "/img/perdura/Rustica-Pueblo-Viejo.jpg",
+                "/img/perdura/Rustica-Rojo-Cardenal.jpg",
+            ]
         },
         {
             titulo: "Adobe",
@@ -326,7 +282,9 @@ export const fachaletas: Fachaleta = {
             ancho: "8cm",
             grosor: "3cm",
             pzasxCaja: "16 piezas",
-            img: []
+            img: [
+                "/img/perdura/Adobe.jpg",
+            ]
         },
         {
             titulo: "Adoquín",
@@ -334,23 +292,20 @@ export const fachaletas: Fachaleta = {
             ancho: "Máx 20cm, Min 10cm",
             grosor: "4cm",
             pzasxCaja: "31 piezas",
-            img: []
+            img: [
+                "/img/perdura/Adoquin-Arizona.jpg",
+            ]
         },
         {
-            titulo: "Apilable Montaña",
+            titulo: "Apilable",
             largo: "Máx 53cm, Min 22cm",
             ancho: "Máx 17cm, Min 3cm",
             grosor: "2cm a 6cm",
             pzasxCaja: "Máx 36, Min 30 piezas",
-            img: []
-        },
-        {
-            titulo: "Apilable Santa Fe",
-            largo: "Máx 53cm, Min 22cm",
-            ancho: "Máx 17cm, Min 3cm",
-            grosor: "2cm a 6cm",
-            pzasxCaja: "109 piezas",
-            img: []
+            img: [
+                "/img/perdura/Apilable-Montaña.jpg",
+                "/img/perdura/Apilable-Santa-Fe.jpg",
+            ]
         },
         {
             titulo: "Arenisca Capuchino",
@@ -358,79 +313,36 @@ export const fachaletas: Fachaleta = {
             ancho: "Máx 7.6cm, Min 7.4cm",
             grosor: "2.2cm a 4.8cm",
             pzasxCaja: "Máx 23, Min 22 piezas",
-            img: []
+            img: [
+                "/img/perdura/Arenisca-Capuchino.jpg",
+            ]
         },
         {
-            titulo: "Carolina Acapulco",
+            titulo: "Carolina",
             largo: "Máx 52cm, Min 20cm",
             ancho: "10cm",
             grosor: "6cm",
             pzasxCaja: "Máx 39, Min 30 piezas",
-            img: []
+            img: [
+                "/img/perdura/Carolina-Acapulco.jpg",
+                "/img/perdura/Carolina-Blanca.jpg",
+                "/img/perdura/Carolina-Nepal.jpg",
+                "/img/perdura/Carolina-Onix.jpg",
+                "/img/perdura/Carolina-Plata.jpg",
+            ]
         },
         {
-            titulo: "Carolina Blanca",
-            largo: "Máx 52cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "6cm",
-            pzasxCaja: "Máx 39, Min 30 piezas",
-            img: []
-        },
-        {
-            titulo: "Carolina Nepal",
-            largo: "Máx 52cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "6cm",
-            pzasxCaja: "Máx 39, Min 30 piezas",
-            img: []
-        },
-        {
-            titulo: "Carolina Onix",
-            largo: "Máx 52cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "6cm",
-            pzasxCaja: "Máx 39, Min 30 piezas",
-            img: []
-        },
-        {
-            titulo: "Carolina Plata",
-            largo: "Máx 52cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "6cm",
-            pzasxCaja: "Máx 39, Min 30 piezas",
-            img: []
-        },
-        {
-            titulo: "Castillo Europeo Beige",
+            titulo: "Castillo Europeo",
             largo: "Máx 40cm, Min 5cm",
             ancho: "Máx 30cm, Min 5cm",
             grosor: "3cm",
             pzasxCaja: "Máx 26 piezas, Mín 23 piezas",
-            img: []
-        },
-        {
-            titulo: "Castillo Europeo Bronce",
-            largo: "Máx 40cm, Min 5cm",
-            ancho: "Máx 30cm, Min 5cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 26 piezas, Mín 23 piezas",
-            img: []
-        },
-        {
-            titulo: "Castillo Europeo Condado",
-            largo: "Máx 40cm, Min 5cm",
-            ancho: "Máx 30cm, Min 5cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 26 piezas, Mín 23 piezas",
-            img: []
-        },
-        {
-            titulo: "Castillo Europeo Gris",
-            largo: "Máx 40cm, Min 5cm",
-            ancho: "Máx 30cm, Min 5cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 26 piezas, Mín 23 piezas",
-            img: []
+            img: [
+                "/img/perdura/Castillo-Europeo-Beige.jpg",
+                "/img/perdura/Castillo-Europeo-Bronce.jpg",
+                "/img/perdura/Castillo-Europeo-Condado.jpg",
+                "/img/perdura/Castillo-Europeo-Gris.jpg",
+            ]
         },
         {
             titulo: "Coral",
@@ -438,159 +350,89 @@ export const fachaletas: Fachaleta = {
             ancho: "Máx 33cm, Min 16cm",
             grosor: "Máx 4.4cm, Mín 1.7cm",
             pzasxCaja: "Cantidad variada",
-            img: []
+            img: [
+                "/img/perdura/Coral.jpg",
+            ]
         },
         {
-            titulo: "Creta Ebano",
+            titulo: "Creta",
             largo: "Máx 50cm, Min 20cm",
             ancho: "Máx 12cm, Min 12cm",
             grosor: "Máx 3.6cm, Mín 1.6cm",
             pzasxCaja: "Máx 30 piezas, Mín 21 piezas",
-            img: []
+            img: [
+                "/img/perdura/Creta-Ebano.jpg",
+            ]
         },
-        {
-            titulo: "Creta Perlino",
-            largo: "Máx 50cm, Min 20cm",
-            ancho: "Máx 12cm, Min 12cm",
-            grosor: "Máx 3.6cm, Mín 1.6cm",
-            pzasxCaja: "Máx 30 piezas, Mín 21 piezas",
-            img: []
-        },
+        // {
+        //     titulo: "Creta Perlino",
+        //     largo: "Máx 50cm, Min 20cm",
+        //     ancho: "Máx 12cm, Min 12cm",
+        //     grosor: "Máx 3.6cm, Mín 1.6cm",
+        //     pzasxCaja: "Máx 30 piezas, Mín 21 piezas",
+        //     img: []
+        // },
         {
             titulo: "Drift Ligera",
             largo: "Máx 55cm, Min 20cm",
             ancho: "Máx 35cm, Min 14cm",
             grosor: "5cm",
             pzasxCaja: "Máx 19 piezas, Mín 17 piezas",
-            img: []
+            img: [
+                "/img/perdura/Drift-Ligera.jpg",
+            ]
         },
         {
-            titulo: "Ensenada Moka",
+            titulo: "Ensenada",
             largo: "Máx 40.8cm, Min 9.8cm",
             ancho: "Máx 12.6cm, Min 6.3cm",
             grosor: "1.4cm a 3.6cm",
             pzasxCaja: "45 piezas",
-            img: []
+            img: [
+                "/img/perdura/Ensenada-Moka.jpg",
+                "/img/perdura/Ensenada-Oxford.jpg",
+            ]
         },
         {
-            titulo: "Ensenada Oxford",
-            largo: "Máx 40.8cm, Min 9.8cm",
-            ancho: "Máx 12.6cm, Min 6.3cm",
-            grosor: "1.4cm a 3.6cm",
-            pzasxCaja: "45 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Basalto",
+            titulo: "Fast Set",
             largo: "Máx 55cm, Min 20cm",
             ancho: "Máx 10cm, Min 10cm",
             grosor: "3cm",
             pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
+            img: [
+                "/img/perdura/Fast-Set-Basalto.jpg",
+                "/img/perdura/Fast-Set-Beige.jpg",
+                "/img/perdura/Fast-Set-Calabria.jpg",
+                "/img/perdura/Fast-Set-Careyes.jpg",
+                "/img/perdura/Fast-Set-Chocolate.jpg",
+                "/img/perdura/Fast-Set-Himalaya.jpg",
+                "/img/perdura/Fast-Set-Peninsula.jpg",
+                "/img/perdura/Fast-Set-Terracota.jpg",
+            ]
         },
         {
-            titulo: "Fast Set Beige",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Calabria",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Careyes",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Chocolate",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Himalaya",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Península",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Fast Set Terracota",
-            largo: "Máx 55cm, Min 20cm",
-            ancho: "Máx 10cm, Min 10cm",
-            grosor: "3cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Galarza 33 Blanco",
+            titulo: "Galarza Blanco",
             largo: "Máx 33.2cm, Min 32.8cm",
             ancho: "Máx 33.2cm, Min 32.8cm",
             grosor: "1.7cm a 2cm",
             pzasxCaja: "10 piezas",
-            img: []
+            img: [
+                "/img/perdura/Galarza-33-Blanco.jpg",
+                "/img/perdura/Galarza-49-Blanco.jpg",
+                "/img/perdura/Galarza-Mixta-Blanco.jpg",
+            ]
         },
         {
-            titulo: "Galarza 49 Blanco",
-            largo: "Máx 49.8cm, Min 49.2cm",
-            ancho: "Máx 33.2cm, Min 32.8cm",
-            grosor: "1.7cm a 2cm",
-            pzasxCaja: "8 piezas",
-            img: []
-        },
-        {
-            titulo: "Galarza Mixta Blanco",
-            largo: "Máx 49.8cm, Min 16.3cm",
-            ancho: "Máx 33.2cm, Min 16.3cm",
-            grosor: "1.7cm a 2cm",
-            pzasxCaja: "Máx 16 piezas, Mín 10 piezas",
-            img: []
-        },
-        {
-            titulo: "Laja Apache",
+            titulo: "Laja",
             largo: "Máx 56cm, Min 20cm",
             ancho: "Máx 38cm, Min 15cm",
             grosor: "4cm",
             pzasxCaja: "Máx 16 piezas, Mín 14 piezas",
-            img: []
-        },
-        {
-            titulo: "Laja Dorada",
-            largo: "Máx 56cm, Min 20cm",
-            ancho: "Máx 38cm, Min 15cm",
-            grosor: "4cm",
-            pzasxCaja: "Máx 16 piezas, Mín 14 piezas",
-            img: []
-        },
-        {
-            titulo: "Laja Himalaya",
-            largo: "Máx 56cm, Min 20cm",
-            ancho: "Máx 38cm, Min 15cm",
-            grosor: "4cm",
-            pzasxCaja: "Máx 16 piezas, Mín 14 piezas",
-            img: []
+            img: [
+                "/img/perdura/Laja-Apache.jpg",
+                "/img/perdura/Laja-Dorada.jpg",
+                "/img/perdura/Laja-Himalaya.jpg",
+            ]
         },
         {
             titulo: "Muro Alpicat",
@@ -598,72 +440,53 @@ export const fachaletas: Fachaleta = {
             ancho: "17cm",
             grosor: "1.5cm",
             pzasxCaja: "27 piezas",
-            img: []
+            img: [
+                "/img/perdura/Muro-Alpicat.jpg",
+            ]
         },
         {
-            titulo: "Recinto Negra",
+            titulo: "Recinto Negro",
             largo: "Máx 33.2cm, Min 32.8cm",
             ancho: "Máx 33.2cm, Min 32.8cm",
             grosor: "1.9cm",
             pzasxCaja: "10 piezas",
-            img: []
+            img: [
+                "/img/perdura/Recinto-Negro.jpg",
+            ]
         },
         {
-            titulo: "Sherpa Argento",
+            titulo: "Sherpa",
             largo: "Máx 50cm, Min 20cm",
             ancho: "10cm",
             grosor: "1.8cm a 3.8cm",
             pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
+            img: [
+                "/img/perdura/Sherpa-Argento.jpg",
+                "/img/perdura/Sherpa-Ebano.jpg",
+                "/img/perdura/Sherpa-Perlino.jpg",
+            ]
         },
         {
-            titulo: "Sherpa Ebano",
-            largo: "Máx 50cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "1.8cm a 3.8cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Sherpa Perlino",
-            largo: "Máx 50cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "1.8cm a 3.8cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Vulcano Grafito",
+            titulo: "Vulcano",
             largo: "Máx 50cm, Min 20cm",
             ancho: "10cm",
             grosor: "4cm",
             pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
+            img: [
+                "/img/perdura/Vulcano-Grafito.jpg",
+                "/img/perdura/Vulcano-Santa-Elena.jpg",
+            ]
         },
         {
-            titulo: "Vulcano Santa Helena",
-            largo: "Máx 50cm, Min 20cm",
-            ancho: "10cm",
-            grosor: "4cm",
-            pzasxCaja: "Máx 32 piezas, Mín 28 piezas",
-            img: []
-        },
-        {
-            titulo: "Woodstone Cenizo",
+            titulo: "Woodstone",
             largo: "92cm",
             ancho: "Máx 20cm, Min 15cm",
             grosor: "2.2cm a 2.5cm",
             pzasxCaja: "5 piezas",
-            img: []
-        },
-        {
-            titulo: "Woodstone Pino Viejo",
-            largo: "92cm",
-            ancho: "Máx 20cm, Min 15cm",
-            grosor: "2.2cm a 2.5cm",
-            pzasxCaja: "5 piezas",
-            img: []
-        },
-                    
+            img: [
+                "/img/perdura/Woodstone-Cenizo.jpg",
+                "/img/perdura/Woodstone-Pino-Viejo.jpg",
+            ]
+        },              
     ],
 }

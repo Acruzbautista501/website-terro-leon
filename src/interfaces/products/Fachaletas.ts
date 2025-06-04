@@ -1,19 +1,19 @@
 export interface Fachaleta {
-    lapusa: Lapusa[],
+    // lapusa: Lapusa[],
     rockStone: RockStone[],
     mextile: Mextile[],
     perdura: Perdura[],
 }
 
-export interface Lapusa {
-    titulo: string,
-    img: string[],
-    ancho: string,
-    largo: string,
-    piezasxM2: string,
-    peso: string,
-    espesor: string,
-}
+// export interface Lapusa {
+//     titulo: string,
+//     img: string[],
+//     ancho: string,
+//     largo: string,
+//     piezasxM2: string,
+//     peso: string,
+//     espesor: string,
+// }
 
 export interface RockStone {
     titulo: string,

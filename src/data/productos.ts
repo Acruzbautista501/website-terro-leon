@@ -12,13 +12,13 @@ export const productos: Producto[] = [
         url: ''
     },*/
     {
-        titulo: 'Ladrillo y block',
-        img: '/img/ladrillo.jpg',
-        url: ''
+        titulo: 'Fachaletas y Piedras',
+        img: '/img/fachaleta.jpg',
+        url: '/productos/fachaletas-y-piedras'
     },
     {
-        titulo: 'Fachaletas',
-        img: '/img/fachaleta.jpg',
+        titulo: 'Ladrillo y block',
+        img: '/img/ladrillo.jpg',
         url: ''
     },
     {
