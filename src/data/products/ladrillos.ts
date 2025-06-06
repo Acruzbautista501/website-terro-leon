@@ -4,7 +4,14 @@ export const ladrillos: Ladrillo = {
     rockStoneTab: [
         {
             titulo: "Tabique Misión",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Mision Caribe.jpg",
+                 "/img/rockstone/Tabique Mision Recocho.jpg",
+                "/img/rockstone/Tabique Mision Terracota.jpg",
+                "/img/rockstone/TABIQUE MISION CABANA.jpg",
+                "/img/rockstone/TABIQUE MISION BERNAL.jpg",
+                "/img/rockstone/TABIQUE MISION YAGUL.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             contenido: "12 piezas individuales",
             cubre: "1.0 ml (aplicando junta)",
@@ -14,7 +21,12 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Tabique Rustico",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Rustico Capuchino.jpg",
+                "/img/rockstone/TABIQUE RUSTICO CARIBE.jpg",
+                "/img/rockstone/Tabique Rustico 4 tonos.jpg",
+                "/img/rockstone/Tabique Rustico Colonial.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             contenido: "12 piezas individuales",
             cubre: "1.0 ml (aplicando junta)",
@@ -24,7 +36,10 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Tabique Cabeceado",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Cabeceado Temixco.jpg",
+                "/img/rockstone/Tabqiue Cabeceado Glaseado.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             contenido: "150 piezas",
             cubre: "1.00m2 (Aplicando junta)",
@@ -34,7 +49,9 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Tabique Conchuela",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Conchuela Marfil.jpg",
+            ],
             medidas: "15 × 14 × 21 cm",
             contenido: "68 piezas individuales",
             cubre: "1.00m2 (Aplicando junta)",
@@ -44,7 +61,13 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Tabique Cultivado",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Cultivado Mitla.jpg",
+                "/img/rockstone/Tabique Cultivado San Lorenzo.jpg",
+                "/img/rockstone/TABIQUE CULTIVADO DAINZU.jpg",
+                "/img/rockstone/TABIQUE CULTIVADO BALAM.jpg",
+                "/img/rockstone/TABIQUE CULTIVADO TULE.jpg",
+            ],
             medidas: "15 × 14 × 21 cm",
             contenido: "68 piezas individuales",
             cubre: "1.00m2 (Aplicando junta)",
@@ -62,29 +85,31 @@ export const ladrillos: Ladrillo = {
             pesoxCaja: "22.50 Kg",
             margenVariacion: "+/- 3%"
         },
-        {
-            titulo: "Tabique Misión",
-            img: [],
-            medidas: "15 × 14 × 21 cm",
-            contenido: "76 piezas individuales",
-            cubre: "1.00m2 (Aplicando junta)",
-            juntaRecom: "Junta recomendada de 1.00 cm",
-            pesoxCaja: "15.76 Kg",
-            margenVariacion: "+/- 3%"
-        },
-        {
-            titulo: "Tabique Rustico",
-            img: [],
-            medidas: "15 × 14 × 21 cm",
-            contenido: "40 piezas individuales",
-            cubre: "1.00m2 (Aplicando junta)",
-            juntaRecom: "Junta recomendada de 1.00 cm",
-            pesoxCaja: "22.88 Kg",
-            margenVariacion: "+/- 3%"
-        },
+        // {
+        //     titulo: "Tabique Misión",
+        //     img: [],
+        //     medidas: "15 × 14 × 21 cm",
+        //     contenido: "76 piezas individuales",
+        //     cubre: "1.00m2 (Aplicando junta)",
+        //     juntaRecom: "Junta recomendada de 1.00 cm",
+        //     pesoxCaja: "15.76 Kg",
+        //     margenVariacion: "+/- 3%"
+        // },
+        // {
+        //     titulo: "Tabique Rustico",
+        //     img: [],
+        //     medidas: "15 × 14 × 21 cm",
+        //     contenido: "40 piezas individuales",
+        //     cubre: "1.00m2 (Aplicando junta)",
+        //     juntaRecom: "Junta recomendada de 1.00 cm",
+        //     pesoxCaja: "22.88 Kg",
+        //     margenVariacion: "+/- 3%"
+        // },
         {
             titulo: "Tabique Viejo",
-            img: [],
+            img: [
+                "/img/rockstone/Tabique Viejo.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             contenido: "50 piezas individuales",
             cubre: "1.00m2 (Aplicando junta)",
@@ -96,7 +121,11 @@ export const ladrillos: Ladrillo = {
     rockStone: [
         {
             titulo: "Ladrillo Catalán",
-            img: [],
+            img: [
+                "/img/rockstone/Ladrillo Catalan Malinalco.jpg",
+                "/img/rockstone/Ladrillo Catalan Viesca.jpg",
+                "/img/rockstone/Ladrillo Catalan Huamantla.jpg",
+            ],
             largo: "24.5cm",
             ancho: "7cm",
             espesor: "1.50cm",
@@ -108,7 +137,9 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Ladrillo de Alfarería",
-            img: [],
+            img: [
+                "/img/rockstone/Ladrillo de Alfarería Cadereyta.jpg",
+            ],
             largo: "24cm",
             ancho: "6.50cm",
             espesor: "1.50cm",
@@ -120,7 +151,10 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Ladrillo Macizo",
-            img: [],
+            img: [
+                "/img/rockstone/Ladrillo Macizo Recinto.jpg",
+                "/img/rockstone/Ladrillo Macizo Metepec.jpg",
+            ],
             largo: "24cm",
             ancho: "6.50cm",
             espesor: "1.50cm",
@@ -132,7 +166,11 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Ladrillo Tejar",
-            img: [],
+            img: [
+                "/img/rockstone/Ladrillo Tejar de Recuperacion.jpg",
+                "/img/rockstone/Ladrillo Tejar Aculco.jpg",
+                "/img/rockstone/Ladrillo Tejar Valladolid.jpg",
+            ],
             largo: "24.5cm",
             ancho: "7cm",
             espesor: "1.50cm",
