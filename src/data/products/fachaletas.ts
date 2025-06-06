@@ -70,7 +70,7 @@ export const fachaletas: Fachaleta = {
         {
             titulo: "Piedra Cañada",
             img: [
-                "/img/rockstone/PIEDRA-CAÑADA-UXMAL-MURO.png",
+                "/img/rockstone/PIEDRA-CANADA-UXMAL-MURO.png",
             ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
@@ -111,8 +111,8 @@ export const fachaletas: Fachaleta = {
         {
             titulo: "Piedra de Rio",
             img: [
-                "/img/rockstone/PIEDRA-DE-RÍO-OLMECA.jpg",
-                "/img/rockstone/PIEDRA-DE-RÍO-SAN-FELIPE-MURO.jpg",
+                "/img/rockstone/PIEDRA-DE-RIO-OLMECA.jpg",
+                "/img/rockstone/PIEDRA-DE-RIO-SAN-FELIPE-MURO.jpg",
             ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
@@ -127,7 +127,7 @@ export const fachaletas: Fachaleta = {
         {
             titulo: "Piedra Huasteca",
             img: [
-                "/img/rockstone/PIEDRA-DE-RÍO-SAN-FELIPE-MURO.jpg",
+                "/img/rockstone/Piedra-Huasteca-Hidalguense.jpg",
             ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
@@ -178,8 +178,8 @@ export const fachaletas: Fachaleta = {
             img: [
                 "/img/rockstone/piedrin-caribe.jpg",
                 "/img/rockstone/PIEDRIN-CONFETI.jpg",
-                "/img/rockstone/Piedrín-Durazno.jpg",
-                "/img/rockstone/Piedrín-Olmeca.jpg",
+                "/img/rockstone/Piedrin-Durazno.jpg",
+                "/img/rockstone/Piedrin-Olmeca.jpg",
                 "/img/rockstone/piedrin-oro-viejo.jpg",
             ],
             medidas: "3 × 60 × 80 cm",
@@ -220,7 +220,7 @@ export const fachaletas: Fachaleta = {
             grosor: "1.4cm a 1.7cm",
             pzasxCaja: "60 piezas",
             img: [
-                "/img/perdura/Antik-Ático.jpg",
+                "/img/perdura/Antik-Atico.jpg",
                 "/img/perdura/Antik-Cava.jpg",
                 "/img/perdura/Antik-Torre.jpg",
             ]
@@ -303,7 +303,7 @@ export const fachaletas: Fachaleta = {
             grosor: "2cm a 6cm",
             pzasxCaja: "Máx 36, Min 30 piezas",
             img: [
-                "/img/perdura/Apilable-Montaña.jpg",
+                "/img/perdura/Apilable-Montana.jpg",
                 "/img/perdura/Apilable-Santa-Fe.jpg",
             ]
         },
