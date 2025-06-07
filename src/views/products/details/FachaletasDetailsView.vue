@@ -96,7 +96,7 @@ function cotizarProducto() {
             <h1 class="text-center text-uppercase display-4">{{ fachaleta.titulo }}</h1>
           </div>
 
-          <div v-if="fachaleta?.img?.length > 1" class="mb-4">
+          <div v-if="fachaleta?.img?.length >= 1" class="mb-4">
             <label class="form-label fs-3 fw-bold">Selecciona un color:</label>
             <div class="row g-2">
               <div
@@ -116,7 +116,7 @@ function cotizarProducto() {
                     height="30"
                     class="rounded-circle border"
                   />
-                  <span class="text-capitalize">{{ getColorNameFromPath(img) }}</span>
+                  <span class="text-uppercase">{{ getColorNameFromPath(img) }}</span>
                 </button>
               </div>
             </div>
