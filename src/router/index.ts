@@ -9,10 +9,14 @@ import TermsConditionsView from '../views/TermsConditionsView.vue'
 import FAQsView from '../views/FAQsView.vue'
 import TejasView from '../views/products/TejasView.vue'
 import FachaletasView from '../views/products/FachaletasView.vue'
+import LadrillosView from '../views/products/LadrillosView.vue'
+import AdoquinesView from '../views/products/AdoquinesView.vue'
 import TejasDetailsView from '../views/products/details/TejasDetailsView.vue'
 import FachaletasDetailsView from '../views/products/details/FachaletasDetailsView.vue'
 import PrivacyNoticeView from '../views/PrivacyNoticeView.vue'
 import DeliveryPoliciesView from '../views/DeliveryPoliciesView.vue'
+import LadrillosDetailsView from '../views/products/details/LadrillosDetailsView.vue'
+import AdoquinesDetailsView from '../views/products/details/AdoquinesDetailsView.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -45,11 +49,23 @@ const routes: RouteRecordRaw[] = [
     component: TejasView,
     meta: { title: 'Tejas | Terro' },
   },
-    {
+  {
     path: '/productos/fachaletas-y-piedras',
     name: 'Fachaletas y Piedras',
     component: FachaletasView,
-    meta: { title: 'Tejas | Terro' },
+    meta: { title: 'Fachaletas y Piedras | Terro' },
+  },
+  {
+    path: '/productos/ladrillos-y-block',
+    name: 'Ladrillos y Block',
+    component: LadrillosView,
+    meta: { title: 'Ladrillos y Block | Terro' },
+  },
+  {
+    path: '/productos/adoquines',
+    name: 'Adoquines',
+    component: AdoquinesView,
+    meta: { title: 'Adoquines | Terro' },
   },
   {
     path: '/tejas/:tipo/:slug',
@@ -57,11 +73,23 @@ const routes: RouteRecordRaw[] = [
     component: TejasDetailsView,
     meta: { title: 'Detalle de Teja | Terro' }, // Base genérica
   },
-    {
+  {
     path: '/fachaletas-y-piedras/:tipo/:slug',
     name: 'FachaletaDetalle',
     component: FachaletasDetailsView,
     meta: { title: 'Detalle de Fachaletas | Terro' }, // Base genérica
+  },
+  {
+    path: '/ladrillos-y-block/:tipo/:slug',
+    name: 'LadrilloDetalle',
+    component: LadrillosDetailsView,
+    meta: { title: 'Detalle de Ladrillos | Terro' }, // Base genérica
+  },
+  {
+    path: '/adoquines/:tipo/:slug',
+    name: 'AdoquinDetalle',
+    component: AdoquinesDetailsView,
+    meta: { title: 'Detalle de Adoquines | Terro' }, // Base genérica
   },
   {
     path: '/recursos',
