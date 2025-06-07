@@ -3,8 +3,15 @@ import type { Adoquin } from "../../interfaces/products/Adoquines";
 export const adoquines: Adoquin = {
     mextile: [
         {
-            titulo: "Adoquin Grand Holland",
-            img: [],
+            titulo: "Adoquin Grand Holland (Espesor de 6 cm)",
+            img: [
+                "/img/mexline/Adoquin Grand Holland Negro.jpg",
+                "/img/mexline/Adoquin Grand Holland Trigo.jpg",
+                "/img/mexline/Adoquin Grand Holland Gris Plomo.jpg",
+                "/img/mexline/Adoquin Grand Holland Tabaco.jpg",
+                "/img/mexline/Adoquin Grand Holland Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Grand Holland Terracota.jpg",
+            ],
             medidas: "30cm x 15cm",
             espesor: "6cm",
             pesoxPzas: "5.9 Kg",
@@ -14,8 +21,15 @@ export const adoquines: Adoquin = {
             fachxTar: "216 piezas"
         },
         {
-            titulo: "Adoquin Grand Holland",
-            img: [],
+            titulo: "Adoquin Grand Holland (Espesor de 7.7 cm)",
+            img: [
+                "/img/mexline/Adoquin Grand Holland Trigo.jpg",
+                "/img/mexline/Adoquin Grand Holland Negro.jpg",
+                "/img/mexline/Adoquin Grand Holland Gris Plomo.jpg",
+                "/img/mexline/Adoquin Grand Holland Tabaco.jpg",
+                "/img/mexline/Adoquin Grand Holland Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Grand Holland Terracota.jpg",
+            ],
             medidas: "30cm x 15cm",
             espesor: "7.7cm",
             pesoxPzas: "7.5 Kg",
@@ -25,8 +39,15 @@ export const adoquines: Adoquin = {
             fachxTar: "168 piezas"
         },
         {
-            titulo: "Adoquin Holand",
-            img: [],
+            titulo: "Adoquin Holand (Espesor de 4 cm)",
+            img: [
+                "/img/mexline/Adoquin Holland Negro.jpg",
+                "/img/mexline/Adoquin Holland Trigo.jpg",
+                "/img/mexline/Adoquin Holland Gris Plomo.jpg",
+                "/img/mexline/Adoquin Holland Tabaco.jpg",
+                "/img/mexline/Adoquin Holland Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Holland Terracota.jpg",
+            ],
             medidas: "20cm x 10cm",
             espesor: "4cm",
             pesoxPzas: "1.6 Kg",
@@ -36,8 +57,15 @@ export const adoquines: Adoquin = {
             fachxTar: "720 piezas"
         },
         {
-            titulo: "Adoquin Holand",
-            img: [],
+            titulo: "Adoquin Holand (Espesor de 6 cm)",
+            img: [
+                "/img/mexline/Adoquin Holland Trigo.jpg",
+                "/img/mexline/Adoquin Holland Negro.jpg",
+                "/img/mexline/Adoquin Holland Gris Plomo.jpg",
+                "/img/mexline/Adoquin Holland Tabaco.jpg",
+                "/img/mexline/Adoquin Holland Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Holland Terracota.jpg",
+            ],
             medidas: "20cm x 10cm",
             espesor: "6cm",
             pesoxPzas: "2.5 Kg",
@@ -47,8 +75,15 @@ export const adoquines: Adoquin = {
             fachxTar: "480 piezas"
         },
         {
-            titulo: "Adoquin Holand",
-            img: [],
+            titulo: "Adoquin Holand (Espesor de 8 cm)",
+            img: [
+                "/img/mexline/Adoquin Holland Terracota.jpg",
+                "/img/mexline/Adoquin Holland Trigo.jpg",
+                "/img/mexline/Adoquin Holland Negro.jpg",
+                "/img/mexline/Adoquin Holland Gris Plomo.jpg",
+                "/img/mexline/Adoquin Holland Tabaco.jpg",
+                "/img/mexline/Adoquin Holland Rojo Rubi.jpg",
+            ],
             medidas: "20cm x 10cm",
             espesor: "8cm",
             pesoxPzas: "3.5 Kg",
@@ -59,7 +94,14 @@ export const adoquines: Adoquin = {
         },
         {
             titulo: "Adoquin London",
-            img: [],
+            img: [
+                "/img/mexline/Adoquin London Negro.jpg",
+                "/img/mexline/Adoquin London Trigo.jpg",
+                "/img/mexline/Adoquin London Gris Plomo.jpg",
+                "/img/mexline/Adoquin London Tabaco.jpg",
+                "/img/mexline/Adoquin London Rojo Rubi.jpg",
+                "/img/mexline/Adoquin London Terracota.jpg",
+            ],
             medidas: "20.5cm x 7cm",
             espesor: "6cm",
             pesoxPzas: "1.85 Kg",
@@ -70,7 +112,14 @@ export const adoquines: Adoquin = {
         },
         {
             titulo: "Adoquin Orion",
-            img: [],
+            img: [
+                "/img/mexline/Adoquin Orion Trigo.jpg",
+                "/img/mexline/Adoquin Orion Negro.jpg",
+                "/img/mexline/Adoquin Orion Gris Plomo.jpg",
+                "/img/mexline/Adoquin Orion Tabaco.jpg",
+                "/img/mexline/Adoquin Orion Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Orion Terracota.jpg",
+            ],
             medidas: "19.1cm x 16.5cm",
             espesor: "6cm",
             pesoxPzas: "4.2 Kg",
@@ -81,7 +130,14 @@ export const adoquines: Adoquin = {
         },
         {
             titulo: "Adoquin Titan",
-            img: [],
+            img: [
+                "/img/mexline/Adoquin Titan Tabaco.jpg",
+                "/img/mexline/Adoquin Titan Trigo.jpg",
+                "/img/mexline/Adoquin Titan Negro.jpg",
+                "/img/mexline/Adoquin Titan Gris Plomo.jpg",
+                "/img/mexline/Adoquin Titan Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Titan Terracota.jpg",
+            ],
             medidas: "22.5cm x 11.25cm",
             espesor: "6cm",
             pesoxPzas: "3.2 Kg",
@@ -92,7 +148,14 @@ export const adoquines: Adoquin = {
         },
         {
             titulo: "Adoquin Aries",
-            img: [],
+            img: [
+                "/img/mexline/Adoquin Aries Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Aries Tabaco.jpg",
+                "/img/mexline/Adoquin Aries Trigo.jpg",
+                "/img/mexline/Adoquin Aries Negro.jpg",
+                "/img/mexline/Adoquin Aries Gris Plomo.jpg",
+                "/img/mexline/Adoquin Aries Terracota.jpg",
+            ],
             medidas: "23.8cm x 12cm",
             espesor: "6cm",
             pesoxPzas: "3.7 Kg",
@@ -102,8 +165,15 @@ export const adoquines: Adoquin = {
             fachxTar: "336 piezas"
         },
         {
-            titulo: "Adoquin Plaza 15x15",
-            img: [],
+            titulo: "Adoquin Plaza 15x15 (Espesor de 6 cm)",
+            img: [
+                "/img/mexline/Adoquin Plaza Negro.jpg",
+                "/img/mexline/Adoquin Plaza Trigo.jpg",
+                "/img/mexline/Adoquin Plaza Gris Plomo.jpg",
+                "/img/mexline/Adoquin Plaza Tabaco.jpg",
+                "/img/mexline/Adoquin Plaza Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Plaza Terracota.jpg",
+            ],
             medidas: "15cm x 15cm",
             espesor: "6cm",
             pesoxPzas: "2.9 Kg",
@@ -113,8 +183,15 @@ export const adoquines: Adoquin = {
             fachxTar: "432 piezas"
         },
         {
-            titulo: "Adoquin Plaza 15x15",
-            img: [],
+            titulo: "Adoquin Plaza 15x15 (Espesor de 7.7 cm)",
+            img: [
+                "/img/mexline/Adoquin Plaza Trigo.jpg",
+                "/img/mexline/Adoquin Plaza Negro.jpg",
+                "/img/mexline/Adoquin Plaza Gris Plomo.jpg",
+                "/img/mexline/Adoquin Plaza Tabaco.jpg",
+                "/img/mexline/Adoquin Plaza Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Plaza Terracota.jpg",
+            ],
             medidas: "15cm x 15cm",
             espesor: "7.7cm",
             pesoxPzas: "3.7 Kg",
@@ -124,8 +201,15 @@ export const adoquines: Adoquin = {
             fachxTar: "336 piezas"
         },
         {
-            titulo: "Plaza 20x20",
-            img: [],
+            titulo: "Plaza 20x20 (Espesor de 6 cm)",
+            img: [
+                "/img/mexline/Adoquin Plaza Gris Plomo.jpg",
+                "/img/mexline/Adoquin Plaza Trigo.jpg",
+                "/img/mexline/Adoquin Plaza Negro.jpg",
+                "/img/mexline/Adoquin Plaza Tabaco.jpg",
+                "/img/mexline/Adoquin Plaza Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Plaza Terracota.jpg",
+            ],
             medidas: "20cm x 20cm",
             espesor: "6cm",
             pesoxPzas: "5.4 Kg",
@@ -135,8 +219,15 @@ export const adoquines: Adoquin = {
             fachxTar: "270 piezas"
         },
         {
-            titulo: "Plaza 20x20",
-            img: [],
+            titulo: "Plaza 20x20 (Espesor de 8 cm)",
+            img: [
+                "/img/mexline/Adoquin Plaza Tabaco.jpg",
+                "/img/mexline/Adoquin Plaza Gris Plomo.jpg",
+                "/img/mexline/Adoquin Plaza Trigo.jpg",
+                "/img/mexline/Adoquin Plaza Negro.jpg",
+                "/img/mexline/Adoquin Plaza Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Plaza Terracota.jpg",
+            ],
             medidas: "20cm x 20cm",
             espesor: "8cm",
             pesoxPzas: "7.15 Kg",
@@ -147,7 +238,14 @@ export const adoquines: Adoquin = {
         },
         {
             titulo: "Adoquin Plaza 30x30",
-            img: [],
+            img: [
+                "/img/mexline/Adoquin Plaza Rojo Rubi.jpg",
+                "/img/mexline/Adoquin Plaza Tabaco.jpg",
+                "/img/mexline/Adoquin Plaza Gris Plomo.jpg",
+                "/img/mexline/Adoquin Plaza Trigo.jpg",
+                "/img/mexline/Adoquin Plaza Negro.jpg",
+                "/img/mexline/Adoquin Plaza Terracota.jpg",
+            ],
             medidas: "30cm x 30cm",
             espesor: "6cm",
             pesoxPzas: "11.8 Kg",

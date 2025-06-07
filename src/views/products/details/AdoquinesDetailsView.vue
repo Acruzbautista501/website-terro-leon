@@ -77,7 +77,7 @@ function cotizarProducto() {
       <div class="mb-4">
         <router-link
           to="/productos/adoquines"
-          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-infor"
+          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-infor text-uppercase"
         >
           <i class="bi bi-arrow-left-circle"></i> Volver
         </router-link>
@@ -96,7 +96,7 @@ function cotizarProducto() {
             <h1 class="text-center text-uppercase display-4">{{ adoquin.titulo }}</h1>
           </div>
 
-          <div v-if="adoquin?.img?.length > 1" class="mb-4">
+          <div v-if="adoquin?.img?.length >= 1" class="mb-4">
             <label class="form-label fs-3 fw-bold">Selecciona un color:</label>
             <div class="row g-2">
               <div
@@ -116,7 +116,7 @@ function cotizarProducto() {
                     height="30"
                     class="rounded-circle border"
                   />
-                  <span class="text-capitalize">{{ getColorNameFromPath(img) }}</span>
+                  <span class="text-uppercase">{{ getColorNameFromPath(img) }}</span>
                 </button>
               </div>
             </div>

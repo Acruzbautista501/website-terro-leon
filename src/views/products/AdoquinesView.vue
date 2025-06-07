@@ -66,8 +66,6 @@ function irADetalle(adoquin: { titulo: string; tipo: string }) {
             </div>
             <div class="card-body">
               <h5 class="card-title text-uppercase fs-3">{{ adoquin.titulo }}</h5>
-              <p class="mb-0">{{ adoquin.medidas }}</p>
-              <small class="text-muted">Espesor: {{ adoquin.espesor }}</small>
             </div>
           </div>
         </div>
