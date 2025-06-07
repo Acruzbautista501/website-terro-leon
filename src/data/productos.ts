@@ -19,12 +19,12 @@ export const productos: Producto[] = [
     {
         titulo: 'Ladrillo y block',
         img: '/img/ladrillo.jpg',
-        url: ''
+        url: '/productos/ladrillos-y-block'
     },
     {
         titulo: 'Adoquines',
         img: '/img/adoquin.jpg',
-        url: ''
+        url: '/productos/adoquines'
     },
 ]
 
@@ -37,12 +37,12 @@ export const imperdibles: Imperdible[] = [
     {
         titulo: 'Adoquines',
         img: '/img/adoquin.jpg',
-        url: ''
+        url: '/productos/adoquines'
     },
     {
         titulo: 'Fachaletas',
         img: '/img/fachaleta.jpg',
-        url: ''
+        url: '/productos/fachaletas-y-piedras'
     },
 ]
 
