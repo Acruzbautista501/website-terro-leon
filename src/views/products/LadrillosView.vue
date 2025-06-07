@@ -42,7 +42,7 @@ function irADetalle(ladrillo: { titulo: string; tipo: string }) {
     <section class="container-fluid">
       <div class="p-5 text-center container">
         <div class="text-center py-4">
-          <h1 class="title-hero-product mb-4 display-1 text-uppercase">Ladrillos</h1>
+          <h1 class="title-hero-product mb-4 display-1 text-uppercase">Ladrillos y Blocks</h1>
         </div>
       </div>
       <div class="mb-4 container">

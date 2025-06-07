@@ -73,7 +73,7 @@ function cotizarProducto() {
     <section class="container py-5">
       <div class="mb-4">
         <router-link
-          to="/productos/ladrillos"
+          to="/productos/ladrillos-y-block"
           class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-uppercase text-infor"
         >
           <i class="bi bi-arrow-left-circle"></i> Volver
@@ -93,7 +93,7 @@ function cotizarProducto() {
             <h1 class="text-center text-uppercase display-4">{{ ladrillo.titulo }}</h1>
           </div>
 
-          <div v-if="ladrillo?.img?.length > 1" class="mb-4">
+          <div v-if="ladrillo?.img?.length >= 1" class="mb-4">
             <label class="form-label fs-3 fw-bold">Selecciona un color:</label>
             <div class="row g-2">
               <div class="col-6 col-sm-4" v-for="(img, index) in ladrillo.img" :key="index">
@@ -109,7 +109,7 @@ function cotizarProducto() {
                     height="30"
                     class="rounded-circle border"
                   />
-                  <span class="text-capitalize">{{ getColorNameFromPath(img) }}</span>
+                  <span class="text-uppercase">{{ getColorNameFromPath(img) }}</span>
                 </button>
               </div>
             </div>

@@ -6,7 +6,7 @@ export const ladrillos: Ladrillo = {
             titulo: "Tabique Misión",
             img: [
                 "/img/rockstone/Tabique Mision Caribe.jpg",
-                 "/img/rockstone/Tabique Mision Recocho.jpg",
+                "/img/rockstone/Tabique Mision Recocho.jpg",
                 "/img/rockstone/Tabique Mision Terracota.jpg",
                 "/img/rockstone/TABIQUE MISION CABANA.jpg",
                 "/img/rockstone/TABIQUE MISION BERNAL.jpg",
@@ -77,7 +77,9 @@ export const ladrillos: Ladrillo = {
         },
         {
             titulo: "Tabique Huatulco",
-            img: [],
+            img: [
+                "/img/rockstone/TABIQUE HUATULCO BOREAL.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             contenido: "80 piezas individuales",
             cubre: "1.00m2 (Aplicando junta)",
@@ -167,8 +169,8 @@ export const ladrillos: Ladrillo = {
         {
             titulo: "Ladrillo Tejar",
             img: [
-                "/img/rockstone/Ladrillo Tejar de Recuperacion.jpg",
                 "/img/rockstone/Ladrillo Tejar Aculco.jpg",
+                "/img/rockstone/Ladrillo Tejar de Recuperacion.jpg",
                 "/img/rockstone/Ladrillo Tejar Valladolid.jpg",
             ],
             largo: "24.5cm",
@@ -183,8 +185,14 @@ export const ladrillos: Ladrillo = {
     ],
     mextile: [
         {
-            titulo: "Block Cara de Piedra",
-            img: [],
+            titulo: "Block Cara de Piedra 6",
+            img: [
+                "/img/mexline/Block Cara de Piedra 6 Trigo.jpg",
+                "/img/mexline/Block Cara de Piedra 6 Gris Plomo.jpg",
+                "/img/mexline/Block Cara de Piedra 6 Tabaco.jpg",
+                "/img/mexline/Block Cara de Piedra 6 Rojo Rubi.jpg",
+                "/img/mexline/Block Cara de Piedra 6 Terracota.jpg",
+            ],
             medidas: "40cm x 19.5cm",
             espesor: "15 cm",
             pesoxPzas: "14.2 kg",
@@ -194,8 +202,14 @@ export const ladrillos: Ladrillo = {
             blockxTar: "100 piezas"
         },
         {
-            titulo: "Block Doble Cara de Piedra",
-            img: [],
+            titulo: "Block Doble Cara de Piedra 6",
+            img: [
+                "/img/mexline/Block Doble Cara de Piedra 6 Trigo.jpg",
+                "/img/mexline/Block Doble Cara de Piedra 6 Gris Plomo.jpg",
+                "/img/mexline/Block Doble Cara de Piedra 6 Tabaco.jpg",
+                "/img/mexline/Block Doble Cara de Piedra 6 Rojo Rubi.jpg",
+                "/img/mexline/Block Doble Cara de Piedra 6 Terracota.jpg"
+            ],
             medidas: "40cm x 19.5cm",
             espesor: "15 cm",
             pesoxPzas: "16.5 kg",
