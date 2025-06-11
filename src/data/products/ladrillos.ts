@@ -119,6 +119,34 @@ export const ladrillos: Ladrillo = {
             pesoxCaja: "24.98 Kg",
             margenVariacion: "+/- 3%"
         },
+        {
+            titulo: "Sillar",
+            img: [
+                "/img/rockstone/Sillar Paja.jpg",
+                "/img/rockstone/Sillar Arizona.jpg",
+                "/img/rockstone/Sillar Caribe.jpg",
+            ],
+            medidas: "3 × 60 × 80 cm",
+            contenido: "8 piezas individuales",
+            cubre: "1.00m2 (Aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.50 cm",
+            pesoxCaja: "28.40 Kg",
+            margenVariacion: "+/- 3%"
+        },          
+        {
+            titulo: "Mini Sillar",
+            img: [
+                "/img/rockstone/Mini Sillar Paja.jpg",
+                "/img/rockstone/Mini Sillar Arizona.jpg",
+                "/img/rockstone/Mini Sillar Caribe.jpg",
+            ],
+            medidas: "3 × 60 × 80 cm",
+            contenido: "28 piezas individuales",
+            cubre: "1.00m2 (Aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.50 cm",
+            pesoxCaja: "22.49 Kg",
+            margenVariacion: "+/- 3%"
+        },       
     ],
     rockStone: [
         {
@@ -140,7 +168,7 @@ export const ladrillos: Ladrillo = {
         {
             titulo: "Ladrillo de Alfarería",
             img: [
-                "/img/rockstone/Ladrillo de Alfarería Cadereyta.jpg",
+                "/img/rockstone/Ladrillo de Alfareria Cadereyta.jpg",
             ],
             largo: "24cm",
             ancho: "6.50cm",
@@ -181,7 +209,38 @@ export const ladrillos: Ladrillo = {
             juntaRecom: "Junta recomendada de 1.00 cm",
             pesoxCaja: "14.00kg",
             margenVariacion: "+/- 3%"
-        },
+        }, 
+        {
+            titulo: "Sillar Real",
+            img: [
+                "/img/rockstone/Sillar Real Arizona.jpg",
+                "/img/rockstone/Sillar Real Desierto.jpg",
+                "/img/rockstone/Sillar Real Tabaco.jpg",
+            ],
+            largo: "46cm",
+            ancho: "28cm",
+            espesor: "3cm",
+            contenido: "7 piezas individuales",
+            cubre: "1.00m2 (Aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.50 cm",
+            pesoxCaja: "31.50kg",
+            margenVariacion: "+/- 3%"
+        },         
+        {
+            titulo: "Mini Sillar Real",
+            img: [
+                "/img/rockstone/Mini Sillar Real Arizona.jpg",
+                "/img/rockstone/Mini Sillar Real Desierto.jpg",
+            ],
+            largo: "22.50cm",
+            ancho: "14cm",
+            espesor: "1.50cm",
+            contenido: "28 piezas individuales",
+            cubre: "1.00m2 (Aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.50 cm",
+            pesoxCaja: "23.20kg",
+            margenVariacion: "+/- 3%"
+        }, 
     ],
     mextile: [
         {

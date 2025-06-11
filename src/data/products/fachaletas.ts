@@ -68,6 +68,24 @@ export const fachaletas: Fachaleta = {
             margenVariacion: "+/- 3%"
         },
         {
+            titulo: "Piedra Bambu Decorativo",
+            img: [
+                "/img/rockstone/PIEDRA-BAMBU-DECORATIVO-CHOCOLATE.jpg",
+                "/img/rockstone/PIEDRA-BAMBU-DECORATIVO-SECO.jpg",
+                "/img/rockstone/PIEDRA-BAMBU-DECORATIVO-LIMA-MURO.jpg",
+                "/img/rockstone/PIEDRA-BAMBU-DECORATIVO-VERDE-MURO.jpg",
+            ],
+            medidas: "3 × 60 × 80 cm",
+            largo: "",
+            ancho: "",
+            espesor: "",
+            contenido: "44 piezas individuales",
+            cubre: "1.00m2 (Aplicando junta)",
+            juntaRecom: "",
+            pesoxCaja: "27.65kg",
+            margenVariacion: "+/- 3%"
+        },  
+        {
             titulo: "Piedra Cañada",
             img: [
                 "/img/rockstone/PIEDRA-CANADA-UXMAL-MURO.png",
@@ -82,22 +100,29 @@ export const fachaletas: Fachaleta = {
             pesoxCaja: "36 Kg",
             margenVariacion: "+/- 3%"
         },
-        /*{
+        {
             titulo: "Piedra Colosal",
-            img: [],
+            img: [
+                "/img/rockstone/Piedra Colosal Caribe.jpg",
+                "/img/rockstone/Piedra Colosal Cenizo.jpg",
+                "/img/rockstone/Piedra Colosal Izamal.jpg",
+            ],
             medidas: "",
-            largo: "",
-            ancho: "",
-            espesor: "",
-            contenido: "",
-            cubre: "",
+            largo: "40 cm",
+            ancho: "10 cm",
+            espesor: "Irregular",
+            contenido: "24 piezas individuales",
+            cubre: "0.96m2",
             juntaRecom: "",
             pesoxCaja: "",
-            margenVariacion: ""
+            margenVariacion: "36.45kg"
         },
         {
             titulo: "Piedra de Rancho",
-            img: [],
+            img: [
+                "/img/rockstone/Piedra de Rancho Colorado.jpg",
+                "/img/rockstone/Piedra de Rancho Uxmal.jpg",
+            ],
             medidas: "3 × 60 × 80 cm",
             largo: "Irregular",
             ancho: "Irregular",
@@ -107,7 +132,7 @@ export const fachaletas: Fachaleta = {
             juntaRecom: "Junta recomendada de 1.50 cm",
             pesoxCaja: "34.20 Kg",
             margenVariacion: "+/- 3%"
-        },*/
+        },
         {
             titulo: "Piedra de Rio",
             img: [
@@ -192,6 +217,46 @@ export const fachaletas: Fachaleta = {
             pesoxCaja: "31.90 Kg",
             margenVariacion: "+/- 3%"
         },
+        {
+            titulo: "Apilable montaña",
+            img: [
+                "/img/rockstone/APILABLE-MONTANA-RECINTO.jpg",
+                "/img/rockstone/APILABLE-MONTANA-MIXTECA-MURO.jpg",
+                "/img/rockstone/APILABLE-MONTANA-MAYA.jpg",
+                "/img/rockstone/APILABLE-MONTANA-COZUMEL.jpg",
+                "/img/rockstone/APILABLE-MONTANA-CENIZO.jpg",
+                "/img/rockstone/APILABLE-MONTANA-CARIBE.jpg",
+                "/img/rockstone/APILABLE-MONTANA-AZTECA.jpg",
+                "/img/rockstone/APILABLE-MONTANA-MAPLE.jpg",                
+            ],
+            medidas: "3 × 60 × 80 cm",
+            largo: "40 cm",
+            ancho: ":10 cm ",
+            espesor: "Irregular",
+            contenido: "24 piezas individuales",
+            cubre: "0.96m2 (aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.00 cm",
+            pesoxCaja: "37.50 Kg",
+            margenVariacion: "+/- 3%"
+        },
+        {
+            titulo: "Apilable Peñasco",
+            img: [
+                "/img/rockstone/Apilable-penasco-recinto.jpg",
+                "/img/rockstone/Apilable-penasco-Palenque-MURO.jpg",
+                "/img/rockstone/Apilable-penasco-tepoztlan.jpg",
+                "/img/rockstone/Apilable-Penasco-Canela.jpg",             
+            ],
+            medidas: "3 × 60 × 80 cm",
+            largo: "40 cm",
+            ancho: ":10 cm ",
+            espesor: "Irregular",
+            contenido: "24 piezas individuales",
+            cubre: "0.96m2 (aplicando junta)",
+            juntaRecom: "Junta recomendada de 1.00 cm",
+            pesoxCaja: "31.50 Kg",
+            margenVariacion: "+/- 3%"
+        },
     ],
     mextile: [
         {
@@ -247,7 +312,7 @@ export const fachaletas: Fachaleta = {
             grosor: "1.4cm a 1.7cm",
             pzasxCaja: "45 piezas",
             img: [
-                "/img/perdura/Corcho-Hacienda.jpg",
+                "/img/perdura/Corcho-Hacienda.jpeg",
                 "/img/perdura/Corcho-New-Jersey.jpg",
             ]
         },

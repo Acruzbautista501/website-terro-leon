@@ -6,11 +6,6 @@ export const productos: Producto[] = [
         img: '/img/teja.jpg',
         url: '/productos/tejas'
     },
-    /*{
-        titulo: 'Pisos',
-        img: '/img/pisos.jpg',
-        url: ''
-    },*/
     {
         titulo: 'Fachaletas y Piedras',
         img: '/img/fachaleta.jpg',
@@ -25,6 +20,11 @@ export const productos: Producto[] = [
         titulo: 'Adoquines',
         img: '/img/adoquin.jpg',
         url: '/productos/adoquines'
+    },
+    {
+        titulo: 'Canteras',
+        img: '/img/rockstone/cantera-laminada-hueso.jpg',
+        url: '/productos/canteras'
     },
 ]
 

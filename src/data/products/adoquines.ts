@@ -201,6 +201,40 @@ export const adoquines: Adoquin = {
             fachxTar: "336 piezas"
         },
         {
+            titulo: "Bordeador",
+            img: [
+                "/img/mexline/bordeador_jardin_rack_trigo.jpg",
+                "/img/mexline/bordeador_jardin_rack_gris_plomo.jpg",
+                "/img/mexline/bordeador_jardin_rack_tabaco.jpg",
+                "/img/mexline/bordeador_jardin_rack_rojo_rubi.jpg",
+                "/img/mexline/bordeador_jardin_rack_terracota.jpg",
+            ],
+            medidas: "",
+            espesor: "5cm",
+            pesoxPzas: "9.6 cm ",
+            pzasxM2: "1.64 pzas",
+            pesoxM2: "15.7 kg",
+            resistencia: "",
+            fachxTar: "152 piezas"
+        },
+        {
+            titulo: "Eco Pasto",
+            img: [
+                "/img/mexline/eco_pasto_rack_trigo.jpg",
+                "/img/mexline/eco_pasto_rack_gris_plomo.jpg",
+                "/img/mexline/eco_pasto_rack_tabaco.jpg",
+                "/img/mexline/eco_pasto_rack_rojo_rubi.jpg",
+                "/img/mexline/eco_pasto_rack_terracota.jpg",
+            ],
+            medidas: "29.3cm x 44cm",
+            espesor: "9cm",
+            pesoxPzas: "13.3 cm ",
+            pzasxM2: "",
+            pesoxM2: "13.3 kg",
+            resistencia: "250 kg/cm2",
+            fachxTar: "80 piezas"
+        },
+        {
             titulo: "Plaza 20x20 (Espesor de 6 cm)",
             img: [
                 "/img/mexline/Adoquin Plaza Gris Plomo.jpg",

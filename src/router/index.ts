@@ -11,12 +11,15 @@ import TejasView from '../views/products/TejasView.vue'
 import FachaletasView from '../views/products/FachaletasView.vue'
 import LadrillosView from '../views/products/LadrillosView.vue'
 import AdoquinesView from '../views/products/AdoquinesView.vue'
+import CanterasView from '../views/products/CanterasView.vue'
 import TejasDetailsView from '../views/products/details/TejasDetailsView.vue'
 import FachaletasDetailsView from '../views/products/details/FachaletasDetailsView.vue'
 import PrivacyNoticeView from '../views/PrivacyNoticeView.vue'
 import DeliveryPoliciesView from '../views/DeliveryPoliciesView.vue'
 import LadrillosDetailsView from '../views/products/details/LadrillosDetailsView.vue'
 import AdoquinesDetailsView from '../views/products/details/AdoquinesDetailsView.vue'
+import CanterasDetailsView from '../views/products/details/CanterasDetailsView.vue'
+
 
 const routes: RouteRecordRaw[] = [
   {
@@ -68,6 +71,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: 'Adoquines | Terro' },
   },
   {
+    path: '/productos/canteras',
+    name: 'Canteras',
+    component: CanterasView,
+    meta: { title: 'Canteras | Terro' },
+  },
+  {
     path: '/tejas/:tipo/:slug',
     name: 'TejaDetalle',
     component: TejasDetailsView,
@@ -90,6 +99,12 @@ const routes: RouteRecordRaw[] = [
     name: 'AdoquinDetalle',
     component: AdoquinesDetailsView,
     meta: { title: 'Detalle de Adoquines | Terro' }, // Base genérica
+  },
+  {
+    path: '/canteras/:tipo/:slug',
+    name: 'CanteraDetalle',
+    component: CanterasDetailsView,
+    meta: { title: 'Detalle de Canteras | Terro' }, // Base genérica
   },
   {
     path: '/recursos',
