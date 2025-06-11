@@ -28,7 +28,7 @@
 }
 
 
-  async function sendQuoteEmail() {
+async function sendQuoteEmail() {
   const offcanvasEl = document.getElementById('quoteOffcanvas');
 
   if (offcanvasEl) {
@@ -40,7 +40,8 @@
         title: 'Enviar cotización',
         html:
           '<input id="swal-input-email" class="swal2-input" placeholder="Correo Electrónico">' +
-          '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono">',
+          '<input id="swal-input-phone" class="swal2-input" placeholder="Teléfono">' +
+          '<textarea id="swal-input-message" class="swal2-textarea" placeholder="Mensaje adicional (opcional)"></textarea>',
         focusConfirm: false,
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
@@ -48,6 +49,7 @@
         preConfirm: () => {
           const email = (document.getElementById('swal-input-email') as HTMLInputElement).value;
           const phone = (document.getElementById('swal-input-phone') as HTMLInputElement).value;
+          const message = (document.getElementById('swal-input-message') as HTMLTextAreaElement).value;
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
           if (!email) {
@@ -55,7 +57,7 @@
           } else if (!emailRegex.test(email)) {
             Swal.showValidationMessage('Correo no válido');
           } else {
-            return { email, phone };
+            return { email, phone, message };
           }
         },
         customClass: {
@@ -65,13 +67,14 @@
       });
 
       if (formValues) {
-        await quoteStore.sendQuoteByEmail(formValues.email, formValues.phone);
+        await quoteStore.sendQuoteByEmail(formValues.email, formValues.phone, formValues.message);
       }
     }, 300);
   } else {
     console.error('Elemento no encontrado: quoteOffcanvas');
   }
 }
+
 
 
   const navbarCollapseRef = ref<HTMLElement | null>(null)

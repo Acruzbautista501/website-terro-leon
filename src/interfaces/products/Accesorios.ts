@@ -1,11 +1,11 @@
 export interface Accesorio {
     perdura: Perdura[],
-    rockSrone: RockStone[],
+    rockStone: RockStone[],
 
 }
 
 export interface Perdura {
-    productos: string[],
+    titulo: string,
     img: string[],
 }
 

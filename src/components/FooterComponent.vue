@@ -36,8 +36,8 @@
           <li class="mb-3"><router-link to="/politicas-de-entrega-y-devoluciones" class="text-decoration-none text-uppercase color-footer" @click.prevent="handleScrollToTop">Políticas de Entrega y Devoluciones</router-link></li>
           <li class="mb-3"><router-link to="/terminos-y-condiciones" class="text-decoration-none text-uppercase color-footer" @click="handleScrollToTop">Términos y condiciones</router-link></li>
         </ul>
-        <PrivacyNoticeComponent ref="modalPrivacy" />
-        <DeliveryPoliciesComponent ref="modalDelivery"/>
+        <!-- <PrivacyNoticeComponent ref="modalPrivacy" />
+        <DeliveryPoliciesComponent ref="modalDelivery"/> -->
       </div>
 
       <!-- Columna de redes sociales -->

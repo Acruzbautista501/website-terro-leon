@@ -60,11 +60,12 @@ export const useQuoteStore = defineStore('quote', () => {
     if (item && item.quantity > 1) item.quantity -= 1
   }
 
-  const sendQuoteByEmail = async (email: string, phone: string) => {
+  const sendQuoteByEmail = async (email: string, phone: string, message: string) => {
     try {
       const response = await axios.post('https://terroacabados.com/correo/formulario-cotizacion.php', {
         email,
         phone,
+        message,
         quote: quote.value,
       })
 
@@ -78,7 +79,6 @@ export const useQuoteStore = defineStore('quote', () => {
             popup: 'swal2-popup-lg'
           },
         }).then(() => {
-          // Vaciar cotizador y redirigir al home
           quote.value = []
           localStorage.removeItem('quote')
           router.push('/')

@@ -4,19 +4,19 @@ import { useRoute } from 'vue-router';
 import HeaderComponent from '../../../components/HeaderComponent.vue';
 import ProductCarousel from '../../../components/ProductCarousel.vue';
 import FooterComponent from '../../../components/FooterComponent.vue';
-import { tejas } from '../../../data/products/tejas';
+import { accesorios } from '../../../data/products/accesorios';
 import { useQuoteStore } from '../../../stores/quoteStore';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 const quoteStore = useQuoteStore();
 
 const route = useRoute();
-const tipo = route.params.tipo as keyof typeof tejas;
+const tipo = route.params.tipo as keyof typeof accesorios;
 const slug = route.params.slug as string;
 
 defineProps<{}>();
 
-const teja = ref<any>(null);
+const accesorio = ref<any>(null);
 const selectedImage = ref<string | null>(null);
 
 function slugify(text: string): string {
@@ -30,10 +30,10 @@ function slugify(text: string): string {
 }
 
 onMounted(() => {
-  const lista = tejas[tipo];
+  const lista = accesorios[tipo];
   if (lista && Array.isArray(lista)) {
-    const match = lista.find(t => slugify(t.titulo) === slug);
-    teja.value = match;
+    const match = lista.find(a => slugify(a.titulo) === slug);
+    accesorio.value = match;
     if (match?.img?.length) {
       selectedImage.value = match.img[0];
     }
@@ -46,17 +46,17 @@ function getColorNameFromPath(path: string): string {
 }
 
 function cotizarProducto() {
-  if (teja.value && selectedImage.value) {
+  if (accesorio.value && selectedImage.value) {
     quoteStore.addToQuote({
-      id: teja.value.id,
-      name: teja.value.titulo,
+      id: accesorio.value.id || `${tipo}-${slug}`,
+      name: accesorio.value.titulo,
       color: getColorNameFromPath(selectedImage.value)
     });
 
     Swal.fire({
       icon: 'success',
       title: 'Agregado a la cotización',
-      html: `<strong>${teja.value.titulo}</strong><br>Color: ${getColorNameFromPath(selectedImage.value)}`,
+      html: `<strong>${accesorio.value.titulo}</strong><br>Variante: ${getColorNameFromPath(selectedImage.value)}`,
       toast: true,
       position: 'top-end',
       showConfirmButton: false,
@@ -68,42 +68,40 @@ function cotizarProducto() {
     });
   }
 }
-
 </script>
 
 <template>
   <HeaderComponent />
-  <main v-if="teja" class="main-bg">
+  <main v-if="accesorio" class="main-bg">
     <section class="container py-5">
       <div class="mb-4">
         <router-link
-          to="/productos/tejas"
-          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-uppercase text-infor"
+          to="/productos/accesorios"
+          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-infor text-uppercase"
         >
-        <i class="bi bi-arrow-left-circle"></i> Volver
+          <i class="bi bi-arrow-left-circle"></i> Volver
         </router-link>
       </div>
       <div class="row g-3">
         <div class="col-12 col-xl-6">
           <ProductCarousel
-            v-if="teja"
-            :carouselId="`carousel-${teja.id}`"
+            v-if="accesorio"
+            :carouselId="`carousel-${tipo}-${slug}`"
             :images="[selectedImage || '/img/placeholder.jpg']"
-            :title="teja.titulo"
+            :title="accesorio.titulo"
           />
         </div>
         <div class="col-12 col-xl-6">
           <div class="mt-4 mb-5">
-            <h1 class="text-center text-uppercase display-4">{{ teja.titulo }}</h1>
+            <h1 class="text-center text-uppercase display-4">{{ accesorio.titulo }}</h1>
           </div>
 
-          <!-- Selector de color con miniatura circular -->
-          <div v-if="teja?.img?.length >= 1" class="mb-4">
-            <label class="form-label fs-3 fw-bold">Selecciona un color:</label>
+          <div v-if="accesorio?.img?.length >= 1" class="mb-4">
+            <label class="form-label fs-3 fw-bold">Selecciona variante:</label>
             <div class="row g-2">
               <div
                 class="col-6 col-sm-4"
-                v-for="(img, index) in teja.img"
+                v-for="(img, index) in accesorio.img"
                 :key="index"
               >
                 <button
@@ -113,7 +111,7 @@ function cotizarProducto() {
                 >
                   <img
                     :src="img"
-                    alt="Color miniatura"
+                    alt="Variante"
                     width="30"
                     height="30"
                     class="rounded-circle border"
@@ -123,20 +121,19 @@ function cotizarProducto() {
               </div>
             </div>
           </div>
+
           <div class="container mt-3 pt-3">
-            <p class="fs-3" v-if="teja.medidas"><span class="fw-bold">Medidas:</span> {{ teja.medidas }}</p>
-            <p class="fs-3" v-if="teja.piezasxM2"><span class="fw-bold">Piezas/m²:</span> {{ teja.piezasxM2 }} piezas</p>
-            <p class="fs-3" v-if="teja.peso"><span class="fw-bold">Peso:</span> {{ teja.peso }}</p>
-            <p class="fs-3" v-if="teja.descripcion"><span class="fw-bold">Descripción:</span> {{ teja.descripcion }}</p>
-            <p class="fs-3" v-if="teja.reqInstalacion"><span class="fw-bold">Requisitos de instalación:</span> {{ teja.reqInstalacion }}</p>
-            <p class="fs-3" v-if="teja.absorcion"><span class="fw-bold">Absorción:</span> {{ teja.absorcion }}</p>
-            <p class="fs-3" v-if="teja.resistencia"><span class="fw-bold">Resistencia:</span> {{ teja.resistencia }}</p>
-            <p class="fs-3" v-if="teja.ancho"><span class="fw-bold">Ancho:</span> {{ teja.ancho }}</p>
-            <p class="fs-3" v-if="teja.largo"><span class="fw-bold">Largo:</span> {{ teja.largo }}</p>
-            <p class="fs-3" v-if="teja.espesor"><span class="fw-bold">Espesor:</span> {{ teja.espesor }}</p>
-            <p class="fs-3" v-if="teja.translapeMin"><span class="fw-bold">Translape mínimo:</span> {{ teja.translapeMin }}</p>
-            <p class="fs-3" v-if="teja.piezasxTarima"><span class="fw-bold">Piezas por tarima:</span> {{ teja.piezasxTarima }}</p>
+            <p class="fs-3" v-if="accesorio.medidas"><span class="fw-bold">Medidas:</span> {{ accesorio.medidas }}</p>
+            <p class="fs-3" v-if="accesorio.largo"><span class="fw-bold">Largo:</span> {{ accesorio.largo }}</p>
+            <p class="fs-3" v-if="accesorio.ancho"><span class="fw-bold">Ancho:</span> {{ accesorio.ancho }}</p>
+            <p class="fs-3" v-if="accesorio.espesor"><span class="fw-bold">Espesor:</span> {{ accesorio.espesor }}</p>
+            <p class="fs-3" v-if="accesorio.contenido"><span class="fw-bold">Contenido:</span> {{ accesorio.contenido }}</p>
+            <p class="fs-3" v-if="accesorio.cubre"><span class="fw-bold">Cubre:</span> {{ accesorio.cubre }}</p>
+            <p class="fs-3" v-if="accesorio.juntaRecom"><span class="fw-bold">Junta recomendada:</span> {{ accesorio.juntaRecom }}</p>
+            <p class="fs-3" v-if="accesorio.pesoxCaja"><span class="fw-bold">Peso por caja:</span> {{ accesorio.pesoxCaja }}</p>
+            <p class="fs-3" v-if="accesorio.margenVariacion"><span class="fw-bold">Margen de variación:</span> {{ accesorio.margenVariacion }}</p>
           </div>
+
           <div class="text-center mt-5 pt-3">
             <button
               class="btn btn-outline-secondary btn-lg px-4 py-2 fs-3 w-25"
@@ -153,10 +150,7 @@ function cotizarProducto() {
       <div class="px-4 pb-3">
         <div class="col-lg-8 mx-auto text-infor">
           <p class="lead mb-5 fs-3">
-            *Al ser productos de origen natural, los tonos y colores aquí mostrados pueden tener sutiles variaciones inherentes a los productos de barro. El color mostrado de los productos varía de acuerdo al brillo de cada pantalla.
-            Los productos flameados tienen amplias variaciones de color, resultado de la posición de el producto en el horno, patrones de rociado y cobertura resultante.
-            <br />
-            Se recomienda su compra en base a muestras físicas que puede encontrar en nuestra tienda.
+            *Los colores y variantes pueden tener ligeras variaciones según el lote de producción. Para mayor certeza, sugerimos validar físicamente las muestras en tienda.
           </p>
         </div>
       </div>
@@ -188,7 +182,4 @@ function cotizarProducto() {
   color: #fff8ea !important;
   border: 1px solid #9d9167 !important;
 }
-
 </style>
-
-

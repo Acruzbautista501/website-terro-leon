@@ -74,7 +74,7 @@ function cotizarProducto() {
       <div class="mb-4">
         <router-link
           to="/productos/canteras"
-          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-infor"
+          class="d-inline-flex align-items-center gap-2 fs-2 text-decoration-none text-back text-infor text-uppercase"
         >
           <i class="bi bi-arrow-left-circle"></i> Volver
         </router-link>

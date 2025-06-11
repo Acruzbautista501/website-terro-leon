@@ -26,6 +26,11 @@ export const productos: Producto[] = [
         img: '/img/rockstone/cantera-laminada-hueso.jpg',
         url: '/productos/canteras'
     },
+    {
+        titulo: 'Accesorios',
+        img: '/img/perdura/ANTIGRAFITTI LIMPIADOR.jpg',
+        url: '/productos/accesorios'
+    },
 ]
 
 export const imperdibles: Imperdible[] = [

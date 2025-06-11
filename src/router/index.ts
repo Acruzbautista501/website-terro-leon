@@ -19,6 +19,8 @@ import DeliveryPoliciesView from '../views/DeliveryPoliciesView.vue'
 import LadrillosDetailsView from '../views/products/details/LadrillosDetailsView.vue'
 import AdoquinesDetailsView from '../views/products/details/AdoquinesDetailsView.vue'
 import CanterasDetailsView from '../views/products/details/CanterasDetailsView.vue'
+import AccesoriosView from '../views/products/AccesoriosView.vue'
+import AccesoriosDetailsView from '../views/products/details/AccesoriosDetailsView.vue'
 
 
 const routes: RouteRecordRaw[] = [
@@ -77,6 +79,12 @@ const routes: RouteRecordRaw[] = [
     meta: { title: 'Canteras | Terro' },
   },
   {
+    path: '/productos/accesorios',
+    name: 'Accesorios',
+    component: AccesoriosView,
+    meta: { title: 'Accesorios | Terro' },
+  },
+  {
     path: '/tejas/:tipo/:slug',
     name: 'TejaDetalle',
     component: TejasDetailsView,
@@ -105,6 +113,12 @@ const routes: RouteRecordRaw[] = [
     name: 'CanteraDetalle',
     component: CanterasDetailsView,
     meta: { title: 'Detalle de Canteras | Terro' }, // Base genérica
+  },
+    {
+    path: '/accesorios/:tipo/:slug',
+    name: 'AccesorioDetalle',
+    component: AccesoriosDetailsView,
+    meta: { title: 'Detalle de Accesorios | Terro' }, // Base genérica
   },
   {
     path: '/recursos',
