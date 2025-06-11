@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import HeaderComponent from '../../../components/HeaderComponent.vue';
 import ProductCarousel from '../../../components/ProductCarousel.vue';
 import FooterComponent from '../../../components/FooterComponent.vue';
-import { canteras } from '../../../data/products/Canteras';
+import { canteras } from '../../../data/products/canteras';
 import { useQuoteStore } from '../../../stores/quoteStore';
 import Swal from 'sweetalert2';
 

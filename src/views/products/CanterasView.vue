@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import HeaderComponent from '../../components/HeaderComponent.vue';
 import FooterComponent from '../../components/FooterComponent.vue';
-import { canteras } from '../../data/products/Canteras';
+import { canteras } from '../../data/products/canteras'; 
 import { useRouter } from 'vue-router';
 
 const handleScrollToTop = () => {
