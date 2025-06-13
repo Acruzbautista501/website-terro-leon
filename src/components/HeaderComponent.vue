@@ -164,7 +164,7 @@ async function sendQuoteEmail() {
               @input="onQuantityInput(item.id, $event)"
             >
             <span class="ms-2">m²</span>
-            <button class="btn btn-outline-danger btn-lg ms-5" @click="quoteStore.removeFromQuote(item.id)">
+            <button class="btn btn-outline-danger btn-lg ms-5" @click="quoteStore.removeFromQuote(item.id, item.color)">
               <i class="bi bi-trash"></i>
             </button>
           </div>

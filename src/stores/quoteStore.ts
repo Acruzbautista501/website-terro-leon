@@ -45,8 +45,8 @@ export const useQuoteStore = defineStore('quote', () => {
     }
   }
 
-  const removeFromQuote = (id: string) => {
-    quote.value = quote.value.filter(i => i.id !== id)
+  const removeFromQuote = (id: string, color: string) => {
+    quote.value = quote.value.filter(i => !(i.id === id && i.color === color))
     localStorage.setItem('quote', JSON.stringify(quote.value))
   }
 
