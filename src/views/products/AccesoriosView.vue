@@ -9,11 +9,11 @@ const handleScrollToTop = () => {
 };
 
 const perdura = accesorios.perdura;
-const rockStone = accesorios.rockStone;
+// const rockStone = accesorios.rockStone;
 
 const accesoriosConTipo = [
   ...perdura.map(a => ({ ...a, tipo: 'perdura' })),
-  ...rockStone.map(a => ({ ...a, tipo: 'rockStone' })),
+  // ...rockStone.map(a => ({ ...a, tipo: 'rockStone' })),
 ];
 
 const router = useRouter();
